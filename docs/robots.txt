@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zeyizhang-berkeley.github.io/sitemap.xml

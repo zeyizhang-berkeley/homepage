@@ -1,0 +1,973 @@
+{
+  "meta": {
+    "language": "en",
+    "source": "CV_v2/main.tex",
+    "extracted_date": "2026-10-23",
+    "scope": "Approved visible CV content only; comments, unpublished manuscripts beyond the CV, and private Overleaf links excluded.",
+    "publication_order": "Preserve current CV order and section split: Publications 1–7, Manuscripts 8–10.",
+    "equal_contribution_note": "* Equal contribution.",
+    "link_style": "Use citation/status/resource labels for links; do not hyperlink publication titles.",
+    "notes": [
+      "Item 10 is a forthcoming-manuscript announcement, not a confirmed formal title or author list. Link only Coming soon.",
+      "Paper2Bench has a visible Demo label but no URL in the CV; do not invent a link.",
+      "No publication year is specified for manuscripts 8–10; null is intentional.",
+      "Equal contribution is marked for Li, Y. and Zhang, Z. in #2, and Dias, N. and Zhang, Z. in #4. #6 has no equal-contribution marks in the current CV.",
+      "The DTCS links are explicitly for v.01, while the experience project is v.02.",
+      "Mentorship outcomes are copied from the CV, without external re-verification."
+    ]
+  },
+  "profile": {
+    "name": "Zeyi Zhang",
+    "location": "Berkeley, CA",
+    "headline": "Ph.D. Candidate in Chemistry, UC Berkeley",
+    "email": "zhentan007@berkeley.edu",
+    "bio": "I am a Ph.D. candidate at UC Berkeley and a researcher at Lawrence Berkeley National Laboratory, developing electronic structure methods and scientific software. My research spans GPU-accelerated real-space DFT, electronic structure methods for excited states, machine learning for quantum chemistry, and recursive self-improvement (RSI) for science. I am the developer of PARSEC.py, a Q-Chem contributor, and a research scientist intern at ByteDance.",
+    "research_interests": [
+      "GPU-accelerated real-space DFT",
+      "Electronic structure methods for excited states",
+      "Machine learning for quantum chemistry",
+      "Recursive self-improvement (RSI) for science"
+    ],
+    "links": [
+      {
+        "label": "Email",
+        "url": "mailto:zhentan007@berkeley.edu"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/zeyizhang-berkeley"
+      },
+      {
+        "label": "Google Scholar",
+        "url": "https://scholar.google.com/citations?user=-k2Zl3sAAAAJ"
+      },
+      {
+        "label": "ORCID",
+        "url": "https://orcid.org/0009-0006-7067-1469"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/zeyi-zhang-a92929247/"
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "University of California, Berkeley",
+      "location": "Berkeley, CA",
+      "degree": "Ph.D. in Chemistry (Theoretical Chemistry); candidate",
+      "dates": "Aug 2022–2027 (expected)",
+      "advisors": [
+        {
+          "name": "Martin Head-Gordon",
+          "title": "Prof.",
+          "url": "https://mhggroupberkeley.com/members/"
+        },
+        {
+          "name": "Jin Qian",
+          "title": "Dr.",
+          "url": "https://qiangrouppage.lbl.gov/people"
+        }
+      ]
+    },
+    {
+      "institution": "Shanghai Jiao Tong University",
+      "location": "Shanghai, China",
+      "degree": "B.S. in Chemistry",
+      "program": "Zhiyuan Honors Program",
+      "program_url": "https://en.zhiyuan.sjtu.edu.cn/",
+      "dates": "Sep 2018–Jun 2022",
+      "score": "90.64/100",
+      "gpa": "3.93/4.00",
+      "scholarships": [
+        {
+          "name": "Fan Hsu-chi Scholarship",
+          "url": "http://fanhsuchischolars.org.cn/"
+        },
+        {
+          "name": "Zhiyuan Honors Scholarship",
+          "url": null
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "id": "bytedance",
+      "organization": "ByteDance, Seed–AI for Science",
+      "organization_url": "https://seed.bytedance.com/en/",
+      "role": "Research Scientist Intern, Quantum Chemistry",
+      "location": "San Jose, CA",
+      "dates": "Jun 2026–Present",
+      "mentors": [
+        {
+          "name": "Yixiao Chen",
+          "title": "Dr.",
+          "url": "https://scholar.google.com/citations?user=tI2CAegAAAAJ&hl=en"
+        },
+        {
+          "name": "Xuelan Wen",
+          "title": "Dr.",
+          "url": "https://scholar.google.com/citations?user=X537_QwAAAAJ&hl=en"
+        }
+      ],
+      "projects": [
+        {
+          "name": "GPU-accelerated quantum chemistry",
+          "summary": "Develop ByteQC and GPU4PySCF with tensor hypercontraction (THC) for HF, perturbation, and CC theory, reducing average runtime and GPU memory by 38% and 72% on A100 GPUs.",
+          "links": [
+            {
+              "label": "ByteQC Code",
+              "url": "https://github.com/bytedance/byteqc"
+            },
+            {
+              "label": "GPU4PySCF Code",
+              "url": "https://github.com/bytedance/gpu4pyscf"
+            }
+          ]
+        },
+        {
+          "name": "Transition-metal data generation",
+          "summary": "Develop JaQMC for transition-metal data generation via auxiliary-field quantum Monte Carlo (AFQMC), yielding a Cr₂ curve closer to experiment than DMRG and 9.5% lower BDE MAE than MRCC.",
+          "links": [
+            {
+              "label": "JaQMC Code",
+              "url": "https://github.com/bytedance/jaqmc"
+            }
+          ]
+        },
+        {
+          "name": "Machine-learned DFT",
+          "summary": "Explore training methods for machine-learned density functional theory (MLDFT).",
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": "lbnl",
+      "organization": "Lawrence Berkeley National Laboratory",
+      "organization_url": null,
+      "role": "Graduate Student Researcher",
+      "location": "Berkeley, CA",
+      "dates": "Nov 2022–Present",
+      "advisors": [
+        {
+          "name": "Jin Qian",
+          "title": "Dr.",
+          "url": "https://qiangrouppage.lbl.gov/people"
+        }
+      ],
+      "publication_numbers": [
+        1,
+        3,
+        7,
+        9
+      ],
+      "projects": [
+        {
+          "name": "PARSEC.py",
+          "summary": "Develop a Python-based real-space Kohn–Sham DFT code with ML density interfaces, multi-node/multi-GPU parallelization, and GPU-accelerated geometry optimization and molecular dynamics.",
+          "details": [
+            {
+              "text": "Integrate ML density models like ChargE3Net and SCDP, reducing SCF iterations by up to 26.7%.",
+              "publication_numbers": [
+                3
+              ]
+            },
+            {
+              "text": "Converge DFT for a system with over 10,000 atoms (~40,000 valence electrons) in under 5 minutes on 16 A100 GPUs.",
+              "publication_numbers": [
+                9
+              ]
+            },
+            {
+              "text": "Interface with ML force fields like UMA and MACE, reducing total relaxation time by up to 48%.",
+              "publication_numbers": [
+                9
+              ]
+            },
+            {
+              "text": "Investigate X-ray photoelectron spectroscopy, interfacial chemistry, and CO₂ capture.",
+              "publication_numbers": [
+                7
+              ]
+            }
+          ],
+          "links": [
+            {
+              "label": "Code",
+              "url": "https://github.com/QianGroupPage/PARSEC.py"
+            }
+          ]
+        },
+        {
+          "name": "Recursive Self-Improvement (RSI) for Science",
+          "summary": "Develop benchmarks and evaluation frameworks for scientific reasoning.",
+          "links": [
+            {
+              "label": "Demo",
+              "url": "https://rsi4science.org/"
+            }
+          ],
+          "subprojects": [
+            {
+              "name": "MolP2SBench",
+              "summary": "Evaluate 7 LLMs across 11 property channels with shuffled and counterfactual inputs to test whether structure predictions follow physical evidence.",
+              "publication_numbers": [
+                1
+              ],
+              "links": [
+                {
+                  "label": "Code",
+                  "url": "https://github.com/DUAL-Xiao/MolP2SBench"
+                }
+              ]
+            },
+            {
+              "name": "Paper2Bench",
+              "summary": "Develop benchmarks from research papers and evaluation frameworks to assess LLMs across scientific tasks, including reaction mechanisms, transition states, and synthesis.",
+              "links": [],
+              "unlinked_label": "Demo"
+            },
+            {
+              "name": "Scientific benchmark contributions",
+              "summary": "Contribute scientific tasks to Agents’ Last Exam, FrontierPhysics, and RSI-Exam.",
+              "links": [
+                {
+                  "label": "Agents’ Last Exam",
+                  "url": "https://agents-last-exam.org/"
+                },
+                {
+                  "label": "FrontierPhysics",
+                  "url": "https://www.benchflow.ai/frontierphysics"
+                },
+                {
+                  "label": "RSI-Exam",
+                  "url": "https://rsi-exam.ai/index.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Digital Twin for Chemical Sciences (DTCS-v.02)",
+          "summary": "Extend a digital twin connecting theory and experiment with multimodal spectroscopy for gas-phase reaction analysis, targeting atmospheric and ultrafast chemistry.",
+          "details": [
+            {
+              "text": "Develop an agentic AI workflow for structure preparation, Q-Chem/VASP input generation, HPC execution, and spectroscopic analysis from natural-language instructions."
+            }
+          ],
+          "links": [
+            {
+              "label": "v.01 Code",
+              "url": "https://github.com/QianGroupPage/DTCS-v.01"
+            },
+            {
+              "label": "v.01 Paper",
+              "url": "https://www.nature.com/articles/s43588-025-00857-y"
+            }
+          ]
+        },
+        {
+          "name": "Microelectronic systems",
+          "summary": "Model semiconductor and lithography applications.",
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": "berkeley",
+      "organization": "University of California, Berkeley",
+      "organization_url": null,
+      "role": "Graduate Student Researcher",
+      "location": "Berkeley, CA",
+      "dates": "Nov 2022–Present",
+      "advisors": [
+        {
+          "name": "Martin Head-Gordon",
+          "title": "Prof.",
+          "url": "https://mhggroupberkeley.com/members/"
+        }
+      ],
+      "publication_numbers": [
+        2,
+        4,
+        5,
+        6,
+        8
+      ],
+      "projects": [
+        {
+          "name": "State-Specific Excited-State Theories, Multireference Methods, and Strong Correlation",
+          "summary": "Develop electronic-structure methods for excited states and strongly correlated systems.",
+          "details": [
+            {
+              "text": "Develop energy decomposition analysis for excitations in two-determinant ROKS.",
+              "publication_numbers": [
+                5
+              ]
+            },
+            {
+              "text": "Develop a frozen MO initial guess for orbital-optimized DFT of charge-transfer excitations.",
+              "publication_numbers": [
+                6
+              ]
+            },
+            {
+              "text": "Study strongly correlated C₂ with HF, DFT, and multireference NOCI(-RSPT) versus MRCI+Q and experiment, achieving 32%/24% lower bond-length/energy MAEs than EOM-DIP-CCSD for low-lying states.",
+              "publication_numbers": [
+                8
+              ]
+            }
+          ],
+          "links": []
+        },
+        {
+          "name": "Computational Spectroscopy and Reaction Mechanisms",
+          "summary": "Study photoionization of CO₂–H₂O clusters and O–O bond formation, with implications for astrochemistry.",
+          "publication_numbers": [
+            4
+          ],
+          "links": []
+        },
+        {
+          "name": "Machine-Learned Hamiltonians (MLH)",
+          "summary": "Develop machine-learned models for electronic states and molecular properties.",
+          "details": [
+            {
+              "text": "Develop label-free post-training for flow-matching QHFlow2 models via short SCF corrections, improving orbital accuracy on QH9 and HELM and outperforming supervised fine-tuning in eight transfer settings.",
+              "publication_numbers": [
+                2
+              ]
+            },
+            {
+              "text": "Develop an electronic force field by considering orbital response in non-self-consistent MLH.",
+              "publication_numbers": []
+            },
+            {
+              "text": "Develop manifold-based flow-matching models for electronic states and molecular properties.",
+              "publication_numbers": []
+            }
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": "qchem",
+      "organization": "Q-Chem, Inc.",
+      "organization_url": "https://www.q-chem.com/",
+      "role": "Software Engineer",
+      "location": "Berkeley, CA",
+      "dates": "Nov 2022–Present",
+      "mentors": [
+        {
+          "name": "Xintian Feng",
+          "title": "Dr.",
+          "url": "https://scholar.google.com/citations?user=PDRszz8AAAAJ&hl=en"
+        }
+      ],
+      "publication_numbers": [
+        10
+      ],
+      "projects": [
+        {
+          "name": "Complex-valued orbital methods",
+          "summary": "Develop complex-valued orbital methods for HF, DFT, MP2, NOCI(-MP2), orbital optimization, and EDA.",
+          "links": []
+        },
+        {
+          "name": "Q-Chem 7.0",
+          "summary": "Contributed the frozen MO initial guess for orbital-optimized DFT.",
+          "publication_numbers": [
+            10
+          ],
+          "links": [
+            {
+              "label": "Web",
+              "url": "https://q-chem.com/support/releaselog70/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nyu-ecnu",
+      "organization": "NYU-ECNU Center for Computational Chemistry",
+      "organization_url": "https://research.shanghai.nyu.edu/chemistry",
+      "role": "Research Assistant",
+      "location": "Shanghai, China",
+      "dates": "Jun 2021–May 2022",
+      "advisors": [
+        {
+          "name": "Zenghui Zhang",
+          "title": "Prof.",
+          "url": "https://research.shanghai.nyu.edu/centers-and-institutes/chemistry/people/john-zenghui-zhang"
+        },
+        {
+          "name": "Tong Zhu",
+          "title": "Prof.",
+          "url": "https://research.shanghai.nyu.edu/centers-and-institutes/chemistry/people/tong-zhu"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Prebiotic reaction pathways",
+          "summary": "Built an active-learning workflow with DFT, machine learning potentials, molecular dynamics, and nudged elastic band methods to map pathways and transition states for 10 prebiotic glycine-formation reactions.",
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": "sjtu",
+      "organization": "Shanghai Jiao Tong University",
+      "organization_url": null,
+      "role": "Research Assistant",
+      "location": "Shanghai, China",
+      "dates": "Feb 2021–Jun 2022",
+      "advisors": [
+        {
+          "name": "Huai Sun",
+          "title": "Prof.",
+          "url": "https://scholar.google.com/citations?user=YzcYG9EAAAAJ&hl=en"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Property prediction in ionic liquids",
+          "summary": "Investigated CO₂ solubility in ionic liquids with graph kernels and Gaussian process regression; built ILThermo data-processing pipelines for property prediction.",
+          "links": []
+        }
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "number": 1,
+      "id": "molp2s",
+      "section": "Publications",
+      "title": "MolP2SBench: Do LLMs Really Reason from Molecular Properties to Structure?",
+      "authors": [
+        {
+          "name": "Xie, Y.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Shi, Z.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Zhang, Z.",
+          "is_self": true,
+          "equal_contribution": false
+        },
+        {
+          "name": "Qi, Z.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Dong, Y.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Wang, Y.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Xiao, X.",
+          "is_self": false,
+          "equal_contribution": false
+        }
+      ],
+      "year": 2026,
+      "venue": "ICLR 2027",
+      "status": "Submitted",
+      "citation": "Submitted to ICLR 2027 (2026).",
+      "links": [
+        {
+          "label": "arXiv: 2610.12522 [physics.chem-ph]",
+          "url": "https://arxiv.org/html/2610.12522v1"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "opsd",
+      "section": "Publications",
+      "title": "On Policy Self Distillation for Learning Kohn-Sham Hamiltonian.",
+      "authors": [
+        {
+          "name": "Li, Y.",
+          "is_self": false,
+          "equal_contribution": true
+        },
+        {
+          "name": "Zhang, Z.",
+          "is_self": true,
+          "equal_contribution": true
+        },
+        {
+          "name": "Bai, D.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Gerstein, M.",
+          "is_self": false,
+          "equal_contribution": false
+        }
+      ],
+      "year": 2026,
+      "venue": "ICLR 2027",
+      "status": "Submitted",
+      "citation": "Submitted to ICLR 2027 (2026).",
+      "links": [
+        {
+          "label": "Submitted to ICLR 2027 (2026).",
+          "url": "https://openreview.net/forum?id=l3ZCZaRFKC"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "id": "parsec",
+      "section": "Publications",
+      "title": "PARSEC.py: A Python-Based Real-Space Kohn–Sham Density Functional Theory Code Accelerated by Machine Learned Charge Density.",
+      "authors": [
+        {
+          "name": "Zhang, Z.",
+          "is_self": true,
+          "equal_contribution": false
+        },
+        {
+          "name": "Perez, C. M.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Kwon, P.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Head-Gordon, M.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Qian, J.",
+          "is_self": false,
+          "equal_contribution": false
+        }
+      ],
+      "year": 2026,
+      "venue": "J. Comput. Chem.",
+      "volume": "47",
+      "pages_or_article": "e70482",
+      "status": "Published",
+      "citation": "J. Comput. Chem. 47, e70482 (2026).",
+      "links": [
+        {
+          "label": "J. Comput. Chem. 47, e70482 (2026).",
+          "url": "https://doi.org/10.1002/jcc.70482"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "id": "photoionization",
+      "section": "Publications",
+      "title": "Ionization-Driven Oxygen–Oxygen Bond Formation in Mixed CO₂–H₂O Clusters: The Role of Solvation and Cluster Composition.",
+      "authors": [
+        {
+          "name": "Dias, N.",
+          "is_self": false,
+          "equal_contribution": true
+        },
+        {
+          "name": "Zhang, Z.",
+          "is_self": true,
+          "equal_contribution": true
+        },
+        {
+          "name": "Lemmens, A. K.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Wannenmacher, A.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Qian, J.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Head-Gordon, M.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Ahmed, M.",
+          "is_self": false,
+          "equal_contribution": false
+        }
+      ],
+      "year": 2026,
+      "venue": "J. Am. Chem. Soc.",
+      "volume": "148",
+      "pages_or_article": "35681–35693",
+      "status": "Published",
+      "citation": "J. Am. Chem. Soc. 148, 35681–35693 (2026).",
+      "links": [
+        {
+          "label": "J. Am. Chem. Soc. 148, 35681–35693 (2026).",
+          "url": "https://doi.org/10.1021/jacs.6c07627"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "id": "rokseda",
+      "section": "Publications",
+      "title": "An Energy Decomposition Method for Electronic Excitations in Two-Determinant Restricted Open-Shell Kohn–Sham Theory.",
+      "authors": [
+        {
+          "name": "Ling, H.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Shen, H.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Zhang, Z.",
+          "is_self": true,
+          "equal_contribution": false
+        },
+        {
+          "name": "Head-Gordon, M.",
+          "is_self": false,
+          "equal_contribution": false
+        }
+      ],
+      "year": 2026,
+      "venue": "J. Chem. Theory Comput.",
+      "volume": "22",
+      "pages_or_article": "385–398",
+      "status": "Published",
+      "citation": "J. Chem. Theory Comput. 22, 385–398 (2026).",
+      "links": [
+        {
+          "label": "J. Chem. Theory Comput. 22, 385–398 (2026).",
+          "url": "https://doi.org/10.1021/acs.jctc.5c01738"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "id": "ctguess",
+      "section": "Publications",
+      "title": "An Improved Guess for the Variational Calculation of Charge-transfer Excitations in Large Systems.",
+      "authors": [
+        {
+          "name": "Bogo, N.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Zhang, Z.",
+          "is_self": true,
+          "equal_contribution": false
+        },
+        {
+          "name": "Head-Gordon, M.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Stein, C. J.",
+          "is_self": false,
+          "equal_contribution": false
+        }
+      ],
+      "year": 2025,
+      "venue": "Phys. Chem. Chem. Phys.",
+      "volume": "27",
+      "pages_or_article": "17533–17547",
+      "status": "Published",
+      "citation": "Phys. Chem. Chem. Phys. 27, 17533–17547 (2025).",
+      "links": [
+        {
+          "label": "Phys. Chem. Chem. Phys. 27, 17533–17547 (2025).",
+          "url": "https://doi.org/10.1039/D5CP01867F"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "id": "realspace",
+      "section": "Publications",
+      "title": "Real-space Kohn–Sham Density Functional Theory for Complex Energy Applications.",
+      "authors": [
+        {
+          "name": "Zhang, Z.",
+          "is_self": true,
+          "equal_contribution": false
+        },
+        {
+          "name": "Liu, L.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Glenna, D. M.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Jana, A.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Perez, C. M.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Qian, J.",
+          "is_self": false,
+          "equal_contribution": false
+        }
+      ],
+      "year": 2025,
+      "venue": "Chem. Commun.",
+      "volume": "61",
+      "pages_or_article": "10273–10286",
+      "status": "Published",
+      "citation": "Chem. Commun. 61, 10273–10286 (2025).",
+      "links": [
+        {
+          "label": "Chem. Commun. 61, 10273–10286 (2025).",
+          "url": "https://doi.org/10.1039/D5CC01820J"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "id": "c2",
+      "section": "Manuscripts",
+      "title": "Revisiting the Low-Lying States of the C₂ Molecule Using Hartree–Fock, Kohn–Sham Density Functional, and Non-Orthogonal Configuration Interaction Theories: Symmetry Breaking, Strong Correlation, Bonding and Energies.",
+      "authors": [
+        {
+          "name": "Zhang, Z.",
+          "is_self": true,
+          "equal_contribution": false
+        },
+        {
+          "name": "Krotz, A.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Qian, J.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Head-Gordon, M.",
+          "is_self": false,
+          "equal_contribution": false
+        }
+      ],
+      "year": null,
+      "venue": "Chem. Sci.",
+      "status": "Submitted",
+      "citation": "Chem. Sci. Submitted.",
+      "links": []
+    },
+    {
+      "number": 9,
+      "id": "prm",
+      "section": "Manuscripts",
+      "title": "Real-Space Density Functional Theory for Materials Simulations: Algorithms, Applications, and the Next Frontier.",
+      "authors": [
+        {
+          "name": "Zhang, Z.",
+          "is_self": true,
+          "equal_contribution": false
+        },
+        {
+          "name": "Qian, J.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Yao, N.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Fan, D.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Dogan, M.",
+          "is_self": false,
+          "equal_contribution": false
+        },
+        {
+          "name": "Chelikowsky, J. R.",
+          "is_self": false,
+          "equal_contribution": false
+        }
+      ],
+      "year": null,
+      "venue": "Phys. Rev. Mater.",
+      "status": "Invited contribution; in preparation",
+      "citation": "Phys. Rev. Mater. Invited contribution; in preparation.",
+      "links": [
+        {
+          "label": "Invited contribution",
+          "url": "https://journals.aps.org/prmaterials/collections/PRM-COMPMATER26"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "id": "qchem",
+      "section": "Manuscripts",
+      "kind": "Forthcoming manuscript announcement",
+      "title": null,
+      "authors": null,
+      "year": null,
+      "venue": null,
+      "status": "Coming soon.",
+      "description": "Co-author of the next Q-Chem software overview manuscript.",
+      "citation": "Co-author of the next Q-Chem software overview manuscript. Coming soon.",
+      "links": [
+        {
+          "label": "Coming soon.",
+          "url": "https://q-chem.com/support/releaselog70/"
+        }
+      ]
+    }
+  ],
+  "skills": {
+    "programming_languages": [
+      "Python",
+      "C++",
+      "Fortran"
+    ],
+    "coding_agents": [
+      "Claude Code",
+      "Codex"
+    ],
+    "simulation_software": [
+      "Q-Chem",
+      "ORCA",
+      "VASP",
+      "Gaussian",
+      "Psi4",
+      "PySCF",
+      "CP2K",
+      "Quantum Espresso",
+      "LAMMPS",
+      "GROMACS",
+      "ASE"
+    ],
+    "scientific_computing_and_ml_frameworks": [
+      "PyTorch",
+      "JAX",
+      "CuPy"
+    ]
+  },
+  "mentorship": [
+    {
+      "name": "Nicola Bogo",
+      "mentee_role": "Graduate student",
+      "mentee_institution": "Technical University of Munich",
+      "current_role": "Postdoctoral Researcher",
+      "current_institution": "UC Berkeley",
+      "current_group": "Martin Head-Gordon group"
+    },
+    {
+      "name": "Haobo Ling",
+      "mentee_role": "Visiting student",
+      "mentee_institution": "Nanjing University",
+      "current_role": "Ph.D. student in Chemistry",
+      "current_institution": "Columbia University"
+    },
+    {
+      "name": "Sahand Adibnia",
+      "mentee_role": "Undergraduate",
+      "mentee_institution": "UC Berkeley",
+      "current_role": "Ph.D. student in Chemical Physics",
+      "current_institution": "Columbia University"
+    },
+    {
+      "name": "Patrick Kwon",
+      "mentee_role": "Undergraduate",
+      "mentee_institution": "UC Berkeley",
+      "current_role": "Research Assistant",
+      "current_institution": "Lawrence Berkeley National Laboratory"
+    },
+    {
+      "name": "Joey Shin",
+      "mentee_role": "Undergraduate",
+      "mentee_institution": "UC Berkeley",
+      "current_role": null,
+      "current_institution": null
+    }
+  ],
+  "teaching": [
+    {
+      "institution": "University of California, Berkeley",
+      "role": "Graduate Student Instructor",
+      "courses": [
+        {
+          "code": "Chem 221B",
+          "name": "Advanced Quantum Mechanics",
+          "level": "Graduate",
+          "dates": "Jan–May 2025"
+        },
+        {
+          "code": "Chem 120A",
+          "name": "Physical Chemistry",
+          "level": "Undergraduate",
+          "dates": "Jan–May 2024"
+        },
+        {
+          "code": "Chem 1A",
+          "name": "General Chemistry",
+          "level": "Undergraduate",
+          "dates": "Jan–May 2023"
+        }
+      ]
+    },
+    {
+      "institution": "Shanghai Jiao Tong University",
+      "role": "Teaching Assistant",
+      "courses": [
+        {
+          "code": "CHEM3404",
+          "name": "Physical Chemistry (2)",
+          "program": "Zhiyuan Honors Program",
+          "program_url": "https://en.zhiyuan.sjtu.edu.cn/",
+          "dates": "Feb–May 2022"
+        }
+      ]
+    }
+  ]
+}
