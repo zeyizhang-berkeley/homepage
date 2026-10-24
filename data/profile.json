@@ -124,7 +124,8 @@
               "label": "GPU4PySCF Code",
               "url": "https://github.com/bytedance/gpu4pyscf"
             }
-          ]
+          ],
+          "homepage_summary": "GPU algorithms for Hartree–Fock and correlated electronic-structure calculations in ByteQC and GPU4PySCF."
         },
         {
           "name": "Transition-metal data generation",
@@ -134,14 +135,16 @@
               "label": "JaQMC Code",
               "url": "https://github.com/bytedance/jaqmc"
             }
-          ]
+          ],
+          "homepage_summary": "Auxiliary-field quantum Monte Carlo reference data for transition-metal systems using JaQMC."
         },
         {
           "name": "Machine-learned DFT",
           "summary": "Explore training methods for machine-learned density functional theory (MLDFT).",
           "links": []
         }
-      ]
+      ],
+      "homepage_summary": "GPU-accelerated quantum chemistry and machine-learned density functionals."
     },
     {
       "id": "lbnl",
@@ -198,7 +201,8 @@
               "label": "Code",
               "url": "https://github.com/QianGroupPage/PARSEC.py"
             }
-          ]
+          ],
+          "homepage_summary": "A GPU-accelerated real-space DFT code with machine-learned charge densities and multi-GPU support."
         },
         {
           "name": "Recursive Self-Improvement (RSI) for Science",
@@ -247,6 +251,18 @@
                 }
               ]
             }
+          ],
+          "homepage_summary": "Benchmarks for scientific reasoning, including MolP2SBench and Paper2Bench.",
+          "homepage_title": "Scientific Reasoning Benchmarks",
+          "homepage_links": [
+            {
+              "label": "Demo",
+              "url": "https://rsi4science.org/"
+            },
+            {
+              "label": "MolP2SBench Code",
+              "url": "https://github.com/DUAL-Xiao/MolP2SBench"
+            }
           ]
         },
         {
@@ -266,14 +282,17 @@
               "label": "v.01 Paper",
               "url": "https://www.nature.com/articles/s43588-025-00857-y"
             }
-          ]
+          ],
+          "homepage_summary": "Agentic workflows connecting quantum-chemical simulations with experimental spectroscopy.",
+          "homepage_title": "Digital Twin for Chemical Sciences"
         },
         {
           "name": "Microelectronic systems",
           "summary": "Model semiconductor and lithography applications.",
           "links": []
         }
-      ]
+      ],
+      "homepage_summary": "Real-space DFT, scientific software, and AI for science."
     },
     {
       "id": "berkeley",
@@ -320,7 +339,9 @@
               ]
             }
           ],
-          "links": []
+          "links": [],
+          "homepage_summary": "Electronic-structure methods for excited states and strongly correlated systems.",
+          "homepage_title": "Excited States & Strong Correlation"
         },
         {
           "name": "Computational Spectroscopy and Reaction Mechanisms",
@@ -328,7 +349,8 @@
           "publication_numbers": [
             4
           ],
-          "links": []
+          "links": [],
+          "homepage_summary": "Photoionization and reaction mechanisms in molecular clusters, with applications to astrochemistry."
         },
         {
           "name": "Machine-Learned Hamiltonians (MLH)",
@@ -349,9 +371,11 @@
               "publication_numbers": []
             }
           ],
-          "links": []
+          "links": [],
+          "homepage_summary": "Machine-learned Hamiltonians and flow-matching models for electronic states and molecular properties."
         }
-      ]
+      ],
+      "homepage_summary": "Excited-state methods, strong correlation, and machine-learned electronic structure."
     },
     {
       "id": "qchem",
@@ -374,7 +398,8 @@
         {
           "name": "Complex-valued orbital methods",
           "summary": "Develop complex-valued orbital methods for HF, DFT, MP2, NOCI(-MP2), orbital optimization, and EDA.",
-          "links": []
+          "links": [],
+          "homepage_summary": "Electronic-structure methods with complex orbitals and improved orbital-optimization guesses."
         },
         {
           "name": "Q-Chem 7.0",
@@ -389,7 +414,8 @@
             }
           ]
         }
-      ]
+      ],
+      "homepage_summary": "Electronic-structure method development in Q-Chem."
     },
     {
       "id": "nyu-ecnu",
@@ -416,7 +442,8 @@
           "summary": "Built an active-learning workflow with DFT, machine learning potentials, molecular dynamics, and nudged elastic band methods to map pathways and transition states for 10 prebiotic glycine-formation reactions.",
           "links": []
         }
-      ]
+      ],
+      "homepage_summary": "Machine-learning-assisted exploration of prebiotic reaction pathways."
     },
     {
       "id": "sjtu",
@@ -438,7 +465,8 @@
           "summary": "Investigated CO₂ solubility in ionic liquids with graph kernels and Gaussian process regression; built ILThermo data-processing pipelines for property prediction.",
           "links": []
         }
-      ]
+      ],
+      "homepage_summary": "Machine learning for CO₂ solubility and ionic-liquid properties."
     }
   ],
   "publications": [

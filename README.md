@@ -24,6 +24,8 @@ Publication order follows the current CV: works 1–7 under Publications and wor
 
 ## Design and provenance
 
+Experience entries show the organization, role, dates, and one sentence about the work. Research & Software cards use concise homepage summaries and primary links; detailed project records remain in the source data and downloadable CV.
+
 The visual reference is <https://onehfr.github.io/>: off-white background, Inter typography, a 264 px sidebar, 760 px main column, 56 px column gap, understated red accents, section rules, and rounded white cards. No reference-site biography, images, publications, or personal assets are reused. Below 860 px, the sidebar becomes a compact profile with a sticky, horizontally scrollable section menu. The new homepage supersedes the previous separate-page design.
 
 Inter is requested from Google Fonts with system-font fallbacks. There are no third-party scripts, analytics, or trackers. Theme preference stays in the visitor's browser.

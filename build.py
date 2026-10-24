@@ -83,13 +83,15 @@ def institution_logo(key):
     return '<div class="affiliation__logo"><img src="assets/institutions/' + INSTITUTION_LOGOS[key] + '" alt="" width="24" height="24" loading="lazy" decoding="async"></div>'
 
 def project_card(p, id_, label='', wide=False):
-    details = p.get('details', [])
-    bullets = '<ul class="project__details">' + ''.join('<li>' + e(d['text']) + pubrefs(d.get('publication_numbers')) + '</li>' for d in details) + '</ul>' if details else ''
-    subs = ''
-    for sub in p.get('subprojects', []):
-        subs += '<div class="subproject"><h4>' + e(sub['name']) + pubrefs(sub.get('publication_numbers')) + '</h4><p>' + e(sub['summary']) + '</p>' + chips(sub.get('links', [])) + '</div>'
+    summary = p.get('homepage_summary', p['summary'])
+    title = p.get('homepage_title', p['name'])
+    references = list(p.get('publication_numbers', []))
+    for detail in p.get('details', []) + p.get('subprojects', []):
+        references.extend(detail.get('publication_numbers', []))
+    references = sorted(set(references))
+    resources = p.get('homepage_links', p.get('links', []))
     label_html = '<p class="project__label">' + e(label) + '</p>' if label else ''
-    return '<article class="project' + (' project--wide' if wide else '') + '" id="' + id_ + '">' + label_html + '<h3>' + e(p['name']) + '</h3><p>' + e(p['summary']) + pubrefs(p.get('publication_numbers')) + '</p>' + bullets + subs + chips(p.get('links', [])) + '</article>'
+    return '<article class="project' + (' project--wide' if wide else '') + '" id="' + id_ + '">' + label_html + '<h3>' + e(title) + '</h3><p>' + e(summary) + pubrefs(references) + '</p>' + chips(resources) + '</article>'
 
 def build_research():
     exp = {x['id']: x for x in DATA['experience']}
@@ -113,11 +115,8 @@ def build_experience():
     rows = []
     for x in DATA['experience']:
         org = link(x['organization_url'], e(x['organization'])) if x.get('organization_url') else e(x['organization'])
-        advisers = x.get('advisors', x.get('mentors', []))
-        label = ('Mentor' if x.get('mentors') else 'Advisor') + ('s' if len(advisers) > 1 else '')
-        extra = '<p class="exp__meta">' + label + ': ' + people(advisers) + '</p>' if advisers else ''
-        earlier = ''.join('<p class="exp__summary">' + e(p['summary']) + '</p>' for p in x['projects']) if x['id'] in ['nyu-ecnu', 'sjtu'] else ''
-        rows.append('<li class="affiliation" id="' + e(x['id']) + '">' + institution_logo(x['id']) + '<div class="affiliation__body"><h3>' + org + '<span class="affiliation__location"> · ' + e(x['location']) + '</span></h3><div class="affiliation__role-date"><p class="exp__role">' + e(x['role']) + '</p><p class="exp__date">' + e(x['dates']) + '</p></div>' + extra + earlier + '</div></li>')
+        summary = '<p class="exp__summary">' + e(x['homepage_summary']) + '</p>' if x.get('homepage_summary') else ''
+        rows.append('<li class="affiliation" id="' + e(x['id']) + '">' + institution_logo(x['id']) + '<div class="affiliation__body"><h3>' + org + '</h3><div class="affiliation__role-date"><p class="exp__role">' + e(x['role']) + '</p><p class="exp__date">' + e(x['dates']) + '</p></div>' + summary + '</div></li>')
     return '<ol class="affiliations">' + ''.join(rows) + '</ol>'
 
 def build_education():
