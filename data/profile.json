@@ -1087,6 +1087,29 @@
           "summary": "Multi-GPU real-space DFT with learned charge densities, geometry optimization, and molecular dynamics."
         },
         {
+          "id": "digital-twin",
+          "role": "Developer",
+          "name": "DTCS-v.02",
+          "summary": "Agentic simulation workflows and multimodal spectroscopy connecting chemical theory with experiment.",
+          "links": [
+            {
+              "label": "v.01 Code",
+              "url": "https://github.com/QianGroupPage/DTCS-v.01"
+            },
+            {
+              "label": "v.01 Paper",
+              "url": "https://www.nature.com/articles/s43588-025-00857-y"
+            }
+          ]
+        },
+        {
+          "id": "qchem-software",
+          "role": "Contributor",
+          "name": "Q-Chem",
+          "url": "https://www.q-chem.com/",
+          "summary": "Complex-valued orbital methods and frozen-orbital initial guesses for excited-state DFT."
+        },
+        {
           "id": "gpu-quantum-chemistry",
           "role": "Contributor",
           "name": "ByteQC",
@@ -1106,36 +1129,13 @@
           "name": "JaQMC",
           "url": "https://github.com/bytedance/jaqmc",
           "summary": "Auxiliary-field quantum Monte Carlo for transition-metal reference data."
-        },
-        {
-          "id": "qchem-software",
-          "role": "Contributor",
-          "name": "Q-Chem",
-          "url": "https://www.q-chem.com/",
-          "summary": "Complex-valued orbital methods and frozen-orbital initial guesses for excited-state DFT."
         }
       ]
     },
     {
       "id": "rsi-science",
-      "title": "AI tools & benchmarks",
+      "title": "AI4Science",
       "items": [
-        {
-          "id": "digital-twin",
-          "role": "Developer",
-          "name": "DTCS-v.02",
-          "summary": "Agentic simulation workflows and multimodal spectroscopy connecting chemical theory with experiment.",
-          "links": [
-            {
-              "label": "v.01 Code",
-              "url": "https://github.com/QianGroupPage/DTCS-v.01"
-            },
-            {
-              "label": "v.01 Paper",
-              "url": "https://www.nature.com/articles/s43588-025-00857-y"
-            }
-          ]
-        },
         {
           "id": "molp2sbench-software",
           "role": "Contributor",
@@ -1144,10 +1144,11 @@
           "summary": "Testing whether LLMs infer molecular structures from physical evidence."
         },
         {
-          "id": "paper2bench-software",
-          "role": "Developer",
-          "name": "Paper2Bench",
-          "summary": "Benchmarks from research papers for reaction mechanisms, transition states, and synthesis."
+          "id": "rsi-for-science-software",
+          "role": "Contributor",
+          "name": "RSI for Science",
+          "url": "https://rsi4science.org/",
+          "summary": "Scientific datasets and benchmarks for self-improving AI, starting with molecular discovery."
         }
       ]
     }
