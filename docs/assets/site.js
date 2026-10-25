@@ -60,7 +60,7 @@ if (figureViewer) {
       if (figureViewer.open) return;
       const thumbnail = button.querySelector("img");
       openedFrom = button;
-      enlargedImage.src = thumbnail.currentSrc || thumbnail.src;
+      enlargedImage.src = button.dataset.figureSrc || thumbnail.currentSrc || thumbnail.src;
       enlargedImage.alt = thumbnail.alt;
       scrollPosition = { left: window.scrollX, top: window.scrollY };
       const body = document.body;

@@ -49,6 +49,13 @@ The image viewer closes with its Close button, Escape, or a backdrop click. It
 keeps keyboard focus inside while open, locks background scrolling, and restores
 the original reading position and thumbnail focus on close. CSS and JavaScript
 URLs include content hashes so updates do not reuse stale browser assets.
+Small previews remain in the publication list. The modal loads each available
+vector or higher-resolution original only when opened. MolP2SBench and OPSD use
+SVGs that preserve vector text and geometry (with source raster artwork or
+converted gradient fragments where necessary). The three Visual Abstracts and
+the review composition use higher-resolution publisher originals; these remain
+raster artwork. The JACS Figure 1 is already the original 1500 × 883 raster from
+the published PDF. Quality details are recorded alongside each source entry.
 
 | Work | Selected image |
 | --- | --- |
