@@ -42,9 +42,13 @@ CV assets, including the symbol-only Berkeley Lab mark.
 The Software list follows the layout of <https://hungqpham.com/#software>: role in the left column, project name and short description on the right, and thin dividers between rows. Typography retains this homepage’s original Inter font, heading weights, and body text styles; the reference is used for layout only. Entries come from this profile’s existing projects, grouped into Scientific packages and AI tools & benchmarks. Developer/Contributor labels reflect the existing CV; no leadership claim is inferred. DTCS-v.02 links are explicitly labeled as v.01 resources, and Paper2Bench has no invented public link.
 
 Publication figures follow the owner's selections on October 25, 2026. They appear
-beside each paper and open at full size when clicked, with intrinsic dimensions,
+beside each paper and enlarge in an on-page modal when clicked, with intrinsic dimensions,
 accessible descriptions, lazy loading, and responsive stacking on small screens.
 The existing homepage typography is unchanged.
+The image viewer closes with its Close button, Escape, or a backdrop click. It
+keeps keyboard focus inside while open, locks background scrolling, and restores
+the original reading position and thumbnail focus on close. CSS and JavaScript
+URLs include content hashes so updates do not reuse stale browser assets.
 
 | Work | Selected image |
 | --- | --- |

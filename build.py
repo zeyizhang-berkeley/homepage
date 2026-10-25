@@ -3,6 +3,7 @@ from pathlib import Path
 from html import escape
 import json
 import shutil
+import hashlib
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / 'dist'
@@ -12,6 +13,10 @@ NAV = [('about', 'About'), ('education', 'Education'), ('experience', 'Experienc
 
 def e(value):
     return escape(str(value), quote=True)
+
+def asset_url(path):
+    version = hashlib.sha256((ROOT / path).read_bytes()).hexdigest()[:12]
+    return path + '?v=' + version
 
 def link(url, text, cls='', download=False):
     attrs = ' class="' + e(cls) + '"' if cls else ''
@@ -66,7 +71,7 @@ def publication(p):
     figure = p.get('image')
     figure_html = ''
     if figure:
-        figure_html = '<figure class="pub__figure"><a class="pub__figure-link" href="' + e(figure['src']) + '" target="_blank" rel="noopener noreferrer" title="View full-size figure" aria-label="View full-size figure for ' + e(p['title']) + '"><img src="' + e(figure['src']) + '" alt="' + e(figure['alt']) + '" width="' + e(figure['width']) + '" height="' + e(figure['height']) + '" loading="lazy" decoding="async"></a></figure>'
+        figure_html = '<figure class="pub__figure"><button class="pub__figure-link" type="button" aria-haspopup="dialog" aria-controls="figure-lightbox" title="Enlarge figure" aria-label="Enlarge figure for ' + e(p['title']) + '"><img src="' + e(figure['src']) + '" alt="' + e(figure['alt']) + '" width="' + e(figure['width']) + '" height="' + e(figure['height']) + '" loading="lazy" decoding="async"></button></figure>'
     cls = 'pub pub--with-figure' if figure else 'pub'
     return '<article class="' + cls + '" id="paper-' + str(p['number']) + '" aria-label="Work ' + str(p['number']) + '">' + figure_html + '<div class="pub__body">' + title + ('<p class="pub__authors">' + authors + '</p>' if authors else '') + '<p class="pub__citation">' + citation + '</p>' + resources + '</div></article>'
 
@@ -190,6 +195,10 @@ def build():
 </head><body><a class="skip-link" href="#main">Skip to content</a><div class="shell"><aside class="side" aria-label="Profile and navigation">
 <div class="profile"><div class="profile__avatar" role="img" aria-label="Portrait placeholder"></div><div class="profile__identity"><h1 class="profile__name">Zeyi Zhang</h1><p class="profile__tagline">Ph.D. Candidate in Chemistry<br>University of California, Berkeley<br>Lawrence Berkeley National Laboratory</p></div></div>
 <p class="profile__location">Berkeley, California</p><ul class="links" aria-label="Contact and academic profiles">''' + social + '</ul>' + link('assets/Zeyi_Zhang_CV.pdf', icon('CV') + 'Download CV', 'cv-link', download=True) + '<nav class="toc" aria-label="On this page"><p class="toc__label">On this page</p><ol class="toc__list">' + nav + '</ol></nav><button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme" hidden>' + icon('Theme') + '<span>Dark theme</span></button></aside><main class="main" id="main">' + body + '<footer class="foot"><span>© 2026 Zeyi Zhang</span><a href="#about">Back to top ↑</a></footer></main></div></body></html>'
+    viewer = '<dialog class="figure-viewer" id="figure-lightbox" aria-label="Enlarged publication figure"><div class="figure-viewer__panel"><div class="figure-viewer__toolbar"><button class="figure-viewer__close" type="button" aria-label="Close enlarged figure" autofocus><span aria-hidden="true">×</span> Close</button></div><img class="figure-viewer__image" alt=""></div></dialog>'
+    html = html.replace('</body>', viewer + '</body>')
+    html = html.replace('href="assets/style.css"', 'href="' + asset_url('assets/style.css') + '"')
+    html = html.replace('src="assets/site.js"', 'src="' + asset_url('assets/site.js') + '"')
     (OUT / 'index.html').write_text(html)
     (OUT / '.nojekyll').write_text('')
     (OUT / 'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: ' + SITE_URL + 'sitemap.xml\n')
