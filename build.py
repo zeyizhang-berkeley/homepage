@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent
 OUT = ROOT / 'dist'
 DATA = json.loads((ROOT / 'data/profile.json').read_text())
 SITE_URL = 'https://zeyizhang-berkeley.github.io/homepage/'
-NAV = [('about', 'About'), ('education', 'Education'), ('experience', 'Experience'), ('publications', 'Publications'), ('research', 'Research'), ('software', 'Software'), ('teaching', 'Teaching'), ('mentorship', 'Mentorship')]
+NAV = [('about', 'About Me'), ('research', 'Research Interest'), ('education', 'Education'), ('experience', 'Experience'), ('publications', 'Publications'), ('software', 'Software'), ('teaching', 'Teaching'), ('mentorship', 'Mentorship')]
 
 def e(value):
     return escape(str(value), quote=True)
@@ -177,15 +177,16 @@ def build():
     links += [x for x in DATA['profile']['links'] if x['label'] == 'LinkedIn']
     social = ''.join('<li>' + link(x['url'], icon(x['label']) + e(x['label'])) + '</li>' for x in links)
     nav = ''.join('<li>' + link('#' + id_, e(label), 'is-active' if id_ == 'about' else '') + '</li>' for id_, label in NAV)
+    topbar = '<header class="topbar"><div class="topbar__inner">' + link('#about', 'Zeyi Zhang', 'topbar__name') + '<nav class="toc" aria-label="Section navigation"><ol class="toc__list">' + nav + '</ol></nav><button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme" hidden>' + icon('Theme') + '<span>Dark theme</span></button></div></header>'
     # Trusted, author-edited paragraph markup keeps the displayed biography in the profile data.
     intro = ''.join('<p>' + paragraph + '</p>' for paragraph in DATA['profile']['about_html'])
     pubs = '<div class="pubs">' + ''.join(publication(p) for p in DATA['publications'] if p['section'] == 'Publications') + '</div>'
     pubs += '<div class="subsection__head" id="manuscripts"><h3>Manuscripts</h3><p>Submitted, in preparation, and forthcoming</p></div><div class="pubs">' + ''.join(publication(p) for p in DATA['publications'] if p['section'] == 'Manuscripts') + '</div>'
-    body = section('about', 'About', intro, cls='intro')
+    body = section('about', 'About Me', intro, cls='intro')
+    body += section('research', 'Research Interest', build_research())
     body += section('education', 'Education', build_education(), panel=True)
     body += section('experience', 'Experience', build_experience(), panel=True)
     body += section('publications', 'Publications', pubs, '* Equal contribution')
-    body += section('research', 'Research', build_research())
     body += section('software', 'Software', build_software(), panel=True)
     body += section('teaching', 'Teaching', build_teaching(), panel=True)
     body += section('mentorship', 'Mentorship', build_mentorship(), panel=True)
@@ -202,9 +203,9 @@ def build():
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <script>try{const t=localStorage.getItem('zeyi-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
 <link rel="stylesheet" href="assets/style.css"><script src="assets/site.js" defer></script>
-</head><body><a class="skip-link" href="#main">Skip to content</a><div class="shell"><aside class="side" aria-label="Profile and navigation">
+</head><body><a class="skip-link" href="#main">Skip to content</a>''' + topbar + '''<div class="shell"><aside class="side" aria-label="Profile and contact information">
 <div class="profile"><div class="profile__avatar" role="img" aria-label="Portrait placeholder"></div><div class="profile__identity"><h1 class="profile__name">Zeyi Zhang</h1><p class="profile__tagline">Ph.D. Candidate in Chemistry<br>University of California, Berkeley<br>Lawrence Berkeley National Laboratory</p></div></div>
-<p class="profile__location">Berkeley, California</p><ul class="links" aria-label="Contact and academic profiles">''' + social + '</ul>' + link('assets/Zeyi_Zhang_CV.pdf', icon('CV') + 'Download CV', 'cv-link', download=True) + '<nav class="toc" aria-label="On this page"><p class="toc__label">On this page</p><ol class="toc__list">' + nav + '</ol></nav><button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme" hidden>' + icon('Theme') + '<span>Dark theme</span></button></aside><main class="main" id="main">' + body + '<footer class="foot"><span>© 2026 Zeyi Zhang</span><a href="#about">Back to top ↑</a></footer></main></div></body></html>'
+<p class="profile__location">Berkeley, California</p><ul class="links" aria-label="Contact and academic profiles">''' + social + '</ul>' + link('assets/Zeyi_Zhang_CV.pdf', icon('CV') + 'Download CV', 'cv-link', download=True) + '</aside><main class="main" id="main">' + body + '<footer class="foot"><span>© 2026 Zeyi Zhang</span><a href="#about">Back to top ↑</a></footer></main></div></body></html>'
     viewer = '<dialog class="figure-viewer" id="figure-lightbox" aria-label="Enlarged publication figure"><div class="figure-viewer__panel"><div class="figure-viewer__toolbar"><button class="figure-viewer__close" type="button" aria-label="Close enlarged figure" autofocus><span aria-hidden="true">×</span> Close</button></div><img class="figure-viewer__image" alt=""></div></dialog>'
     html = html.replace('</body>', viewer + '</body>')
     html = html.replace('href="assets/style.css"', 'href="' + asset_url('assets/style.css') + '"')

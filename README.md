@@ -1,6 +1,6 @@
 # zeyizhang-berkeley — Zeyi Zhang's academic homepage
 
-A responsive, single-page academic homepage with a sticky profile and section navigation, compact Education/Experience entries, publication rows, research cards, a light/dark theme switch, and the current CV download. The portrait is intentionally a blank white square.
+A responsive, single-page academic homepage with a sticky profile and a persistent top navigation bar, compact Education/Experience entries, publication rows, research cards, a light/dark theme switch, and the current CV download. The portrait is intentionally a blank white square.
 
 Target canonical URL: <https://zeyizhang-berkeley.github.io/homepage/>.
 
@@ -24,11 +24,13 @@ Publication order follows the current CV: works 1–7 under Publications and wor
 
 ## Design and provenance
 
-About paragraphs are maintained in `profile.about_html`; `research_highlights` holds the cross-project research summaries. Experience and Software use specific, compact phrases corresponding to the CV points. Detailed results stay in the source records and CV. Summary review preserves exploratory MLDFT wording, the QH9-orbital/HELM-spectral distinction, and the distinction between MLFF-assisted geometry initialization and DFT molecular dynamics.
+About paragraphs are maintained in `profile.about_html`; `research_highlights` holds the cross-project research summaries. Experience and Software use specific, grammatical phrases corresponding to the CV points, with explicit relationships between methods, actions, and applications. Detailed results stay in the source records and CV. Summary review preserves exploratory MLDFT wording, the QH9-orbital/HELM-spectral distinction, and the distinction between MLFF-assisted geometry initialization and DFT molecular dynamics.
 
 Experience entries show the organization, role, dates, and a compact sequence of specific phrases corresponding to the CV points. Research cards synthesize the complete CV into electronic structure and GPU computing, machine learning for quantum chemistry, and AI workflows and scientific reasoning. Software uses compact rows with the contribution role, project name, explicit [Code]/[Website] links, and a brief description; detailed project records remain in the source data and downloadable CV.
 
-The visual reference is <https://onehfr.github.io/>: off-white background, Inter typography, a 264 px sidebar, 960 px main column, 56 px column gap, understated red accents, section rules, and rounded white cards. No reference-site biography, images, publications, or personal assets are reused. Below 860 px, the sidebar becomes a compact profile with a sticky, horizontally scrollable section menu. The new homepage supersedes the previous separate-page design.
+The visual reference is <https://onehfr.github.io/>: off-white background, Inter typography, a 264 px sidebar, 960 px main column, 56 px column gap, understated red accents, section rules, and rounded white cards. No reference-site biography, images, publications, or personal assets are reused. Below 860 px, the sidebar becomes a compact profile; the top navigation remains accessible through horizontal scrolling. The new homepage supersedes the previous separate-page design.
+
+The section navigation follows the persistent top-bar structure of <https://hungqpham.com/> while retaining the homepage's Inter typography and colors. It appears above the profile and content, stays visible during scrolling, and highlights the current section. Navigation jumps directly to each section, and anchor offsets keep destination headings below the bar. The horizontally scrollable menu reveals the active item after page scrolling settles. Navigation and content share this order: About Me, Research Interest, Education, Experience, Publications, Software, Teaching, Mentorship. The former sidebar “On this page” menu is removed. Existing #about and #research links remain compatible.
 
 Inter is requested from Google Fonts with system-font fallbacks. There are no third-party scripts, analytics, or trackers. Theme preference stays in the visitor's browser.
 

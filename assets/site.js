@@ -17,12 +17,38 @@ if (themeButton) {
     updateThemeButton();
   });
 }
+const topbar = document.querySelector(".topbar");
+const navList = document.querySelector(".toc__list");
 const navLinks = Array.from(document.querySelectorAll('.toc a[href^="#"]'));
 const sections = navLinks.map(a => document.getElementById(a.hash.slice(1))).filter(Boolean);
+let headerHeight = 0;
 let scheduled = false;
+let activeSectionId = null;
+let navRevealTimer = null;
+function revealActiveLink() {
+  navRevealTimer = null;
+  if (!navList || navList.scrollWidth <= navList.clientWidth + 1 ||
+      document.querySelector(".figure-viewer[open]")) return;
+  const activeLink = navLinks.find(a => a.hash === `#${activeSectionId}`);
+  if (!activeLink) return;
+  const viewport = navList.getBoundingClientRect();
+  const item = activeLink.getBoundingClientRect();
+  if (item.left < viewport.left + 4) {
+    navList.scrollBy({ left: item.left - viewport.left - 4, behavior: "instant" });
+  } else if (item.right > viewport.right - 4) {
+    navList.scrollBy({ left: item.right - viewport.right + 4, behavior: "instant" });
+  }
+}
+function updateHeaderHeight() {
+  headerHeight = topbar ? Math.ceil(topbar.getBoundingClientRect().height) : 0;
+  root.style.setProperty("--header-height", `${headerHeight}px`);
+  activeSectionId = null;
+  scheduleUpdate();
+}
 function updateActiveSection() {
   scheduled = false;
-  const offset = Math.min(window.innerHeight * 0.28, 220);
+  if (!sections.length || document.querySelector(".figure-viewer[open]")) return;
+  const offset = headerHeight + 32;
   let current = sections[0];
   for (const section of sections) {
     if (section.getBoundingClientRect().top <= offset) current = section;
@@ -34,15 +60,24 @@ function updateActiveSection() {
     if (active) a.setAttribute("aria-current", "location");
     else a.removeAttribute("aria-current");
   });
+  activeSectionId = current.id;
+  // A second scroll container can interrupt Chromium's page smooth scroll.
+  // Wait until page scrolling (or a resize) has settled before revealing the tab.
+  clearTimeout(navRevealTimer);
+  navRevealTimer = setTimeout(revealActiveLink, 150);
 }
 function scheduleUpdate() {
   if (!scheduled) { scheduled = true; requestAnimationFrame(updateActiveSection); }
 }
 if (sections.length) {
   window.addEventListener("scroll", scheduleUpdate, { passive: true });
-  window.addEventListener("resize", scheduleUpdate, { passive: true });
+  window.addEventListener("resize", updateHeaderHeight, { passive: true });
   window.addEventListener("hashchange", scheduleUpdate);
-  window.addEventListener("load", updateActiveSection);
+  window.addEventListener("load", updateHeaderHeight);
+  if (topbar && typeof ResizeObserver !== "undefined") {
+    new ResizeObserver(updateHeaderHeight).observe(topbar);
+  }
+  updateHeaderHeight();
   updateActiveSection();
 }
 
