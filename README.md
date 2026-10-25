@@ -37,7 +37,7 @@ and resource links in lightly separated rows. The existing colors, sidebar, and
 research content are retained. Institution marks are reused from the approved
 CV assets, including the symbol-only Berkeley Lab mark.
 
-The Software list follows the layout of <https://hungqpham.com/#software>: role in the left column, project name and short description on the right, and thin dividers between rows. Entries come from this profile’s existing projects, grouped into Scientific packages and AI tools & benchmarks. Developer/Contributor labels reflect the existing CV; no leadership claim is inferred. DTCS-v.02 links are explicitly labeled as v.01 resources, and Paper2Bench has no invented public link.
+The Software list follows the layout of <https://hungqpham.com/#software>: role in the left column, project name and short description on the right, and thin dividers between rows. Typography retains this homepage’s original Inter font, heading weights, and body text styles; the reference is used for layout only. Entries come from this profile’s existing projects, grouped into Scientific packages and AI tools & benchmarks. Developer/Contributor labels reflect the existing CV; no leadership claim is inferred. DTCS-v.02 links are explicitly labeled as v.01 resources, and Paper2Bench has no invented public link.
 
 Publication figures are intentionally deferred until the owner selects the exact
 figure from each paper. A publication may then receive an `image` object in

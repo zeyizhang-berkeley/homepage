@@ -35,13 +35,13 @@
 .affiliation .exp__summary{margin-top:6px;font-size:13px;line-height:1.65}
 
 .software-group{scroll-margin-top:24px}.software-group+.software-group{margin-top:32px}
-.software-group>h3{margin:0;padding-bottom:14px;border-bottom:1px solid var(--line);font:500 12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--text)}
+.software-group>h3{margin:0;padding-bottom:14px;border-bottom:1px solid var(--line);font:600 17px/1.4 var(--sans);letter-spacing:-.012em;color:var(--text)}
 .software-list{list-style:none;padding:0;margin:0}
 .software__item{display:grid;grid-template-columns:110px minmax(0,1fr);gap:24px;padding:20px 0;scroll-margin-top:24px}
 .software__item+.software__item{border-top:1px solid var(--line)}
-.software__role{margin:3px 0 0;color:var(--muted);font:400 12px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace}
+.software__role{margin:3px 0 0;color:var(--muted);font:400 13px/1.65 var(--sans)}
 .software__role--developer{color:var(--accent)}
-.software__body{min-width:0}.software__body h4{margin:0 0 6px;font-size:16px;line-height:1.5;font-weight:500}
+.software__body{min-width:0}.software__body h4{margin:0 0 6px;font-size:17px;line-height:1.4;font-weight:600;letter-spacing:-.012em}
 .software__link{color:var(--text)}.software__link:hover{color:var(--accent)}
 .software__description{margin:0;color:var(--muted);font-size:14px;line-height:1.65}
 .software__resources{margin:7px 0 0;color:var(--faint);font-size:12.5px}
