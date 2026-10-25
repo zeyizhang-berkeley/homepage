@@ -543,7 +543,7 @@
         "height": 638,
         "full_src": "assets/papers/molp2s-figure1-vector.svg?v=fef65d4d7ade"
       },
-      "summary": "MolP2SBench tests whether language models use molecular properties to infer structure. Controlled property interventions distinguish prediction accuracy from reliance on the supplied evidence, revealing that stronger accuracy does not necessarily imply greater responsiveness to property changes."
+      "summary": "MolP2SBench evaluates seven LLMs on completing masked molecular scaffolds using 11 channels of NMR, vibrational, and electronic properties. With structural candidates fixed, shuffling properties tests reliance on correct pairings and substituting another candidate’s properties tests counterfactual responsiveness, revealing that these capabilities rank property channels differently."
     },
     {
       "number": 2,
@@ -589,7 +589,7 @@
         "height": 740,
         "full_src": "assets/papers/opsd-figure1-vector.svg?v=9e684137e18c"
       },
-      "summary": "OPSD adapts pretrained Hamiltonian models using corrections from a few self-consistent-field iterations, without new converged labels or differentiation through the solver. Experiments show improved orbital-energy predictions and transfer across molecular sizes, density functionals, and solvent conditions."
+      "summary": "OPSD uses the SCF solver as a teacher for pretrained flow models: short SCF runs correct their own Hamiltonian predictions, which become targets for iterative self-distillation. Without new converged labels or solver differentiation, it improves transfer across eight settings and reduces QH9 HOMO–LUMO gap errors by up to 70%."
     },
     {
       "number": 3,
