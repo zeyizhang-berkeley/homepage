@@ -158,7 +158,7 @@
           "links": []
         }
       ],
-      "homepage_summary": "GPU quantum chemistry, transition-metal reference data, and exploratory research on machine-learned DFT."
+      "homepage_summary": "THC for GPU HF and correlated methods; AFQMC transition-metal reference data; exploratory MLDFT training."
     },
     {
       "id": "lbnl",
@@ -306,7 +306,7 @@
           "links": []
         }
       ],
-      "homepage_summary": "Real-space DFT, chemical and semiconductor simulations, scientific reasoning benchmarks, and agentic spectroscopy."
+      "homepage_summary": "ML charge-density interfaces; multi-node/multi-GPU real-space DFT; MLFF-assisted structure initialization and GPU DFT geometry optimization/MD; XPS, interfaces, and CO₂ capture; MolP2SBench molecular reasoning; research-derived scientific benchmarks; scientific agent evaluation; multimodal gas-phase spectroscopy; agentic simulation workflows; semiconductor and lithography modeling."
     },
     {
       "id": "berkeley",
@@ -389,7 +389,7 @@
           "homepage_summary": "Machine-learned Hamiltonians and flow-matching models for electronic states and molecular properties."
         }
       ],
-      "homepage_summary": "Excited states, strong correlation, molecular photoionization, and machine learning for electronic structure and force fields."
+      "homepage_summary": "ROKS excitation EDA; frozen-orbital guesses for charge-transfer excitations; multireference C₂; photoionization-driven O–O bond formation in CO₂–H₂O clusters; label-free SCF self-distillation; orbital-response electronic force fields; manifold flow matching."
     },
     {
       "id": "qchem",
@@ -429,7 +429,7 @@
           ]
         }
       ],
-      "homepage_summary": "Complex-valued electronic-structure methods, orbital optimization, and energy decomposition."
+      "homepage_summary": "Complex-valued HF/DFT and correlated methods, orbital optimization, and EDA; frozen-orbital guesses for orbital-optimized DFT."
     },
     {
       "id": "nyu-ecnu",
@@ -457,7 +457,7 @@
           "links": []
         }
       ],
-      "homepage_summary": "Active learning of prebiotic reaction pathways and transition states."
+      "homepage_summary": "Active learning with DFT/ML potentials, MD, and NEB for prebiotic glycine pathways and transition states."
     },
     {
       "id": "sjtu",
@@ -480,7 +480,7 @@
           "links": []
         }
       ],
-      "homepage_summary": "Data-driven modeling of ionic-liquid properties and CO₂ solubility."
+      "homepage_summary": "Graph kernels and Gaussian processes for ionic-liquid properties and CO₂ solubility; ILThermo data pipelines."
     }
   ],
   "publications": [
@@ -1084,13 +1084,13 @@
           "role": "Developer",
           "name": "PARSEC.py",
           "url": "https://github.com/QianGroupPage/PARSEC.py",
-          "summary": "GPU-accelerated real-space DFT with machine-learned charge densities."
+          "summary": "ML charge densities; multi-node/multi-GPU real-space DFT; MLFF-assisted structure initialization; GPU DFT geometry optimization and MD."
         },
         {
           "id": "digital-twin",
           "role": "Developer",
           "name": "DTCS-v.02",
-          "summary": "Agentic workflows connecting quantum-chemical simulations with experimental spectroscopy.",
+          "summary": "Multimodal gas-phase spectroscopy; agentic simulation and spectroscopy workflows.",
           "links": [
             {
               "label": "v.01 Code",
@@ -1107,28 +1107,28 @@
           "role": "Contributor",
           "name": "Q-Chem",
           "url": "https://www.q-chem.com/",
-          "summary": "Complex-orbital methods and orbital optimization for quantum chemistry."
+          "summary": "Complex-valued HF/DFT and correlated methods; orbital optimization and EDA; frozen-orbital DFT guesses."
         },
         {
           "id": "gpu-quantum-chemistry",
           "role": "Contributor",
           "name": "ByteQC",
           "url": "https://github.com/bytedance/byteqc",
-          "summary": "GPU-accelerated methods for quantum chemistry."
+          "summary": "Tensor hypercontraction (THC) for GPU HF and correlated methods."
         },
         {
           "id": "gpu4pyscf-software",
           "role": "Contributor",
           "name": "GPU4PySCF",
           "url": "https://github.com/bytedance/gpu4pyscf",
-          "summary": "Efficient GPU algorithms for electronic-structure calculations."
+          "summary": "Tensor hypercontraction (THC) for GPU electronic-structure calculations."
         },
         {
           "id": "quantum-monte-carlo",
           "role": "Contributor",
           "name": "JaQMC",
           "url": "https://github.com/bytedance/jaqmc",
-          "summary": "Quantum Monte Carlo reference data for transition-metal systems."
+          "summary": "Auxiliary-field quantum Monte Carlo (AFQMC) for transition-metal reference data."
         }
       ]
     },
@@ -1141,14 +1141,14 @@
           "role": "Contributor",
           "name": "MolP2SBench",
           "url": "https://github.com/DUAL-Xiao/MolP2SBench",
-          "summary": "Benchmarks for molecular-structure reasoning from physical properties."
+          "summary": "Molecular reasoning from physical properties; shuffled and counterfactual evidence."
         },
         {
           "id": "rsi-for-science-software",
           "role": "Contributor",
           "name": "RSI for Science",
           "url": "https://rsi4science.org/",
-          "summary": "Scientific datasets and benchmarks for self-improving AI."
+          "summary": "Research-derived benchmarks for scientific reasoning and self-improvement."
         },
         {
           "id": "agents-last-exam-software",
