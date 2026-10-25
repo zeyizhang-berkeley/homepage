@@ -2,7 +2,7 @@
 
 A responsive, single-page academic homepage with a sticky profile and section navigation, compact Education/Experience entries, publication rows, research cards, a light/dark theme switch, and the current CV download. The portrait is intentionally a blank white square.
 
-Target canonical URL: <https://zeyizhang-berkeley.github.io/>.
+Target canonical URL: <https://zeyizhang-berkeley.github.io/homepage/>.
 
 ## Build
 
@@ -50,10 +50,10 @@ displayed in the meantime.
 
 ## GitHub Pages
 
-Repository: `zeyizhang-berkeley/zeyizhang-berkeley.github.io`.
+Repository: `zeyizhang-berkeley/homepage`.
 
 In Settings → Pages, select **Deploy from a branch**, **main**, **/docs**.
-The generated homepage is served at <https://zeyizhang-berkeley.github.io/>.
+The generated homepage is served at <https://zeyizhang-berkeley.github.io/homepage/>.
 
 After editing content, styles, figures, or the CV, run:
 

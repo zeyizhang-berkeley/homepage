@@ -7,7 +7,7 @@ import shutil
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / 'dist'
 DATA = json.loads((ROOT / 'data/profile.json').read_text())
-SITE_URL = 'https://zeyizhang-berkeley.github.io/'
+SITE_URL = 'https://zeyizhang-berkeley.github.io/homepage/'
 NAV = [('about', 'About'), ('education', 'Education'), ('experience', 'Experience'), ('publications', 'Publications'), ('research', 'Research'), ('software', 'Software'), ('teaching', 'Teaching'), ('mentorship', 'Mentorship')]
 
 def e(value):
@@ -180,8 +180,8 @@ def build():
 <meta name="description" content="Zeyi Zhang is a UC Berkeley chemistry Ph.D. candidate developing electronic-structure methods, GPU simulation software, and AI tools for molecular and materials research.">
 <meta name="theme-color" content="#fafaf8"><meta name="color-scheme" content="light dark">
 <meta property="og:title" content="zeyizhang-berkeley | Zeyi Zhang"><meta property="og:type" content="website">
-<meta property="og:site_name" content="zeyizhang-berkeley"><meta property="og:url" content="https://zeyizhang-berkeley.github.io/">
-<link rel="canonical" href="https://zeyizhang-berkeley.github.io/">
+<meta property="og:site_name" content="zeyizhang-berkeley"><meta property="og:url" content="https://zeyizhang-berkeley.github.io/homepage/">
+<link rel="canonical" href="https://zeyizhang-berkeley.github.io/homepage/">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
