@@ -543,7 +543,7 @@
         "height": 638,
         "full_src": "assets/papers/molp2s-figure1-vector.svg?v=fef65d4d7ade"
       },
-      "summary": "MolP2SBench evaluates seven LLMs on completing masked molecular scaffolds using 11 channels of NMR, vibrational, and electronic properties. With structural candidates fixed, shuffling properties tests reliance on correct pairings and substituting another candidate’s properties tests counterfactual responsiveness, revealing that these capabilities rank property channels differently."
+      "summary": "MolP2SBench evaluates how LLMs infer molecular structure from physical properties. By testing their reliance on the supplied evidence and their responses to changes in that evidence, it reveals strengths and limitations in property-grounded molecular reasoning."
     },
     {
       "number": 2,
@@ -589,7 +589,7 @@
         "height": 740,
         "full_src": "assets/papers/opsd-figure1-vector.svg?v=9e684137e18c"
       },
-      "summary": "OPSD uses the SCF solver as a teacher for pretrained flow models: short SCF runs correct their own Hamiltonian predictions, which become targets for iterative self-distillation. Without new converged labels or solver differentiation, it improves transfer across eight settings and reduces QH9 HOMO–LUMO gap errors by up to 70%."
+      "summary": "OPSD uses the self-consistent-field solver as a teacher for pretrained Hamiltonian models, turning corrections to their own predictions into learning signals. This iterative self-distillation improves accuracy and transferability while reducing dependence on costly reference calculations."
     },
     {
       "number": 3,
