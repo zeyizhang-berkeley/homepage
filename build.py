@@ -51,8 +51,10 @@ def people(items):
 def pubrefs(numbers):
     return '<span class="paper-refs">' + ' '.join(link('#paper-' + str(n), '[' + str(n) + ']') for n in numbers) + '</span>' if numbers else ''
 
-def section(id_, title, body, note='', cls=''):
+def section(id_, title, body, note='', cls='', panel=False):
     note_html = '<p class="section__note">' + note + '</p>' if note else ''
+    if panel:
+        body = '<div class="section-panel">' + body + '</div>'
     return '<section class="section ' + cls + '" id="' + id_ + '" aria-labelledby="' + id_ + '-title"><div class="section__head"><h2 id="' + id_ + '-title">' + title + '</h2>' + note_html + '</div>' + body + '</section>'
 
 def publication(p):
@@ -174,13 +176,13 @@ def build():
     pubs = '<div class="pubs">' + ''.join(publication(p) for p in DATA['publications'] if p['section'] == 'Publications') + '</div>'
     pubs += '<div class="subsection__head" id="manuscripts"><h3>Manuscripts</h3><p>Submitted, in preparation, and forthcoming</p></div><div class="pubs">' + ''.join(publication(p) for p in DATA['publications'] if p['section'] == 'Manuscripts') + '</div>'
     body = section('about', 'About', intro, cls='intro')
-    body += '<div class="career-panel">' + section('education', 'Education', build_education())
-    body += section('experience', 'Experience', build_experience()) + '</div>'
+    body += section('education', 'Education', build_education(), panel=True)
+    body += section('experience', 'Experience', build_experience(), panel=True)
     body += section('publications', 'Publications', pubs, '* Equal contribution')
     body += section('research', 'Research', build_research())
-    body += section('software', 'Software', build_software())
-    body += section('teaching', 'Teaching', build_teaching())
-    body += section('mentorship', 'Mentorship', build_mentorship())
+    body += section('software', 'Software', build_software(), panel=True)
+    body += section('teaching', 'Teaching', build_teaching(), panel=True)
+    body += section('mentorship', 'Mentorship', build_mentorship(), panel=True)
     html = '''<!doctype html><html lang="en" data-theme="light"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>zeyizhang-berkeley | Zeyi Zhang</title>

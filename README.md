@@ -37,7 +37,11 @@ The Education, Experience, and Publications layout follows the structural refere
 degree/role and right-aligned dates underneath, and paper titles, authors, venue,
 and resource links in lightly separated rows. The existing colors, sidebar, and
 research content are retained. Institution marks are reused from the approved
-CV assets, including the symbol-only Berkeley Lab mark.
+CV assets, including the symbol-only Berkeley Lab mark. Education, Experience,
+Software, Teaching, and Mentorship each place their main heading outside a
+separate rounded content panel, matching Publications. Panel borders, background,
+radius, and responsive horizontal padding use the same visual treatment;
+subheadings and existing entry typography remain inside their panel.
 
 Works 1–7 include concise, original summaries of their core methods or findings,
 reviewed against the papers on October 25, 2026. They appear below the venue and inline resource links, following the publication-summary placement at

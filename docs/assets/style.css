@@ -31,9 +31,7 @@
 .pub__resources{margin-left:12px;font-size:12.8px;font-style:normal}.pub__resources a{display:inline-block;white-space:nowrap}.pub__resources a+a{margin-left:9px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.chip{display:inline-flex;align-items:center;gap:6px;padding:3px 11px;border:1px solid var(--line);border-radius:999px;font-size:12.5px;font-weight:500;line-height:1.6;color:var(--text);background:var(--surface)}.chip svg{width:12px;height:12px}.chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
 .subsection__head{margin:32px 0 16px}.subsection__head h3{font-size:19px;font-weight:600;margin:0 0 3px;letter-spacing:-.015em}.subsection__head p{font-size:13px;color:var(--faint);margin:0}
-.career-panel{padding:26px 24px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);margin-bottom:40px}
-.career-panel .section{padding:0}.career-panel .section+.section{padding-top:24px;margin-top:24px}.career-panel .section__head{margin-bottom:20px}
-.career-panel+#publications{border-top:0;padding-top:0}
+.section-panel{min-width:0;padding:22px 24px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
 .affiliations{list-style:none;margin:0;padding:0;display:grid;gap:20px}
 .affiliation{display:grid;grid-template-columns:24px minmax(0,1fr);gap:10px;scroll-margin-top:24px}
 .affiliation__logo{display:flex;width:24px;height:26px;align-items:center;justify-content:center}
@@ -68,5 +66,5 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 @media print{.shell{display:block;padding:0}.side{position:static;max-height:none}.profile__avatar,.links,.toc,.theme-toggle,.cv-link,.foot{display:none!important}.profile__name{margin-top:0}.main{padding-top:24px}:root{--bg:#fff;--text:#111;--surface:#fff;--muted:#444;--line:#ddd}.pub,.project{break-inside:avoid}}
 
-@media(max-width:860px){.career-panel{padding:22px 18px;margin-bottom:32px}.affiliation{scroll-margin-top:72px}.pub--with-figure{grid-template-columns:minmax(0,36%) minmax(0,1fr);gap:18px}.pub{padding:20px 18px}.affiliation__role-date{flex-wrap:wrap;gap:1px 16px}}
-@media(max-width:540px){.career-panel{padding:20px 15px}.affiliation{grid-template-columns:22px minmax(0,1fr);gap:8px}.affiliation__logo,.affiliation__logo img{width:22px}.affiliation__role-date{display:block}.affiliation__role-date .exp__date{margin-top:2px}.affiliation__location{display:block}.pub--with-figure{grid-template-columns:1fr;gap:14px}.pub__figure{justify-content:flex-start}.pub__figure-link{width:min(100%,360px)}.pub__figure img{max-height:280px}.pub{padding:18px 16px}.pub h3{font-size:16px}}
+@media(max-width:860px){.section-panel{padding:20px 18px}.affiliation{scroll-margin-top:72px}.pub--with-figure{grid-template-columns:minmax(0,36%) minmax(0,1fr);gap:18px}.pub{padding:20px 18px}.affiliation__role-date{flex-wrap:wrap;gap:1px 16px}}
+@media(max-width:540px){.section-panel{padding:18px 16px}.affiliation{grid-template-columns:22px minmax(0,1fr);gap:8px}.affiliation__logo,.affiliation__logo img{width:22px}.affiliation__role-date{display:block}.affiliation__role-date .exp__date{margin-top:2px}.affiliation__location{display:block}.pub--with-figure{grid-template-columns:1fr;gap:14px}.pub__figure{justify-content:flex-start}.pub__figure-link{width:min(100%,360px)}.pub__figure img{max-height:280px}.pub{padding:18px 16px}.pub h3{font-size:16px}}
