@@ -533,7 +533,13 @@
           "label": "arXiv: 2610.12522 [physics.chem-ph]",
           "url": "https://arxiv.org/html/2610.12522v1"
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/papers/molp2s-figure1.png",
+        "alt": "MolP2SBench workflow and property interventions for molecular structure reasoning.",
+        "width": 1244,
+        "height": 638
+      }
     },
     {
       "number": 2,
@@ -571,7 +577,13 @@
           "label": "Submitted to ICLR 2027 (2026).",
           "url": "https://openreview.net/forum?id=l3ZCZaRFKC"
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/papers/opsd-figure1.png",
+        "alt": "On-policy self-distillation learns Hamiltonians from dense SCF corrections.",
+        "width": 1400,
+        "height": 740
+      }
     },
     {
       "number": 3,
@@ -616,7 +628,13 @@
           "label": "J. Comput. Chem. 47, e70482 (2026).",
           "url": "https://doi.org/10.1002/jcc.70482"
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/papers/realspace-graphical-abstract.png",
+        "alt": "Real-space grid representation of a molecule and the sparsity pattern of its Kohn–Sham Hamiltonian; graphical abstract from the Real-space KS-DFT review.",
+        "width": 520,
+        "height": 204
+      }
     },
     {
       "number": 4,
@@ -671,7 +689,13 @@
           "label": "J. Am. Chem. Soc. 148, 35681–35693 (2026).",
           "url": "https://doi.org/10.1021/jacs.6c07627"
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/papers/photoionization-figure1.png",
+        "alt": "Reaction pathways and ion products following photoionization of mixed carbon dioxide–water clusters, including oxygen–oxygen bond formation and hydrogen peroxide products.",
+        "width": 1500,
+        "height": 883
+      }
     },
     {
       "number": 5,
@@ -711,7 +735,13 @@
           "label": "J. Chem. Theory Comput. 22, 385–398 (2026).",
           "url": "https://doi.org/10.1021/acs.jctc.5c01738"
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/papers/rokseda-graphical-abstract.png",
+        "alt": "ROKS-EDA schematic connecting a ROKS orbital occupation diagram to OVOCV orbital and NOCV density-difference visualizations.",
+        "width": 520,
+        "height": 187
+      }
     },
     {
       "number": 6,
@@ -751,7 +781,13 @@
           "label": "Phys. Chem. Chem. Phys. 27, 17533–17547 (2025).",
           "url": "https://doi.org/10.1039/D5CP01867F"
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/papers/ctguess-graphical-abstract.png",
+        "alt": "Freeze-and-release squared-gradient minimization for charge-transfer excitations in a donor–acceptor cage.",
+        "width": 520,
+        "height": 370
+      }
     },
     {
       "number": 7,
@@ -801,7 +837,13 @@
           "label": "Chem. Commun. 61, 10273–10286 (2025).",
           "url": "https://doi.org/10.1039/D5CC01820J"
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/papers/realspace-figures-6-8-9.svg",
+        "alt": "Figures 6, 8 and 9: carbonate at the air–water interface, wood-derived carbon capture, and carbon dioxide on graphene.",
+        "width": 1040,
+        "height": 940
+      }
     },
     {
       "number": 8,

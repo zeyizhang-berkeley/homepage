@@ -7,9 +7,11 @@
 .pubs{display:grid;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
 .pub{min-width:0;padding:22px 24px;scroll-margin-top:24px}
 .pub+.pub{border-top:1px solid var(--line)}
-.pub--with-figure{display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;align-items:center}
+.pub--with-figure{display:grid;grid-template-columns:196px minmax(0,1fr);gap:24px;align-items:center}
 .pub__figure{margin:0;display:flex;align-items:center;justify-content:center;min-width:0}
-.pub__figure img{display:block;width:100%;height:auto;max-height:160px;object-fit:contain;border-radius:5px}
+.pub__figure-link{display:block;width:100%;padding:5px;background:#fff;border-radius:5px;cursor:zoom-in}
+.pub__figure-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.pub__figure img{display:block;width:100%;height:auto;max-height:190px;object-fit:contain}
 .pub__body{min-width:0}
 .pub h3,.announcement{margin:0 0 7px;font-size:16.5px;line-height:1.45;font-weight:500;letter-spacing:-.008em}
 .pub__authors{margin:0 0 5px;color:var(--muted);font-size:14px;line-height:1.65}
@@ -56,5 +58,5 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 @media print{.shell{display:block;padding:0}.side{position:static;max-height:none}.profile__avatar,.links,.toc,.theme-toggle,.cv-link,.foot{display:none!important}.profile__name{margin-top:0}.main{padding-top:24px}:root{--bg:#fff;--text:#111;--surface:#fff;--muted:#444;--line:#ddd}.pub,.project{break-inside:avoid}}
 
-@media(max-width:860px){.career-panel{padding:22px 18px;margin-bottom:32px}.affiliation{scroll-margin-top:72px}.pub--with-figure{grid-template-columns:120px minmax(0,1fr);gap:18px}.pub{padding:20px 18px}.affiliation__role-date{flex-wrap:wrap;gap:1px 16px}}
-@media(max-width:540px){.career-panel{padding:20px 15px}.affiliation{grid-template-columns:22px minmax(0,1fr);gap:8px}.affiliation__logo,.affiliation__logo img{width:22px}.affiliation__role-date{display:block}.affiliation__role-date .exp__date{margin-top:2px}.affiliation__location{display:block}.pub--with-figure{grid-template-columns:1fr;gap:14px}.pub__figure{justify-content:flex-start}.pub__figure img{width:auto;max-width:200px;max-height:140px}.pub{padding:18px 16px}.pub h3{font-size:16px}}
+@media(max-width:860px){.career-panel{padding:22px 18px;margin-bottom:32px}.affiliation{scroll-margin-top:72px}.pub--with-figure{grid-template-columns:160px minmax(0,1fr);gap:18px}.pub{padding:20px 18px}.affiliation__role-date{flex-wrap:wrap;gap:1px 16px}}
+@media(max-width:540px){.career-panel{padding:20px 15px}.affiliation{grid-template-columns:22px minmax(0,1fr);gap:8px}.affiliation__logo,.affiliation__logo img{width:22px}.affiliation__role-date{display:block}.affiliation__role-date .exp__date{margin-top:2px}.affiliation__location{display:block}.pub--with-figure{grid-template-columns:1fr;gap:14px}.pub__figure{justify-content:flex-start}.pub__figure-link{width:min(100%,280px)}.pub__figure img{max-height:220px}.pub{padding:18px 16px}.pub h3{font-size:16px}}

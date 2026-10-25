@@ -1,0 +1,169 @@
+{
+  "selected_on": "2026-10-25",
+  "figures": [
+    {
+      "publication_id": 1,
+      "figure": "Figure 1",
+      "file": "molp2s-figure1.png",
+      "dimensions_px": [
+        1244,
+        638
+      ],
+      "source_url": "https://arxiv.org/html/2610.12522v1",
+      "source_asset_url": "https://arxiv.org/html/2610.12522v1/figure1.png",
+      "method": "Downloaded original arXiv HTML figure asset unchanged; verified full figure against Figure 1 caption.",
+      "alt": "MolP2SBench workflow and property interventions for molecular structure reasoning.",
+      "sha256": "4fe34c77323e295686df57463f48fbb256488beb3509d64e9506f333f403350d"
+    },
+    {
+      "publication_id": 2,
+      "figure": "Figure 1",
+      "file": "opsd-figure1.png",
+      "dimensions_px": [
+        1400,
+        740
+      ],
+      "source_url": "https://openreview.net/forum?id=l3ZCZaRFKC",
+      "source_pdf_sha256": "800fdb863992e626bd3b7be0a99bb1ffac14f5b1ce8c37976a5cc855c2cf17d0",
+      "source_page_one_based": 2,
+      "crop_points_top_left": [
+        130,
+        78,
+        480,
+        263
+      ],
+      "render_scale": 4,
+      "dpi": 288,
+      "method": "Rendered exact PDF vector figure; removed line-number margin and caption only. Full diagram labels and graphics retained.",
+      "alt": "On-policy self-distillation learns Hamiltonians from dense SCF corrections.",
+      "sha256": "32bc8924484632ebba1621ed420ffd3dcbd6c45c65201740813efe5eaee43c34"
+    },
+    {
+      "publication_id": 3,
+      "figure": "Publisher Visual Abstract",
+      "file": "realspace-graphical-abstract.png",
+      "dimensions_px": [
+        520,
+        204
+      ],
+      "source_url": "https://pubs.rsc.org/cc/article/61/56/10273/882519/Real-space-Kohn-Sham-density-functional-theory-for",
+      "source_asset_filename": "m_d5cc01820j-ga.png",
+      "method": "Downloaded the original displayed PNG from the publisher article using Chrome Save Image; all labels and content preserved.",
+      "verified_against_publisher": true,
+      "selected_for_other_paper": true,
+      "sha256": "425e7fc4d3ce8b4c7ad857c352c203787e2c52b821305608b89148e01bec9dc1"
+    },
+    {
+      "publication": 4,
+      "doi": "10.1021/jacs.6c07627",
+      "figure": "Figure 1",
+      "file": "photoionization-figure1.png",
+      "page": 2,
+      "printed_page": "35682",
+      "source_url": "https://pubs.acs.org/doi/10.1021/jacs.6c07627",
+      "source_type": "final publisher PDF",
+      "alt": "Reaction pathways and ion products following photoionization of mixed carbon dioxide–water clusters, including oxygen–oxygen bond formation and hydrogen peroxide products.",
+      "verification": "Visually checked original PDF page and extracted figure. Original embedded raster image; no crop, resampling, redrawing, or content edits.",
+      "width": 1500,
+      "height": 883,
+      "pdf_bbox_points": [
+        123.47699737548828,
+        60.435028076171875,
+        483.47698974609375,
+        272.35302734375
+      ],
+      "sha256": "25db629d8b336ca2dc74be8330fc430efe3e184cce6eb5815243cdd696994861"
+    },
+    {
+      "publication_id": 5,
+      "figure": "Publisher Visual Abstract",
+      "file": "rokseda-graphical-abstract.png",
+      "dimensions_px": [
+        520,
+        187
+      ],
+      "source_url": "https://doi.org/10.1021/acs.jctc.5c01738",
+      "source_asset_filename": "m_ct5c01738_0011.png",
+      "method": "Downloaded the original displayed PNG from the publisher article using Chrome Save Image; all labels and content preserved.",
+      "verified_against_publisher": true,
+      "selected_for_other_paper": false,
+      "sha256": "4ca94a53ff15681035cdce7d3f71836a342c81eff76fb67d18e66f3871f3b791"
+    },
+    {
+      "publication_id": 6,
+      "figure": "Publisher Visual Abstract",
+      "file": "ctguess-graphical-abstract.png",
+      "dimensions_px": [
+        520,
+        370
+      ],
+      "source_url": "https://pubs.rsc.org/cp/article/27/33/17533/886712/An-improved-guess-for-the-variational-calculation",
+      "source_asset_filename": "m_d5cp01867f-ga.png",
+      "method": "Downloaded the original displayed PNG from the publisher article using Chrome Save Image; all labels and content preserved.",
+      "verified_against_publisher": true,
+      "selected_for_other_paper": false,
+      "sha256": "7ae851682c7747597fe9e6bf1dff502b191bb86de98c4928df0eca3a423d1864"
+    },
+    {
+      "publication_id": 7,
+      "figure": "Figures 6, 8 and 9",
+      "file": "realspace-figures-6-8-9.svg",
+      "dimensions_px": [
+        1040,
+        940
+      ],
+      "source_url": "https://www.osti.gov/servlets/purl/2584094",
+      "doi": "10.1039/D5CC01820J",
+      "method": "Intact original embedded JPEG figures arranged in an SVG composition; only figure-number labels and white spacing added.",
+      "components": [
+        {
+          "figure": 6,
+          "filename": "d5cc01820j-figure-6.jpg",
+          "dimensions": [
+            977,
+            440
+          ],
+          "sha256": "ff2222a6d42d56d0caa8f0be66829cfc02da3c33f6a075d1903d7821b1de81ff",
+          "pdf_page_one_based": 9,
+          "journal_page": 10280,
+          "caption_summary": "Schematic of the experimental design for probing a carbonate cluster residing near the liquid water surface.",
+          "original_source_reference": 88,
+          "figure_license_in_caption": "CC BY 4.0",
+          "visually_verified": true
+        },
+        {
+          "figure": 8,
+          "filename": "d5cc01820j-figure-8.jpg",
+          "dimensions": [
+            977,
+            628
+          ],
+          "sha256": "7fd6e78ab0dc9cde50efe0190443a2b9932b84e98f7a854072809cbbe219fdaa",
+          "pdf_page_one_based": 10,
+          "journal_page": 10281,
+          "caption_summary": "Schematic showing steam-assisted temperature vacuum swing desorption with wood-derived activated carbon as the CO2 adsorbent and dynamic energy supply.",
+          "original_source_reference": 94,
+          "figure_license_in_caption": "CC BY 4.0",
+          "visually_verified": true
+        },
+        {
+          "figure": 9,
+          "filename": "d5cc01820j-figure-9.jpg",
+          "dimensions": [
+            977,
+            719
+          ],
+          "sha256": "c0954b9d4fc66700e4e80f5a9a7afd92dee90e92d7ed728d532a27a871bb8b38",
+          "pdf_page_one_based": 10,
+          "journal_page": 10281,
+          "caption_summary": "CO2 configurations on pristine graphene sheets containing 36, 252, 780, and 1152 carbon atoms, using ARES.",
+          "original_source_reference": 94,
+          "figure_license_in_caption": "CC BY 4.0",
+          "visually_verified": true
+        }
+      ],
+      "sha256": "756fe13f934397b7c23adcc22a47309bf323abb803cb2fb6a4188d50aed7c438"
+    }
+  ],
+  "pending": []
+}

@@ -66,7 +66,7 @@ def publication(p):
     figure = p.get('image')
     figure_html = ''
     if figure:
-        figure_html = '<figure class="pub__figure"><img src="' + e(figure['src']) + '" alt="' + e(figure['alt']) + '" loading="lazy" decoding="async"></figure>'
+        figure_html = '<figure class="pub__figure"><a class="pub__figure-link" href="' + e(figure['src']) + '" target="_blank" rel="noopener noreferrer" title="View full-size figure" aria-label="View full-size figure for ' + e(p['title']) + '"><img src="' + e(figure['src']) + '" alt="' + e(figure['alt']) + '" width="' + e(figure['width']) + '" height="' + e(figure['height']) + '" loading="lazy" decoding="async"></a></figure>'
     cls = 'pub pub--with-figure' if figure else 'pub'
     return '<article class="' + cls + '" id="paper-' + str(p['number']) + '" aria-label="Work ' + str(p['number']) + '">' + figure_html + '<div class="pub__body">' + title + ('<p class="pub__authors">' + authors + '</p>' if authors else '') + '<p class="pub__citation">' + citation + '</p>' + resources + '</div></article>'
 
