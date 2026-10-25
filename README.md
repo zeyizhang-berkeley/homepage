@@ -28,7 +28,7 @@ About paragraphs are maintained in `profile.about_html`; `research_highlights` h
 
 Experience entries show the organization, role, dates, and one sentence about the work. Research cards synthesize the complete CV into electronic structure and GPU computing, machine learning for quantum chemistry, and AI workflows and scientific reasoning. Software uses compact rows with the contribution role, linked project name, and one-line description; detailed project records remain in the source data and downloadable CV.
 
-The visual reference is <https://onehfr.github.io/>: off-white background, Inter typography, a 264 px sidebar, 760 px main column, 56 px column gap, understated red accents, section rules, and rounded white cards. No reference-site biography, images, publications, or personal assets are reused. Below 860 px, the sidebar becomes a compact profile with a sticky, horizontally scrollable section menu. The new homepage supersedes the previous separate-page design.
+The visual reference is <https://onehfr.github.io/>: off-white background, Inter typography, a 264 px sidebar, 960 px main column, 56 px column gap, understated red accents, section rules, and rounded white cards. No reference-site biography, images, publications, or personal assets are reused. Below 860 px, the sidebar becomes a compact profile with a sticky, horizontally scrollable section menu. The new homepage supersedes the previous separate-page design.
 
 Inter is requested from Google Fonts with system-font fallbacks. There are no third-party scripts, analytics, or trackers. Theme preference stays in the visitor's browser.
 
@@ -40,8 +40,7 @@ research content are retained. Institution marks are reused from the approved
 CV assets, including the symbol-only Berkeley Lab mark.
 
 Works 1–7 include concise, original summaries of their core methods or findings,
-reviewed against the papers on October 25, 2026. They appear between the venue
-and resource links, following the publication-summary placement at
+reviewed against the papers on October 25, 2026. They appear below the venue and inline resource links, following the publication-summary placement at
 <https://masterzhou1.github.io/> while retaining this homepage's typography.
 Edit each publication's `summary` in `data/profile.json` to revise this text.
 Manuscripts 8–10 retain their existing descriptions and status.
@@ -51,12 +50,12 @@ The Software list follows the layout of <https://hungqpham.com/#software>: role 
 Publication figures follow the owner's selections on October 25, 2026. They appear
 beside each paper and enlarge in an on-page modal when clicked, with intrinsic dimensions,
 accessible descriptions, lazy loading, and responsive stacking on small screens.
-Publication rows retain the original Inter family, font weights, line heights, and spacing. Only font sizes are compacted: titles are 16 px and authors, citations, summaries, and resource links are 12.8 px, following the reference site's smaller supporting text.
+Publication rows retain the original Inter family, font weights, and line heights. Font sizes are compacted: titles are 16 px and authors, citations, summaries, and resource links are 12.8 px, following the reference site's smaller supporting text.
 The image viewer closes with its Close button, Escape, or a backdrop click. It
 keeps keyboard focus inside while open, locks background scrolling, and restores
 the original reading position and thumbnail focus on close. CSS and JavaScript
 URLs include content hashes so updates do not reuse stale browser assets.
-Small previews remain in the publication list. The modal loads each available
+The main column is widened to 960 px. Publication figures occupy 36% of each two-column row, with a 280 px height limit and their original aspect ratios. Small screens stack figures above text, with previews up to 360 px wide. Paper and related links follow the venue or submission status inline, separated by 12 px, and wrap naturally when needed. Previews remain in the publication list. The modal loads each available
 vector or higher-resolution original only when opened. MolP2SBench and OPSD use
 SVGs that preserve vector text and geometry (with source raster artwork or
 converted gradient fragments where necessary). The three Visual Abstracts and
