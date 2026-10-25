@@ -117,11 +117,14 @@ def build_software():
     for group in DATA['software_groups']:
         rows = []
         for item in group['items']:
-            name = link(item['url'], e(item['name']), 'software__link') if item.get('url') else e(item['name'])
+            name = e(item['name'])
             role_class = ' software__role--developer' if item['role'] == 'Developer' else ''
-            resources = item.get('links', [])
-            links_html = '<p class="software__resources">' + ' · '.join(link(r['url'], e(r['label'])) for r in resources) + '</p>' if resources else ''
-            rows.append('<li class="software__item" id="' + e(item['id']) + '"><p class="software__role' + role_class + '">' + e(item['role']) + '</p><div class="software__body"><h4>' + name + '</h4><p class="software__description">' + e(item['summary']) + '</p>' + links_html + '</div></li>')
+            resources = list(item.get('links', []))
+            if item.get('url'):
+                label = 'Code' if item['url'].startswith('https://github.com/') else 'Website'
+                resources.insert(0, {'url': item['url'], 'label': label})
+            links_html = ' <span class="software__resources">' + ' '.join(link(r['url'], '[' + e(r['label']) + ']') for r in resources) + '</span>' if resources else ''
+            rows.append('<li class="software__item" id="' + e(item['id']) + '"><p class="software__role' + role_class + '">' + e(item['role']) + '</p><div class="software__body"><h4>' + name + links_html + '</h4><p class="software__description">' + e(item['summary']) + '</p></div></li>')
         groups.append('<div class="software-group" id="' + e(group['id']) + '"><h3>' + e(group['title']) + '</h3><ol class="software-list">' + ''.join(rows) + '</ol></div>')
     return ''.join(groups)
 

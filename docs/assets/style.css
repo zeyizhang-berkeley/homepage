@@ -52,9 +52,8 @@
 .software__role{margin:3px 0 0;color:var(--muted);font:400 13px/1.65 var(--sans)}
 .software__role--developer{color:var(--accent)}
 .software__body{min-width:0}.software__body h4{margin:0 0 6px;font-size:17px;line-height:1.4;font-weight:600;letter-spacing:-.012em}
-.software__link{color:var(--text)}.software__link:hover{color:var(--accent)}
 .software__description{margin:0;color:var(--muted);font-size:14px;line-height:1.65}
-.software__resources{margin:7px 0 0;color:var(--faint);font-size:12.5px}
+.software__resources{margin-left:10px;font-size:12.5px;font-weight:400;letter-spacing:normal}.software__resources a{display:inline-block;white-space:nowrap}.software__resources a+a{margin-left:9px}
 @media(max-width:860px){.software-group,.software__item{scroll-margin-top:72px}}
 @media(max-width:540px){.software__item{grid-template-columns:1fr;gap:5px;padding:18px 0}.software__role{margin:0}.software-group+.software-group{margin-top:24px}}
 
