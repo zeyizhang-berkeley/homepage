@@ -1,6 +1,6 @@
 # zeyizhang-berkeley — Zeyi Zhang's academic homepage
 
-A responsive, single-page academic homepage with a sticky profile and a persistent top navigation bar, compact Education/Experience entries, publication rows, research cards, a light/dark theme switch, and the current CV download. The portrait is intentionally a blank white square.
+A responsive, single-page academic homepage with a sticky profile and a persistent top navigation bar, compact Education/Experience entries, publication rows, research cards, a light/dark theme switch, and a link to view the current CV PDF. The portrait is intentionally a blank white square.
 
 Target canonical URL: <https://zeyizhang-berkeley.github.io/homepage/>.
 
@@ -18,7 +18,7 @@ The dependency-free Python build writes `dist/index.html`, assets, and compatibi
 - Page composition and content rendering: `build.py`.
 - Visual styles and responsive layout: `assets/style.css`.
 - Local theme preference and section tracking: `assets/site.js`.
-- Downloadable CV: `assets/Zeyi_Zhang_CV.pdf`; replace and rebuild when the CV changes.
+- CV PDF: `assets/Zeyi_Zhang_CV.pdf`; replace and rebuild when the CV changes.
 
 Publication order follows the current CV: works 1–7 under Publications and works 8–10 under Manuscripts. Submission and preparation status is explicit. Work 10 is a forthcoming Q-Chem manuscript announcement without an invented title or author list. Publication titles are plain text; links belong to citations or labeled resources. Paper2Bench has no invented demo URL. No private manuscript or Overleaf links are published.
 
@@ -31,6 +31,8 @@ Experience entries show the organization, role, dates, and a compact sequence of
 The visual reference is <https://onehfr.github.io/>: off-white background, Inter typography, a 264 px sidebar, 960 px main column, 56 px column gap, understated red accents, section rules, and rounded white cards. No reference-site biography, images, publications, or personal assets are reused. Below 860 px, the sidebar becomes a compact profile; the top navigation remains accessible through horizontal scrolling. The new homepage supersedes the previous separate-page design.
 
 The section navigation follows the persistent top-bar structure of <https://hungqpham.com/> while retaining the homepage's Inter typography and colors. It appears above the profile and content, stays visible during scrolling, and highlights the current section. Navigation jumps directly to each section, and anchor offsets keep destination headings below the bar. The horizontally scrollable menu reveals the active item after page scrolling settles. Navigation and content share this order: About Me, Research Interest, Education, Experience, Publications, Software, Teaching, Mentorship. The former sidebar “On this page” menu is removed. Existing #about and #research links remain compatible.
+
+The “View CV” button links directly to `assets/Zeyi_Zhang_CV.pdf` in the current tab, without an HTML download attribute, so the browser can display the PDF inline.
 
 Inter is requested from Google Fonts with system-font fallbacks. There are no third-party scripts, analytics, or trackers. Theme preference stays in the visitor's browser.
 
