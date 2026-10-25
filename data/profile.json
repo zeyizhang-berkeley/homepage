@@ -997,5 +997,83 @@
         }
       ]
     }
+  ],
+  "software_groups": [
+    {
+      "id": "scientific-packages",
+      "title": "Scientific packages",
+      "items": [
+        {
+          "id": "parsec-software",
+          "role": "Developer",
+          "name": "PARSEC.py",
+          "url": "https://github.com/QianGroupPage/PARSEC.py",
+          "summary": "GPU-accelerated real-space DFT with machine-learned charge densities."
+        },
+        {
+          "id": "gpu-quantum-chemistry",
+          "role": "Contributor",
+          "name": "ByteQC",
+          "url": "https://github.com/bytedance/byteqc",
+          "summary": "GPU-accelerated Hartree–Fock and correlated electronic-structure methods."
+        },
+        {
+          "id": "gpu4pyscf-software",
+          "role": "Contributor",
+          "name": "GPU4PySCF",
+          "url": "https://github.com/bytedance/gpu4pyscf",
+          "summary": "GPU acceleration for electronic-structure calculations in PySCF."
+        },
+        {
+          "id": "quantum-monte-carlo",
+          "role": "Contributor",
+          "name": "JaQMC",
+          "url": "https://github.com/bytedance/jaqmc",
+          "summary": "Quantum Monte Carlo workflows for transition-metal reference data."
+        },
+        {
+          "id": "qchem-software",
+          "role": "Contributor",
+          "name": "Q-Chem",
+          "url": "https://www.q-chem.com/",
+          "summary": "Complex-valued orbital methods and improved orbital-optimization guesses."
+        }
+      ]
+    },
+    {
+      "id": "rsi-science",
+      "title": "AI tools & benchmarks",
+      "items": [
+        {
+          "id": "digital-twin",
+          "role": "Developer",
+          "name": "DTCS-v.02",
+          "summary": "Agentic workflows connecting quantum-chemical simulations and experimental spectroscopy.",
+          "links": [
+            {
+              "label": "v.01 Code",
+              "url": "https://github.com/QianGroupPage/DTCS-v.01"
+            },
+            {
+              "label": "v.01 Paper",
+              "url": "https://www.nature.com/articles/s43588-025-00857-y"
+            }
+          ]
+        },
+        {
+          "id": "molp2sbench-software",
+          "role": "Contributor",
+          "name": "MolP2SBench",
+          "url": "https://github.com/DUAL-Xiao/MolP2SBench",
+          "summary": "Benchmarks testing molecular structure inference from physical properties."
+        },
+        {
+          "id": "paper2bench-software",
+          "role": "Developer",
+          "name": "Paper2Bench",
+          "summary": "Benchmarks built from research papers to evaluate scientific reasoning."
+        }
+      ]
+    }
   ]
 }

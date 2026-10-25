@@ -24,7 +24,7 @@ Publication order follows the current CV: works 1–7 under Publications and wor
 
 ## Design and provenance
 
-Experience entries show the organization, role, dates, and one sentence about the work. Research & Software cards use concise homepage summaries and primary links; detailed project records remain in the source data and downloadable CV.
+Experience entries show the organization, role, dates, and one sentence about the work. Research cards summarize the scientific directions. Software uses compact rows with the contribution role, linked project name, and one-line description; detailed project records remain in the source data and downloadable CV.
 
 The visual reference is <https://onehfr.github.io/>: off-white background, Inter typography, a 264 px sidebar, 760 px main column, 56 px column gap, understated red accents, section rules, and rounded white cards. No reference-site biography, images, publications, or personal assets are reused. Below 860 px, the sidebar becomes a compact profile with a sticky, horizontally scrollable section menu. The new homepage supersedes the previous separate-page design.
 
@@ -36,6 +36,8 @@ degree/role and right-aligned dates underneath, and paper titles, authors, venue
 and resource links in lightly separated rows. The existing colors, sidebar, and
 research content are retained. Institution marks are reused from the approved
 CV assets, including the symbol-only Berkeley Lab mark.
+
+The Software list follows the layout of <https://hungqpham.com/#software>: role in the left column, project name and short description on the right, and thin dividers between rows. Entries come from this profile’s existing projects, grouped into Scientific packages and AI tools & benchmarks. Developer/Contributor labels reflect the existing CV; no leadership claim is inferred. DTCS-v.02 links are explicitly labeled as v.01 resources, and Paper2Bench has no invented public link.
 
 Publication figures are intentionally deferred until the owner selects the exact
 figure from each paper. A publication may then receive an `image` object in

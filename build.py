@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parent
 OUT = ROOT / 'dist'
 DATA = json.loads((ROOT / 'data/profile.json').read_text())
 SITE_URL = 'https://zeyizhang-berkeley.github.io/'
-NAV = [('about', 'About'), ('education', 'Education'), ('experience', 'Experience'), ('publications', 'Publications'), ('research', 'Research & Software'), ('teaching', 'Teaching'), ('mentorship', 'Mentorship')]
+NAV = [('about', 'About'), ('education', 'Education'), ('experience', 'Experience'), ('publications', 'Publications'), ('research', 'Research'), ('software', 'Software'), ('teaching', 'Teaching'), ('mentorship', 'Mentorship')]
 
 def e(value):
     return escape(str(value), quote=True)
@@ -95,21 +95,27 @@ def project_card(p, id_, label='', wide=False):
 
 def build_research():
     exp = {x['id']: x for x in DATA['experience']}
-    lbnl, berkeley, byte, qchem = [exp[k]['projects'] for k in ['lbnl', 'berkeley', 'bytedance', 'qchem']]
-    cards = project_card(lbnl[0], 'parsec-software', 'Real-space electronic structure', True)
-    cards += project_card(byte[0], 'gpu-quantum-chemistry', 'GPU algorithms')
-    cards += project_card(byte[1], 'quantum-monte-carlo', 'Accurate reference data')
-    cards += project_card(lbnl[1], 'rsi-science', 'AI for science', True)
-    cards += project_card(lbnl[2], 'digital-twin', 'Theory and experiment')
-    q = dict(qchem[0]); q['name'] = 'Q-Chem'; q['links'] = qchem[1]['links']; q['details'] = [{'text': qchem[1]['summary'], 'publication_numbers': [10]}]
-    cards += project_card(q, 'qchem-software', 'Scientific software')
-    cards += project_card(berkeley[0], 'excited-states', 'Electronic structure', True)
+    berkeley = exp['berkeley']['projects']
+    cards = project_card(berkeley[0], 'excited-states', 'Electronic structure', True)
     cards += project_card(berkeley[2], 'machine-learning', 'Machine learning')
     cards += project_card(berkeley[1], 'spectroscopy', 'Chemical reactions')
     skills = DATA['skills']
     labels = [('programming_languages', 'Programming'), ('scientific_computing_and_ml_frameworks', 'Scientific computing & ML'), ('simulation_software', 'Simulation software'), ('coding_agents', 'Coding agents')]
     skill_html = '<div class="toolkit"><h3>Tools I work with</h3><dl>' + ''.join('<div><dt>' + e(label) + '</dt><dd>' + e(', '.join(skills[key])) + '</dd></div>' for key, label in labels) + '</dl></div>'
     return '<div class="projects">' + cards + '</div>' + skill_html
+
+def build_software():
+    groups = []
+    for group in DATA['software_groups']:
+        rows = []
+        for item in group['items']:
+            name = link(item['url'], e(item['name']), 'software__link') if item.get('url') else e(item['name'])
+            role_class = ' software__role--developer' if item['role'] == 'Developer' else ''
+            resources = item.get('links', [])
+            links_html = '<p class="software__resources">' + ' · '.join(link(r['url'], e(r['label'])) for r in resources) + '</p>' if resources else ''
+            rows.append('<li class="software__item" id="' + e(item['id']) + '"><p class="software__role' + role_class + '">' + e(item['role']) + '</p><div class="software__body"><h4>' + name + '</h4><p class="software__description">' + e(item['summary']) + '</p>' + links_html + '</div></li>')
+        groups.append('<div class="software-group" id="' + e(group['id']) + '"><h3>' + e(group['title']) + '</h3><ol class="software-list">' + ''.join(rows) + '</ol></div>')
+    return ''.join(groups)
 
 def build_experience():
     rows = []
@@ -170,7 +176,8 @@ def build():
     body += '<div class="career-panel">' + section('education', 'Education', build_education())
     body += section('experience', 'Experience', build_experience()) + '</div>'
     body += section('publications', 'Publications', pubs, '* Equal contribution')
-    body += section('research', 'Research &amp; Software', build_research())
+    body += section('research', 'Research', build_research())
+    body += section('software', 'Software', build_software())
     body += section('teaching', 'Teaching', build_teaching())
     body += section('mentorship', 'Mentorship', build_mentorship())
     html = '''<!doctype html><html lang="en" data-theme="light"><head>
@@ -193,7 +200,7 @@ def build():
     (OUT / '.nojekyll').write_text('')
     (OUT / 'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: ' + SITE_URL + 'sitemap.xml\n')
     (OUT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>' + SITE_URL + '</loc></url></urlset>')
-    aliases = {'software': 'research', 'q-chem': 'qchem-software', 'real-space': 'parsec-software', 'ecnu': 'nyu-ecnu'}
+    aliases = {'q-chem': 'qchem-software', 'real-space': 'parsec-software', 'ecnu': 'nyu-ecnu'}
     for filename, target in [('publications.html', 'publications'), ('research.html', 'research'), ('experience.html', 'experience')]:
         url = 'index.html#' + target
         script = 'const aliases=' + json.dumps(aliases) + ";const old=location.hash.slice(1);location.replace('index.html#'+(aliases[old]||old||'" + target + "'));"
