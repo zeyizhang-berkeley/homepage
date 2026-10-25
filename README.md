@@ -51,7 +51,7 @@ The Software list follows the layout of <https://hungqpham.com/#software>: role 
 Publication figures follow the owner's selections on October 25, 2026. They appear
 beside each paper and enlarge in an on-page modal when clicked, with intrinsic dimensions,
 accessible descriptions, lazy loading, and responsive stacking on small screens.
-The existing homepage typography is unchanged.
+Publication rows retain the original Inter family, font weights, line heights, and spacing. Only font sizes are compacted: titles are 16 px and authors, citations, summaries, and resource links are 12.8 px, following the reference site's smaller supporting text.
 The image viewer closes with its Close button, Escape, or a backdrop click. It
 keeps keyboard focus inside while open, locks background scrolling, and restores
 the original reading position and thumbnail focus on close. CSS and JavaScript
