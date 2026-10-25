@@ -114,7 +114,7 @@
       ],
       "source_url": "https://www.osti.gov/servlets/purl/2584094",
       "doi": "10.1039/D5CC01820J",
-      "method": "Intact original embedded JPEG figures arranged in an SVG composition; only figure-number labels and white spacing added.",
+      "method": "Intact original embedded JPEG figures arranged in an SVG composition with white spacing; no visible figure-number labels.",
       "components": [
         {
           "figure": 6,
@@ -162,7 +162,7 @@
           "visually_verified": true
         }
       ],
-      "sha256": "756fe13f934397b7c23adcc22a47309bf323abb803cb2fb6a4188d50aed7c438"
+      "sha256": "a925f3fae68b1eebeff5ff11bc263ed5ca8145585972747a714db5eda270292e"
     }
   ],
   "pending": []

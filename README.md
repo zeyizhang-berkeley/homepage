@@ -57,7 +57,7 @@ The existing homepage typography is unchanged.
 | Real-space KS-DFT review | Figures 6, 8 and 9, arranged together in one SVG |
 
 Original scientific content is preserved. The review composition embeds the
-unchanged source JPEGs and adds only figure-number labels and spacing. All three Visual Abstracts are the actual publisher PNG assets, downloaded and
+unchanged source JPEGs with white spacing and no visible figure-number labels. All three Visual Abstracts are the actual publisher PNG assets, downloaded and
 visually checked through the article pages. As explicitly requested, PARSEC.py
 uses the review's Visual Abstract; the review itself uses Figures 6, 8 and 9.
 Source URLs, extraction details, figure licenses where documented, and hashes
