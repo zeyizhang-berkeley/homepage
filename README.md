@@ -14,7 +14,7 @@ The dependency-free Python build writes `dist/index.html`, assets, and compatibi
 
 ## Edit
 
-- Approved CV content: `data/profile.json` (extracted from `CV_v2/main.tex` on October 23, 2026).
+- Approved CV content: `data/profile.json` (initial extraction on October 23, 2026; summaries and toolkit reconciled with the complete current `CV_v2/main.tex` on October 24, 2026).
 - Page composition and content rendering: `build.py`.
 - Visual styles and responsive layout: `assets/style.css`.
 - Local theme preference and section tracking: `assets/site.js`.
@@ -24,7 +24,9 @@ Publication order follows the current CV: works 1–7 under Publications and wor
 
 ## Design and provenance
 
-Experience entries show the organization, role, dates, and one sentence about the work. Research cards summarize the scientific directions. Software uses compact rows with the contribution role, linked project name, and one-line description; detailed project records remain in the source data and downloadable CV.
+About paragraphs are maintained in `profile.about_html`; `research_highlights` holds the cross-project research summaries. Experience and Software keep one short summary per entry. Detailed results stay in the source records and CV. Summary review preserves exploratory MLDFT wording, the QH9-orbital/HELM-spectral distinction, and the distinction between MLFF-assisted geometry initialization and DFT molecular dynamics.
+
+Experience entries show the organization, role, dates, and one sentence about the work. Research cards synthesize the complete CV into electronic structure and GPU computing, machine learning for quantum chemistry, and AI workflows and scientific reasoning. Software uses compact rows with the contribution role, linked project name, and one-line description; detailed project records remain in the source data and downloadable CV.
 
 The visual reference is <https://onehfr.github.io/>: off-white background, Inter typography, a 264 px sidebar, 760 px main column, 56 px column gap, understated red accents, section rules, and rounded white cards. No reference-site biography, images, publications, or personal assets are reused. Below 860 px, the sidebar becomes a compact profile with a sticky, horizontally scrollable section menu. The new homepage supersedes the previous separate-page design.
 

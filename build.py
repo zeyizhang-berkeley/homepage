@@ -94,11 +94,7 @@ def project_card(p, id_, label='', wide=False):
     return '<article class="project' + (' project--wide' if wide else '') + '" id="' + id_ + '">' + label_html + '<h3>' + e(title) + '</h3><p>' + e(summary) + pubrefs(references) + '</p>' + chips(resources) + '</article>'
 
 def build_research():
-    exp = {x['id']: x for x in DATA['experience']}
-    berkeley = exp['berkeley']['projects']
-    cards = project_card(berkeley[0], 'excited-states', 'Electronic structure', True)
-    cards += project_card(berkeley[2], 'machine-learning', 'Machine learning')
-    cards += project_card(berkeley[1], 'spectroscopy', 'Chemical reactions')
+    cards = ''.join(project_card(p, p['id'], p['label'], p.get('wide', False)) for p in DATA['research_highlights'])
     skills = DATA['skills']
     labels = [('programming_languages', 'Programming'), ('scientific_computing_and_ml_frameworks', 'Scientific computing & ML'), ('simulation_software', 'Simulation software'), ('coding_agents', 'Coding agents')]
     skill_html = '<div class="toolkit"><h3>Tools I work with</h3><dl>' + ''.join('<div><dt>' + e(label) + '</dt><dd>' + e(', '.join(skills[key])) + '</dd></div>' for key, label in labels) + '</dl></div>'
@@ -166,10 +162,8 @@ def build():
     links += [x for x in DATA['profile']['links'] if x['label'] == 'LinkedIn']
     social = ''.join('<li>' + link(x['url'], icon(x['label']) + e(x['label'])) + '</li>' for x in links)
     nav = ''.join('<li>' + link('#' + id_, e(label), 'is-active' if id_ == 'about' else '') + '</li>' for id_, label in NAV)
-    intro = '''<p>I build electronic structure methods and scientific software.</p>
-<p>I am a Ph.D. candidate in quantum chemistry at <strong>UC Berkeley</strong>, advised by <a class="person" href="https://mhggroupberkeley.com/members/" target="_blank" rel="noopener noreferrer">Prof. Martin Head-Gordon</a> and <a class="person" href="https://qiangrouppage.lbl.gov/people" target="_blank" rel="noopener noreferrer">Dr. Jin Qian</a>, and a researcher at <strong>Lawrence Berkeley National Laboratory</strong>.</p>
-<p>My research spans GPU-accelerated real-space density functional theory, electronic structure methods for excited states, machine learning for quantum chemistry, and recursive self-improvement for science.</p>
-<p>I develop <a href="#parsec-software">PARSEC.py</a>, contribute to <a href="#qchem-software">Q-Chem</a>, and am a Research Scientist Intern with <a href="https://seed.bytedance.com/en/" target="_blank" rel="noopener noreferrer">ByteDance Seed–AI for Science</a>, working on GPU algorithms, quantum-chemical reference data, and machine-learned density functionals.</p>'''
+    # Trusted, author-edited paragraph markup keeps the displayed biography in the profile data.
+    intro = ''.join('<p>' + paragraph + '</p>' for paragraph in DATA['profile']['about_html'])
     pubs = '<div class="pubs">' + ''.join(publication(p) for p in DATA['publications'] if p['section'] == 'Publications') + '</div>'
     pubs += '<div class="subsection__head" id="manuscripts"><h3>Manuscripts</h3><p>Submitted, in preparation, and forthcoming</p></div><div class="pubs">' + ''.join(publication(p) for p in DATA['publications'] if p['section'] == 'Manuscripts') + '</div>'
     body = section('about', 'About', intro, cls='intro')
@@ -183,7 +177,7 @@ def build():
     html = '''<!doctype html><html lang="en" data-theme="light"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>zeyizhang-berkeley | Zeyi Zhang</title>
-<meta name="description" content="Zeyi Zhang is a UC Berkeley chemistry Ph.D. candidate developing electronic structure methods, scientific software, and AI for science.">
+<meta name="description" content="Zeyi Zhang is a UC Berkeley chemistry Ph.D. candidate developing electronic-structure methods, GPU simulation software, and AI tools for molecular and materials research.">
 <meta name="theme-color" content="#fafaf8"><meta name="color-scheme" content="light dark">
 <meta property="og:title" content="zeyizhang-berkeley | Zeyi Zhang"><meta property="og:type" content="website">
 <meta property="og:site_name" content="zeyizhang-berkeley"><meta property="og:url" content="https://zeyizhang-berkeley.github.io/">

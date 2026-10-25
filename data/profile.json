@@ -14,19 +14,24 @@
       "Equal contribution is marked for Li, Y. and Zhang, Z. in #2, and Dias, N. and Zhang, Z. in #4. #6 has no equal-contribution marks in the current CV.",
       "The DTCS links are explicitly for v.01, while the experience project is v.02.",
       "Mentorship outcomes are copied from the CV, without external re-verification."
-    ]
+    ],
+    "summary_reviewed_date": "2026-10-24",
+    "summary_source_sha256": "ecd188d6881ec9adaa9b6cd323ee8dbc50b61ccfa4bb5cae73754940835404c4",
+    "summary_scope": "About, Research, Experience, Software, and toolkit reviewed against the complete current CV. Existing teaching and mentorship records retained from the previously approved profile."
   },
   "profile": {
     "name": "Zeyi Zhang",
     "location": "Berkeley, CA",
     "headline": "Ph.D. Candidate in Chemistry, UC Berkeley",
     "email": "zhentan007@berkeley.edu",
-    "bio": "I am a Ph.D. candidate at UC Berkeley and a researcher at Lawrence Berkeley National Laboratory, developing electronic structure methods and scientific software. My research spans GPU-accelerated real-space DFT, electronic structure methods for excited states, machine learning for quantum chemistry, and recursive self-improvement (RSI) for science. I am the developer of PARSEC.py, a Q-Chem contributor, and a research scientist intern at ByteDance.",
+    "bio": "I develop quantum-chemical methods, GPU software, and AI tools for molecular and materials research. I am a Ph.D. candidate in theoretical chemistry at UC Berkeley, advised by Prof. Martin Head-Gordon and Dr. Jin Qian, and a Graduate Student Researcher at Lawrence Berkeley National Laboratory. My research connects excited-state and strongly correlated electronic structure with scalable DFT, quantum Monte Carlo, and machine learning. I also build scientific benchmarks and agentic simulation workflows. Applications range from spectroscopy and reaction chemistry to CO₂ capture and microelectronics. I develop PARSEC.py, contribute to Q-Chem, and am a Research Scientist Intern at ByteDance Seed–AI for Science.",
     "research_interests": [
-      "GPU-accelerated real-space DFT",
-      "Electronic structure methods for excited states",
+      "Excited states and strong correlation",
+      "GPU electronic-structure algorithms",
+      "Real-space DFT and AFQMC",
       "Machine learning for quantum chemistry",
-      "Recursive self-improvement (RSI) for science"
+      "Scientific benchmarks and agentic workflows",
+      "Spectroscopy, reaction chemistry, and materials applications"
     ],
     "links": [
       {
@@ -49,6 +54,12 @@
         "label": "LinkedIn",
         "url": "https://www.linkedin.com/in/zeyi-zhang-a92929247/"
       }
+    ],
+    "about_html": [
+      "I develop quantum-chemical methods, GPU software, and AI tools for molecular and materials research.",
+      "I am a Ph.D. candidate in theoretical chemistry at <strong>UC Berkeley</strong>, advised by <a class=\"person\" href=\"https://mhggroupberkeley.com/members/\" target=\"_blank\" rel=\"noopener noreferrer\">Prof. Martin Head-Gordon</a> and <a class=\"person\" href=\"https://qiangrouppage.lbl.gov/people\" target=\"_blank\" rel=\"noopener noreferrer\">Dr. Jin Qian</a>, and a Graduate Student Researcher at <strong>Lawrence Berkeley National Laboratory</strong>.",
+      "My research connects excited-state and strongly correlated electronic structure with scalable DFT, quantum Monte Carlo, and machine learning. I also build scientific benchmarks and agentic simulation workflows. Applications range from spectroscopy and reaction chemistry to CO₂ capture and microelectronics.",
+      "I develop <a href=\"#parsec-software\">PARSEC.py</a>, contribute to <a href=\"#qchem-software\">Q-Chem</a>, and am a Research Scientist Intern at <a href=\"https://seed.bytedance.com/en/\" target=\"_blank\" rel=\"noopener noreferrer\">ByteDance Seed–AI for Science</a>."
     ]
   },
   "education": [
@@ -144,7 +155,7 @@
           "links": []
         }
       ],
-      "homepage_summary": "GPU-accelerated quantum chemistry and machine-learned density functionals."
+      "homepage_summary": "GPU quantum chemistry, AFQMC reference data, and machine-learned density functionals."
     },
     {
       "id": "lbnl",
@@ -292,7 +303,7 @@
           "links": []
         }
       ],
-      "homepage_summary": "Real-space DFT, scientific software, and AI for science."
+      "homepage_summary": "Scalable real-space DFT, scientific reasoning benchmarks, and agentic spectroscopy workflows."
     },
     {
       "id": "berkeley",
@@ -357,7 +368,7 @@
           "summary": "Develop machine-learned models for electronic states and molecular properties.",
           "details": [
             {
-              "text": "Develop label-free post-training for flow-matching QHFlow2 models via short SCF corrections, improving orbital accuracy on QH9 and HELM and outperforming supervised fine-tuning in eight transfer settings.",
+              "text": "Develop label-free SCF self-distillation for flow-matching models, improving QH9 orbital predictions and HELM spectral stability while outperforming supervised fine-tuning across eight transfer settings.",
               "publication_numbers": [
                 2
               ]
@@ -375,7 +386,7 @@
           "homepage_summary": "Machine-learned Hamiltonians and flow-matching models for electronic states and molecular properties."
         }
       ],
-      "homepage_summary": "Excited-state methods, strong correlation, and machine-learned electronic structure."
+      "homepage_summary": "Excited states, strong correlation, machine-learned Hamiltonians, and molecular photoionization."
     },
     {
       "id": "qchem",
@@ -415,7 +426,7 @@
           ]
         }
       ],
-      "homepage_summary": "Electronic-structure method development in Q-Chem."
+      "homepage_summary": "Complex-valued electronic-structure methods and orbital-optimized excited-state DFT."
     },
     {
       "id": "nyu-ecnu",
@@ -443,7 +454,7 @@
           "links": []
         }
       ],
-      "homepage_summary": "Machine-learning-assisted exploration of prebiotic reaction pathways."
+      "homepage_summary": "Active learning of prebiotic reaction pathways and transition states."
     },
     {
       "id": "sjtu",
@@ -466,7 +477,7 @@
           "links": []
         }
       ],
-      "homepage_summary": "Machine learning for CO₂ solubility and ionic-liquid properties."
+      "homepage_summary": "Graph-based learning and Gaussian processes for ionic-liquid properties and CO₂ solubility."
     }
   ],
   "publications": [
@@ -906,19 +917,26 @@
       "Q-Chem",
       "ORCA",
       "VASP",
-      "Gaussian",
-      "Psi4",
       "PySCF",
-      "CP2K",
       "Quantum Espresso",
-      "LAMMPS",
+      "Gaussian",
+      "xTB",
+      "CREST",
+      "Molpro",
+      "ASE",
+      "CP2K",
+      "Psi4",
       "GROMACS",
-      "ASE"
+      "LAMMPS",
+      "VMD"
     ],
     "scientific_computing_and_ml_frameworks": [
       "PyTorch",
       "JAX",
-      "CuPy"
+      "CuPy",
+      "CUDA",
+      "OpenMPI",
+      "OpenMP"
     ]
   },
   "mentorship": [
@@ -1008,35 +1026,35 @@
           "role": "Developer",
           "name": "PARSEC.py",
           "url": "https://github.com/QianGroupPage/PARSEC.py",
-          "summary": "GPU-accelerated real-space DFT with machine-learned charge densities."
+          "summary": "Multi-GPU real-space DFT with learned charge densities, geometry optimization, and molecular dynamics."
         },
         {
           "id": "gpu-quantum-chemistry",
           "role": "Contributor",
           "name": "ByteQC",
           "url": "https://github.com/bytedance/byteqc",
-          "summary": "GPU-accelerated Hartree–Fock and correlated electronic-structure methods."
+          "summary": "GPU-accelerated HF and correlated methods using tensor hypercontraction."
         },
         {
           "id": "gpu4pyscf-software",
           "role": "Contributor",
           "name": "GPU4PySCF",
           "url": "https://github.com/bytedance/gpu4pyscf",
-          "summary": "GPU acceleration for electronic-structure calculations in PySCF."
+          "summary": "Tensor hypercontraction for efficient GPU quantum chemistry."
         },
         {
           "id": "quantum-monte-carlo",
           "role": "Contributor",
           "name": "JaQMC",
           "url": "https://github.com/bytedance/jaqmc",
-          "summary": "Quantum Monte Carlo workflows for transition-metal reference data."
+          "summary": "Auxiliary-field quantum Monte Carlo for transition-metal reference data."
         },
         {
           "id": "qchem-software",
           "role": "Contributor",
           "name": "Q-Chem",
           "url": "https://www.q-chem.com/",
-          "summary": "Complex-valued orbital methods and improved orbital-optimization guesses."
+          "summary": "Complex-valued orbital methods and frozen-orbital initial guesses for excited-state DFT."
         }
       ]
     },
@@ -1048,7 +1066,7 @@
           "id": "digital-twin",
           "role": "Developer",
           "name": "DTCS-v.02",
-          "summary": "Agentic workflows connecting quantum-chemical simulations and experimental spectroscopy.",
+          "summary": "Agentic simulation workflows and multimodal spectroscopy connecting chemical theory with experiment.",
           "links": [
             {
               "label": "v.01 Code",
@@ -1065,14 +1083,49 @@
           "role": "Contributor",
           "name": "MolP2SBench",
           "url": "https://github.com/DUAL-Xiao/MolP2SBench",
-          "summary": "Benchmarks testing molecular structure inference from physical properties."
+          "summary": "Testing whether LLMs infer molecular structures from physical evidence."
         },
         {
           "id": "paper2bench-software",
           "role": "Developer",
           "name": "Paper2Bench",
-          "summary": "Benchmarks built from research papers to evaluate scientific reasoning."
+          "summary": "Benchmarks from research papers for reaction mechanisms, transition states, and synthesis."
         }
+      ]
+    }
+  ],
+  "research_highlights": [
+    {
+      "id": "excited-states",
+      "name": "Electronic Structure & GPU Computing",
+      "label": "Quantum chemistry",
+      "wide": true,
+      "summary": "State-specific excited-state and multireference methods, alongside scalable real-space DFT, GPU-accelerated correlated calculations, and AFQMC reference data.",
+      "publication_numbers": [
+        3,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "machine-learning",
+      "name": "Machine Learning for Quantum Chemistry",
+      "label": "Electronic structure and learning",
+      "summary": "Machine learning for Hamiltonians, charge densities, and force fields, including flow matching, label-free SCF self-distillation, and training for machine-learned DFT.",
+      "publication_numbers": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "spectroscopy",
+      "name": "AI Workflows & Scientific Reasoning",
+      "label": "AI for science",
+      "summary": "Agentic workflows for quantum-chemical simulations and multimodal spectroscopy, alongside benchmarks for molecular inference, reaction mechanisms, and scientific reasoning.",
+      "publication_numbers": [
+        1
       ]
     }
   ]
