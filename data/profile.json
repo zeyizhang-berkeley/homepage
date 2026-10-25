@@ -18,7 +18,9 @@
     "summary_reviewed_date": "2026-10-24",
     "summary_source_sha256": "ecd188d6881ec9adaa9b6cd323ee8dbc50b61ccfa4bb5cae73754940835404c4",
     "summary_scope": "About, Research, Experience, Software, and toolkit reviewed against the complete current CV. Existing teaching and mentorship records retained from the previously approved profile.",
-    "source_sha256": "21e2a145a95d26d9d21110d0f7937c5e5a2bc33d690854ed4a10da9446b6cc71"
+    "source_sha256": "21e2a145a95d26d9d21110d0f7937c5e5a2bc33d690854ed4a10da9446b6cc71",
+    "publication_summaries_reviewed_date": "2026-10-25",
+    "publication_summaries_scope": "Concise original summaries for Publications 1–7, checked against the papers. Manuscripts 8–10 retain their existing descriptions and status."
   },
   "profile": {
     "name": "Zeyi Zhang",
@@ -540,7 +542,8 @@
         "width": 1244,
         "height": 638,
         "full_src": "assets/papers/molp2s-figure1-vector.svg?v=fef65d4d7ade"
-      }
+      },
+      "summary": "MolP2SBench tests whether language models use molecular properties to infer structure. Controlled property interventions distinguish prediction accuracy from reliance on the supplied evidence, revealing that stronger accuracy does not necessarily imply greater responsiveness to property changes."
     },
     {
       "number": 2,
@@ -585,7 +588,8 @@
         "width": 1400,
         "height": 740,
         "full_src": "assets/papers/opsd-figure1-vector.svg?v=9e684137e18c"
-      }
+      },
+      "summary": "OPSD adapts pretrained Hamiltonian models using corrections from a few self-consistent-field iterations, without new converged labels or differentiation through the solver. Experiments show improved orbital-energy predictions and transfer across molecular sizes, density functionals, and solvent conditions."
     },
     {
       "number": 3,
@@ -637,7 +641,8 @@
         "width": 520,
         "height": 204,
         "full_src": "assets/papers/realspace-graphical-abstract-highres.png?v=37460c89ecfc"
-      }
+      },
+      "summary": "PARSEC.py combines real-space Kohn–Sham DFT and machine-learned charge-density initialization in a modular Python framework. Molecular benchmarks show fewer self-consistent-field iterations with suitable density guesses, while GPU acceleration speeds up diagonalization and Hartree-potential calculations."
     },
     {
       "number": 4,
@@ -698,7 +703,8 @@
         "alt": "Reaction pathways and ion products following photoionization of mixed carbon dioxide–water clusters, including oxygen–oxygen bond formation and hydrogen peroxide products.",
         "width": 1500,
         "height": 883
-      }
+      },
+      "summary": "Photoionization experiments and density functional theory reveal how local hydration controls oxygen–oxygen bond formation in CO₂–H₂O clusters. Water-rich environments favor peroxide-forming reactions, while molecular rearrangement and evaporation provide an indirect route to hydrogen peroxide."
     },
     {
       "number": 5,
@@ -745,7 +751,8 @@
         "width": 520,
         "height": 187,
         "full_src": "assets/papers/rokseda-graphical-abstract-highres.png?v=bd4d834c9885"
-      }
+      },
+      "summary": "An energy decomposition framework for two-determinant ROKS excited states separates primary excitation from orbital relaxation. By quantifying energy changes and charge redistribution through orbital analysis, it helps interpret valence, core, and charge-transfer excitations."
     },
     {
       "number": 6,
@@ -792,7 +799,8 @@
         "width": 520,
         "height": 370,
         "full_src": "assets/papers/ctguess-graphical-abstract-highres.png?v=d90284c07ff8"
-      }
+      },
+      "summary": "A freeze-and-release scheme combines constrained initial guesses with squared-gradient minimization for orbital-optimized DFT. Tests on a supramolecular coordination cage and dye–semiconductor complexes demonstrate convergence to targeted charge-transfer excited states while avoiding collapse to lower-energy states."
     },
     {
       "number": 7,
@@ -849,7 +857,8 @@
         "width": 1040,
         "height": 940,
         "full_src": "assets/papers/realspace-figures-6-8-9-highres.svg?v=62897f81b4b1"
-      }
+      },
+      "summary": "This review examines the foundations and computational advances of real-space Kohn–Sham DFT, with applications to interfacial spectroscopy and carbon capture. It discusses opportunities for large-scale electronic-structure simulations alongside current limitations and future directions for exascale computing."
     },
     {
       "number": 8,

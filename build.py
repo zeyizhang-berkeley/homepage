@@ -67,6 +67,7 @@ def publication(p):
                  'Paper' if 'doi.org/' in url else resource['label'])
         resource_links.append(link(url, '[' + e(label) + ']'))
     resources = '<p class="pub__resources">' + ' '.join(resource_links) + '</p>' if resource_links else ''
+    summary = '<p class="pub__summary">' + e(p['summary']) + '</p>' if p.get('summary') else ''
     # Only render a figure after the user has selected an image from the paper.
     figure = p.get('image')
     figure_html = ''
@@ -74,7 +75,7 @@ def publication(p):
         full_src = figure.get('full_src', figure['src'])
         figure_html = '<figure class="pub__figure"><button class="pub__figure-link" type="button" data-figure-src="' + e(full_src) + '" aria-haspopup="dialog" aria-controls="figure-lightbox" title="Enlarge figure" aria-label="Enlarge figure for ' + e(p['title']) + '"><img src="' + e(figure['src']) + '" alt="' + e(figure['alt']) + '" width="' + e(figure['width']) + '" height="' + e(figure['height']) + '" loading="lazy" decoding="async"></button></figure>'
     cls = 'pub pub--with-figure' if figure else 'pub'
-    return '<article class="' + cls + '" id="paper-' + str(p['number']) + '" aria-label="Work ' + str(p['number']) + '">' + figure_html + '<div class="pub__body">' + title + ('<p class="pub__authors">' + authors + '</p>' if authors else '') + '<p class="pub__citation">' + citation + '</p>' + resources + '</div></article>'
+    return '<article class="' + cls + '" id="paper-' + str(p['number']) + '" aria-label="Work ' + str(p['number']) + '">' + figure_html + '<div class="pub__body">' + title + ('<p class="pub__authors">' + authors + '</p>' if authors else '') + '<p class="pub__citation">' + citation + '</p>' + summary + resources + '</div></article>'
 
 INSTITUTION_LOGOS = {
     'berkeley': 'berkeley.png',
