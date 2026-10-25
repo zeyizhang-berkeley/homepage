@@ -47,7 +47,7 @@ Works 1–7 include concise, original summaries of their core methods or finding
 reviewed against the papers on October 25, 2026. They appear below the venue and inline resource links, following the publication-summary placement at
 <https://masterzhou1.github.io/> while retaining this homepage's typography.
 Edit each publication's `summary` in `data/profile.json` to revise this text.
-Manuscripts 8–10 retain their existing descriptions and status.
+Manuscripts 8–10 retain their existing descriptions and status. When a manuscript resource label already appears in its status, that text is linked directly instead of repeating a bracketed link after it.
 
 The Software list follows the layout of <https://hungqpham.com/#software>: role in the left column, project name and short description on the right, and thin dividers between rows. Typography retains this homepage’s original Inter font, heading weights, and body text styles; the reference is used for layout only. Entries come from this profile’s existing projects, grouped into Scientific packages and AI tools & benchmarks. Developer/Contributor labels reflect the existing CV; no leadership claim is inferred. DTCS-v.02 links are explicitly labeled as v.01 resources, and Paper2Bench has no invented public link.
 

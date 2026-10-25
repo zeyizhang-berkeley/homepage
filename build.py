@@ -64,6 +64,9 @@ def publication(p):
     resource_links = []
     for resource in p.get('links', []):
         url = resource['url']
+        if p['section'] == 'Manuscripts' and resource['label'] and e(resource['label']) in citation:
+            citation = citation.replace(e(resource['label']), link(url, e(resource['label'])), 1)
+            continue
         label = ('arXiv' if 'arxiv.org/' in url else
                  'OpenReview' if 'openreview.net/' in url else
                  'Paper' if 'doi.org/' in url else resource['label'])
