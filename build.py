@@ -201,7 +201,8 @@ def build():
     nav = ''.join('<li>' + link('#' + id_, e(label), 'is-active' if id_ == 'about' else '') + '</li>' for id_, label in NAV)
     topbar = '<header class="topbar"><div class="topbar__inner">' + link('#about', 'Zeyi Zhang', 'topbar__name') + '<nav class="toc" aria-label="Section navigation"><ol class="toc__list">' + nav + '</ol></nav><button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme" hidden>' + icon('Theme') + '<span>Dark theme</span></button></div></header>'
     # Trusted, author-edited paragraph markup keeps the displayed biography in the profile data.
-    intro = ''.join('<p>' + paragraph + '</p>' for paragraph in DATA['profile']['about_html'])
+    lead_index = DATA['profile'].get('about_lead_index', 0)
+    intro = ''.join('<p' + (' class="intro__lead"' if i == lead_index else '') + '>' + paragraph + '</p>' for i, paragraph in enumerate(DATA['profile']['about_html']))
     pubs = '<div class="pubs">' + ''.join(publication(p) for p in DATA['publications'] if p['section'] == 'Publications') + '</div>'
     pubs += '<div class="subsection__head" id="manuscripts"><h3>Manuscripts</h3><p>Submitted, in preparation, and forthcoming</p></div><div class="pubs">' + ''.join(publication(p) for p in DATA['publications'] if p['section'] == 'Manuscripts') + '</div>'
     body = section('about', 'About Me', intro, cls='intro')
