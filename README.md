@@ -30,9 +30,9 @@ Experience entries show the organization, role, dates, and a compact sequence of
 
 The visual reference is <https://onehfr.github.io/>: off-white background, Inter typography, a 264 px sidebar, 960 px main column, 56 px column gap, understated red accents, section rules, and rounded white cards. No reference-site biography, images, publications, or personal assets are reused. Below 860 px, the sidebar becomes a compact profile; the top navigation remains accessible through horizontal scrolling. The new homepage supersedes the previous separate-page design.
 
-The section navigation follows the persistent top-bar structure of <https://hungqpham.com/> while retaining the homepage's Inter typography and colors. It appears above the profile and content, stays visible during scrolling, and highlights the current section. Navigation jumps directly to each section, and anchor offsets keep destination headings below the bar. The horizontally scrollable menu reveals the active item after page scrolling settles. Navigation and content share this order: About Me, Research Interest, Education, Experience, Publications, Software, Teaching, Mentorship. The former sidebar “On this page” menu is removed. Existing #about and #research links remain compatible.
+The section navigation follows the persistent top-bar structure of <https://hungqpham.com/> while retaining the homepage's Inter typography and colors. It appears above the profile and content, stays visible during scrolling, and highlights the current section. Navigation jumps directly to each section, and anchor offsets keep destination headings below the bar. The horizontally scrollable menu reveals the active item after page scrolling settles. Navigation and content share this order: About Me, Research Interest, Experience, Education, Software, Publications, Teaching, Mentorship. The former sidebar “On this page” menu is removed. Existing #about and #research links remain compatible.
 
-The “View CV” button links directly to `assets/Zeyi_Zhang_CV.pdf` in the current tab, without an HTML download attribute, so the browser can display the PDF inline.
+The “View CV” button links directly to `assets/Zeyi_Zhang_CV.pdf` in a new tab, without an HTML download attribute, so the browser can display the PDF inline.
 
 Inter is requested from Google Fonts with system-font fallbacks. There are no third-party scripts, analytics, or trackers. Theme preference stays in the visitor's browser.
 
@@ -94,14 +94,33 @@ are recorded in `assets/papers/sources.json`. Manuscripts 8–10 have no images.
 
 Repository: `zeyizhang-berkeley/homepage`.
 
-In Settings → Pages, select **Deploy from a branch**, **main**, **/docs**.
+In Settings → Pages → Build and deployment → Source, select **GitHub Actions**.
 The generated homepage is served at <https://zeyizhang-berkeley.github.io/homepage/>.
 
-After editing content, styles, figures, or the CV, run:
+### Edit in the browser
+
+1. Open <https://vscode.dev/github/zeyizhang-berkeley/homepage>.
+2. Edit `data/profile.json` and save. Use `profile.about_html` for About Me and
+   `research_highlights` for the Research Interest cards. Update the source
+   fields rather than generated `docs/index.html`.
+3. In Source Control, commit and push to `main`.
+4. Open the repository's **Actions** tab and wait for **Build and deploy homepage**
+   to finish successfully, then refresh the homepage.
+
+`.github/workflows/pages.yml` builds the current source and deploys `dist/` on
+every push to `main`. Changes to content, styles, images, and the CV are included.
+The workflow also supports **Run workflow** from the Actions tab. Saving in
+vscode.dev without committing and pushing does not publish the change.
+
+### Local preview and optional generated snapshot
+
+Run `python3 build.py` and open `dist/index.html` for a local preview.
+To also refresh the optional `docs/` snapshot, run:
 
 ```sh
 python3 publish.py
 ```
 
-Commit the source changes and updated `docs/` together, then push `main`.
-No external build dependencies, secrets, or paid hosting are needed.
+Commit the source changes and push `main`; the workflow generates the deployed
+HTML automatically. `docs/` is a retained snapshot, not the live publishing source.
+No external Python dependencies, personal access tokens, or paid hosting are needed.
