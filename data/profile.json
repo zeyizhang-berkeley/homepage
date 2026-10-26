@@ -1221,7 +1221,7 @@
       "id": "quantum-simulation",
       "name": "GPU-Accelerated Quantum Chemistry",
       "label": "Quantum chemistry",
-      "summary": "Making demanding quantum-chemical simulations accessible for scientific and industrial applications through GPU implementations of tensor hypercontraction (THC), auxiliary-field quantum Monte Carlo (AFQMC), and real-space Kohn–Sham DFT, extending scalable calculations from mean-field to correlated methods.",
+      "summary": "Accelerating THC-based electronic-structure methods, AFQMC, and real-space Kohn–Sham DFT on GPUs for large-scale scientific and industrial simulations.",
       "keywords": [
         "GPU computing",
         "THC",
@@ -1237,7 +1237,7 @@
       "id": "real-space-dft",
       "name": "Real-Space Kohn–Sham DFT",
       "label": "Quantum chemistry",
-      "summary": "Developing real-space Kohn–Sham DFT for large, complex systems, including surfaces and interfaces, CO₂ capture, X-ray photoelectron spectroscopy, and semiconductor and lithography applications in microelectronics. Multi-node, multi-GPU electronic-structure calculations are complemented by GPU-accelerated geometry optimization and ab initio molecular dynamics; learned densities and machine learning force fields provide efficient initial density and geometry guesses.",
+      "summary": "Developing real-space DFT for surfaces, interfaces, CO₂ capture, XPS, semiconductors, and lithography, combining multi-GPU computing, ML density and geometry guesses, and GPU-accelerated geometry optimization and molecular dynamics.",
       "keywords": [
         "Surfaces & interfaces",
         "CO₂ capture",
@@ -1254,7 +1254,7 @@
       "id": "quantum-monte-carlo-research",
       "name": "Quantum Monte Carlo",
       "label": "Quantum chemistry",
-      "summary": "Enabling scalable, accurate simulations of transition-metal compounds with GPU-accelerated auxiliary-field quantum Monte Carlo (AFQMC), generating reference energies and potential-energy curves to investigate bonding and assess electronic-structure methods.",
+      "summary": "Using GPU-accelerated AFQMC to generate reference energies and potential-energy curves for transition-metal compounds, supporting studies of bonding and strong correlation.",
       "keywords": [
         "AFQMC",
         "Transition-metal compounds",
@@ -1266,7 +1266,7 @@
       "id": "strong-correlation",
       "name": "Multireference Methods & Strongly Correlated Systems",
       "label": "Quantum chemistry",
-      "summary": "Investigating static correlation, symmetry breaking, and chemical bonding with AFQMC for transition-metal systems and non-orthogonal configuration interaction with perturbative corrections, NOCI(-RSPT), for systems such as C₂. Related work develops complex-valued orbital methods and orbital optimization for HF, DFT, MP2, and NOCI(-MP2).",
+      "summary": "Studying static correlation and symmetry breaking with AFQMC for transition-metal systems and NOCI(-RSPT) for C₂, alongside complex-valued orbital methods and orbital optimization.",
       "keywords": [
         "Static correlation",
         "NOCI(-RSPT)",
@@ -1282,7 +1282,7 @@
       "id": "excited-states",
       "name": "Excited-State Theory & Applications",
       "label": "Quantum chemistry",
-      "summary": "Developing energy decomposition analysis (EDA) for two-determinant ROKS and frozen molecular-orbital guesses for orbital-optimized DFT calculations of charge-transfer excitations. Studying low-lying excited states with NOCI(-RSPT) and applying computational spectroscopy to photoionization and O–O bond formation in CO₂–H₂O clusters, with implications for astrochemistry.",
+      "summary": "Developing ROKS energy decomposition and frozen-orbital guesses for charge-transfer excitations; studying low-lying states with NOCI(-RSPT) and photoionization-driven O–O bond formation in CO₂–H₂O clusters, linking spectroscopy with astrochemistry.",
       "keywords": [
         "ROKS EDA",
         "Charge transfer",
@@ -1300,7 +1300,7 @@
       "id": "machine-learning",
       "name": "Machine Learning for Electronic Structure",
       "label": "AI for science",
-      "summary": "Developing machine-learned Hamiltonians guided by physical principles and self-consistent-field feedback. Integrating learned charge-density models to reduce SCF iterations, alongside machine learning force fields (MLFFs) that preoptimize molecular geometries and accelerate subsequent DFT geometry optimization.",
+      "summary": "Developing machine-learned Hamiltonians with SCF feedback, using learned densities to reduce SCF iterations and ML force-field preoptimization to accelerate DFT geometry optimization.",
       "keywords": [
         "Learned Hamiltonians",
         "SCF self-distillation",
@@ -1317,7 +1317,7 @@
       "id": "scientific-benchmarks",
       "name": "Scientific Benchmarks for LLMs",
       "label": "AI for science",
-      "summary": "Developing scientific benchmarks to evaluate how large language models (LLMs) reason from physical evidence and solve research problems, from molecular-structure inference to reaction mechanisms, transition states, and synthesis. Using shuffled and counterfactual inputs to test molecular reasoning, and contributing research tasks to scientific-agent benchmarks.",
+      "summary": "Evaluating molecular-structure inference with shuffled and counterfactual inputs, benchmarking LLM reasoning about reaction mechanisms, transition states, and synthesis, and contributing tasks to scientific-agent benchmarks.",
       "keywords": [
         "Scientific reasoning",
         "Physical evidence",
@@ -1331,7 +1331,7 @@
       "id": "spectroscopy",
       "name": "Agentic AI Workflows",
       "label": "AI for science",
-      "summary": "Building agentic AI workflows that connect natural-language instructions with structure preparation, simulation setup, high-performance computing, and spectroscopic analysis. Combining quantum-chemical tools and multimodal spectroscopy in a digital twin to study gas-phase reactions and connect theoretical predictions with experimental observations.",
+      "summary": "Automating structure preparation, simulations, HPC execution, and multimodal spectroscopic analysis from natural-language instructions, connecting theory and experiment through a digital twin for gas-phase reactions.",
       "keywords": [
         "Agentic AI",
         "Scientific workflows",
