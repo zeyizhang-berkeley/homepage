@@ -114,7 +114,7 @@ def software_logo(item):
     style = ' brand-logo--' + e(item['logo_style']) if item.get('logo_style') else ''
     return '<span class="brand-logo' + style + '" aria-hidden="true"><img src="' + e(item['logo']) + '" alt="" loading="lazy" decoding="async"></span>'
 
-def project_card(p, id_, label='', wide=False):
+def project_card(p, id_):
     summary = p.get('homepage_summary', p['summary'])
     title = p.get('homepage_title', p['name'])
     references = list(p.get('publication_numbers', []))
@@ -122,13 +122,15 @@ def project_card(p, id_, label='', wide=False):
         references.extend(detail.get('publication_numbers', []))
     references = sorted(set(references))
     resources = p.get('homepage_links', p.get('links', []))
-    label_html = '<p class="project__label">' + e(label) + '</p>' if label else ''
     keywords_html = '<p class="project__keywords">' + e(' · '.join(p['keywords'])) + '</p>' if p.get('keywords') else ''
-    return '<article class="project' + (' project--wide' if wide else '') + '" id="' + id_ + '">' + label_html + '<h3>' + e(title) + '</h3><p>' + e(summary) + pubrefs(references) + '</p>' + keywords_html + chips(resources) + '</article>'
+    return '<article class="project" id="' + id_ + '"><h4>' + e(title) + '</h4><p>' + e(summary) + pubrefs(references) + '</p>' + keywords_html + chips(resources) + '</article>'
 
 def build_research():
-    cards = ''.join(project_card(p, p['id'], p['label'], p.get('wide', False)) for p in DATA['research_highlights'])
-    return '<div class="projects">' + cards + '</div>'
+    groups = []
+    for label, title, id_ in [('Quantum chemistry', 'Quantum Chemistry', 'quantum-chemistry'), ('AI for science', 'AI for Science', 'ai-for-science')]:
+        cards = ''.join(project_card(p, p['id']) for p in DATA['research_highlights'] if p['label'] == label)
+        groups.append('<div class="research-group" aria-labelledby="' + id_ + '-title"><h3 id="' + id_ + '-title">' + title + '</h3><div class="projects">' + cards + '</div></div>')
+    return ''.join(groups)
 
 def build_software():
     groups = []
