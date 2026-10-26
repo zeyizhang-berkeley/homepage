@@ -123,14 +123,10 @@ def project_card(p, id_):
     figure = p.get('image')
     if not figure:
         return '<article class="project" id="' + id_ + '">' + body_html + '</article>'
-    full_src = figure.get('full_src', figure['src'])
-    # The shared button class connects research illustrations to the existing lightbox.
     figure_html = (
-        '<figure class="project__figure"><button class="pub__figure-link project__figure-link" type="button"'
-        ' data-figure-src="' + e(full_src) + '" aria-haspopup="dialog" aria-controls="figure-lightbox"'
-        ' title="Enlarge illustration" aria-label="Enlarge illustration for ' + e(title) + '">'
+        '<figure class="project__figure">'
         '<img src="' + e(figure['src']) + '" alt="' + e(figure['alt']) + '" width="' + e(figure['width'])
-        + '" height="' + e(figure['height']) + '" loading="lazy" decoding="async"></button></figure>'
+        + '" height="' + e(figure['height']) + '" loading="lazy" decoding="async"></figure>'
     )
     return '<article class="project project--with-figure" id="' + id_ + '">' + figure_html + '<div class="project__body">' + body_html + '</div></article>'
 
