@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="excited-states-title excited-states-desc">
+  <title id="excited-states-title">Electronic transitions and a schematic absorption spectrum</title>
+  <desc id="excited-states-desc">Three horizontal lines represent a ground electronic state and two excited states. A teal upward arrow connects the ground state to the first excited state; a burgundy upward arrow connects the same ground state to the second excited state. A separate connector leads from the transition diagram to an absorption spectrum, with energy increasing to the right and absorption increasing upward. The lower-energy teal band lies to the left of the higher-energy burgundy band. Peak positions follow the relative energy gaps drawn on the left. All levels and spectral bands are conceptual: there are no energy units or calculated values, and the band widths and strengths are arbitrary, not experimental or computational results. This original illustration contains no molecular structure or reused paper artwork.</desc>
+  <rect width="800" height="600" fill="#ffffff"/>
+
+  <!-- Separate panels distinguish state energies from the resulting spectrum. -->
+  <g fill="#f4f8fa">
+    <rect x="40" y="60" width="300" height="470" rx="24"/>
+    <rect x="450" y="60" width="310" height="470" rx="24"/>
+  </g>
+
+  <!-- Both transitions originate from the same ground state. -->
+  <g fill="none" stroke="#17344f" stroke-width="7" stroke-linecap="round">
+    <path d="M60 465 H320"/>
+    <path d="M60 300 H320"/>
+    <path d="M60 140 H320"/>
+  </g>
+  <g fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M145 465 V300 M128 319 L145 300 L162 319" stroke="#2b8c86"/>
+    <path d="M250 465 V140 M233 159 L250 140 L267 159" stroke="#93404b"/>
+  </g>
+
+  <!-- This isolated connector is not attached to any individual energy level. -->
+  <path d="M358 338 H424 M406 326 L424 338 L406 350" fill="none" stroke="#17344f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Energy runs rightward from x=480. Absorption runs upward. -->
+  <g fill="none" stroke="#17344f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M480 500 H746 M731 490 L746 500 L731 510"/>
+    <path d="M480 500 V130 M470 145 L480 130 L490 145"/>
+  </g>
+
+  <!--
+    The first and second gaps are 165 and 325 drawing units. Relative to x=480,
+    peak offsets are 85 and 167.424242 units, so their ratio is also 325/165.
+    These are layout coordinates only. The line shapes and intensities are arbitrary.
+  -->
+  <path d="M488 500 H518 C531 500 533 488 541 454 C549 420 550 350 565 350 C580 350 581 420 589 454 C597 488 599 500 612 500 Z" fill="#2b8c86" fill-opacity="0.12"/>
+  <path d="M608 500 C616 500 618 475 623 430 C629 374 632 255 647.424242 255 C663 255 666 374 672 430 C677 475 680 500 695 500 H738 Z" fill="#93404b" fill-opacity="0.12"/>
+  <g fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M488 500 H518 C531 500 533 488 541 454 C549 420 550 350 565 350 C580 350 581 420 589 454 C597 488 599 500 612 500" stroke="#2b8c86"/>
+    <path d="M608 500 C616 500 618 475 623 430 C629 374 632 255 647.424242 255 C663 255 666 374 672 430 C677 475 680 500 695 500 H738" stroke="#93404b"/>
+  </g>
+</svg>

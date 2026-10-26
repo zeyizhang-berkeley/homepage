@@ -1237,8 +1237,8 @@
         9
       ],
       "image": {
-        "src": "assets/research/quantum-simulation-sourced.svg",
-        "alt": "A published carbon dioxide on graphene model paired with a GPU schematic for accelerated electronic-structure calculations.",
+        "src": "assets/research/quantum-simulation-original-v2.svg",
+        "alt": "A verified carbon dioxide model above three graphics processors illustrates parallel electronic-structure computation.",
         "width": 800,
         "height": 600
       }
@@ -1260,8 +1260,8 @@
         9
       ],
       "image": {
-        "src": "assets/research/real-space-dft-sourced.svg",
-        "alt": "The methane and real-space grid panel from the graphical abstract of the real-space DFT review.",
+        "src": "assets/research/real-space-dft-original-v2.svg",
+        "alt": "A water molecule within a regular three-dimensional real-space grid, surrounded by a qualitative electron-density envelope.",
         "width": 800,
         "height": 600
       }
@@ -1323,8 +1323,8 @@
         8
       ],
       "image": {
-        "src": "assets/research/excited-states-sourced.svg",
-        "alt": "Original molecular orbital and density panels from the ROKS energy decomposition graphical abstract.",
+        "src": "assets/research/excited-states-original-v2.svg",
+        "alt": "Two electronic transitions from a ground state to excited states correspond to two schematic absorption peaks, with photon energy increasing to the right.",
         "width": 800,
         "height": 600
       }
