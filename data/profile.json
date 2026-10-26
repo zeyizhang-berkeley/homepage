@@ -158,7 +158,7 @@
           "links": []
         }
       ],
-      "homepage_summary": "THC acceleration of Hartree–Fock and correlated methods on GPUs; AFQMC reference data for transition-metal systems; exploration of training methods for MLDFT."
+      "homepage_summary": "GPU-accelerated quantum chemistry with THC; AFQMC reference data for transition metals; exploration of MLDFT training methods."
     },
     {
       "id": "lbnl",
@@ -306,7 +306,7 @@
           "links": []
         }
       ],
-      "homepage_summary": "Integration of ML charge-density models; real-space DFT across multiple nodes and GPUs; GPU-accelerated DFT geometry optimization and molecular dynamics, with MLFF-assisted structure initialization; studies of XPS, interfacial chemistry, and CO₂ capture; evaluation of molecular-structure reasoning with MolP2SBench; benchmarks derived from scientific literature; contributions to scientific agent benchmarks; multimodal spectroscopy of gas-phase reactions; agentic workflows for simulations and spectroscopy; modeling of semiconductors and lithography."
+      "homepage_summary": "ML-assisted real-space DFT on GPUs; scientific reasoning benchmarks and agentic workflows; spectroscopy, interfacial chemistry, CO₂ capture, semiconductor, and lithography applications."
     },
     {
       "id": "berkeley",
@@ -389,7 +389,7 @@
           "homepage_summary": "Machine-learned Hamiltonians and flow-matching models for electronic states and molecular properties."
         }
       ],
-      "homepage_summary": "Energy decomposition for ROKS excitations; frozen-orbital guesses for charge-transfer excitations; multireference studies of C₂; photoionization-induced O–O bond formation in CO₂–H₂O clusters; label-free SCF self-distillation for learned Hamiltonians; electronic force fields with orbital response; manifold-based flow matching for electronic states and molecular properties."
+      "homepage_summary": "Excited-state and multireference quantum chemistry; photoionization-driven reactions; machine-learned Hamiltonians, electronic force fields, and flow matching."
     },
     {
       "id": "qchem",
@@ -429,7 +429,7 @@
           ]
         }
       ],
-      "homepage_summary": "Complex-valued HF, DFT, and correlated methods, with orbital optimization and energy decomposition; frozen-orbital initial guesses for orbital-optimized DFT."
+      "homepage_summary": "Complex-valued orbital methods, orbital optimization, and energy decomposition; frozen-orbital initial guesses for orbital-optimized DFT."
     },
     {
       "id": "nyu-ecnu",
@@ -457,7 +457,7 @@
           "links": []
         }
       ],
-      "homepage_summary": "Active learning of prebiotic glycine-formation pathways and transition states using DFT, ML potentials, molecular dynamics, and NEB."
+      "homepage_summary": "Active learning of prebiotic glycine-formation pathways and transition states using quantum-chemical simulations."
     },
     {
       "id": "sjtu",
@@ -480,7 +480,7 @@
           "links": []
         }
       ],
-      "homepage_summary": "Prediction of ionic-liquid properties and CO₂ solubility with graph kernels and Gaussian processes; workflows for processing ILThermo data."
+      "homepage_summary": "Machine learning for ionic-liquid properties and CO₂ solubility; workflows for ILThermo data."
     }
   ],
   "publications": [

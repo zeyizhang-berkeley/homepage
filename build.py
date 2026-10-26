@@ -18,11 +18,11 @@ def asset_url(path):
     version = hashlib.sha256((ROOT / path).read_bytes()).hexdigest()[:12]
     return path + '?v=' + version
 
-def link(url, text, cls='', download=False):
+def link(url, text, cls='', download=False, new_tab=False):
     attrs = ' class="' + e(cls) + '"' if cls else ''
     if download:
         attrs += ' download'
-    elif url.startswith(('https://', 'http://')):
+    elif new_tab or url.startswith(('https://', 'http://')):
         attrs += ' target="_blank" rel="noopener noreferrer"'
     return '<a href="' + e(url) + '"' + attrs + '>' + text + '</a>'
 
@@ -208,7 +208,7 @@ def build():
     body = section('about', 'About Me', intro, cls='intro')
     body += section('research', 'Research Interest', build_research())
     body += section('education', 'Education', build_education(), panel=True)
-    body += section('experience', 'Experience', build_experience(), panel=True)
+    body += section('experience', 'Experience', build_experience(), 'See ' + link('assets/Zeyi_Zhang_CV.pdf', '[CV]', new_tab=True) + ' for details.', panel=True)
     body += section('publications', 'Publications', pubs, '* Equal contribution')
     body += section('software', 'Software', build_software(), panel=True)
     body += section('teaching', 'Teaching', build_teaching(), panel=True)
@@ -228,7 +228,7 @@ def build():
 <link rel="stylesheet" href="assets/style.css"><script src="assets/site.js" defer></script>
 </head><body><a class="skip-link" href="#main">Skip to content</a>''' + topbar + '''<div class="shell"><aside class="side" aria-label="Profile and contact information">
 <div class="profile"><div class="profile__avatar" role="img" aria-label="Portrait placeholder"></div><div class="profile__identity"><h1 class="profile__name">Zeyi Zhang</h1><p class="profile__tagline">Ph.D. Candidate in Chemistry<br>University of California, Berkeley<br>Lawrence Berkeley National Laboratory</p></div></div>
-<p class="profile__location">Berkeley, California</p><ul class="links" aria-label="Contact and academic profiles">''' + social + '</ul>' + link('assets/Zeyi_Zhang_CV.pdf', icon('CV') + 'View CV', 'cv-link') + '</aside><main class="main" id="main">' + body + '<footer class="foot"><span>© 2026 Zeyi Zhang</span><a href="#about">Back to top ↑</a></footer></main></div></body></html>'
+<p class="profile__location">Berkeley, California</p><ul class="links" aria-label="Contact and academic profiles">''' + social + '</ul>' + link('assets/Zeyi_Zhang_CV.pdf', icon('CV') + 'View CV', 'cv-link', new_tab=True) + '</aside><main class="main" id="main">' + body + '<footer class="foot"><span>© 2026 Zeyi Zhang</span><a href="#about">Back to top ↑</a></footer></main></div></body></html>'
     viewer = '<dialog class="figure-viewer" id="figure-lightbox" aria-label="Enlarged publication figure"><div class="figure-viewer__panel"><div class="figure-viewer__toolbar"><button class="figure-viewer__close" type="button" aria-label="Close enlarged figure" autofocus><span aria-hidden="true">×</span> Close</button></div><img class="figure-viewer__image" alt=""></div></dialog>'
     html = html.replace('</body>', viewer + '</body>')
     html = html.replace('href="assets/style.css"', 'href="' + asset_url('assets/style.css') + '"')
