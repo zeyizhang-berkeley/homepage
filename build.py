@@ -236,11 +236,12 @@ def build():
 <script>try{const t=localStorage.getItem('zeyi-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
 <link rel="stylesheet" href="assets/style.css"><script src="assets/site.js" defer></script>
 </head><body><a class="skip-link" href="#main">Skip to content</a>''' + topbar + '''<div class="shell"><aside class="side" aria-label="Profile and contact information">
-<div class="profile"><div class="profile__avatar" role="img" aria-label="Portrait placeholder"></div><div class="profile__identity"><h1 class="profile__name">Zeyi Zhang</h1><p class="profile__tagline">Ph.D. Candidate in Chemistry<br>University of California, Berkeley<br>Lawrence Berkeley National Laboratory</p></div></div>
+<div class="profile"><img class="profile__avatar" src="assets/portrait.jpg" alt="Zeyi Zhang" width="934" height="1156" fetchpriority="high" decoding="async"><div class="profile__identity"><h1 class="profile__name">Zeyi Zhang</h1><p class="profile__tagline">Ph.D. Candidate in Chemistry<br>University of California, Berkeley<br>Lawrence Berkeley National Laboratory</p></div></div>
 <p class="profile__location">Berkeley, California</p><ul class="links" aria-label="Contact and academic profiles">''' + social + '</ul>' + link('assets/Zeyi_Zhang_CV.pdf', icon('CV') + 'View CV', 'cv-link', new_tab=True) + '</aside><main class="main" id="main">' + body + '<footer class="foot"><span>© 2026 Zeyi Zhang</span><a href="#about">Back to top ↑</a></footer></main></div></body></html>'
     viewer = '<dialog class="figure-viewer" id="figure-lightbox" aria-label="Enlarged figure"><div class="figure-viewer__panel"><div class="figure-viewer__toolbar"><button class="figure-viewer__close" type="button" aria-label="Close enlarged figure" autofocus><span aria-hidden="true">×</span> Close</button></div><img class="figure-viewer__image" alt=""></div></dialog>'
     html = html.replace('</body>', viewer + '</body>')
     html = html.replace('href="assets/style.css"', 'href="' + asset_url('assets/style.css') + '"')
+    html = html.replace('src="assets/portrait.jpg"', 'src="' + asset_url('assets/portrait.jpg') + '"')
     html = html.replace('src="assets/site.js"', 'src="' + asset_url('assets/site.js') + '"')
     (OUT / 'index.html').write_text(html)
     (OUT / '.nojekyll').write_text('')
