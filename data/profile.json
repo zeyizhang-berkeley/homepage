@@ -1256,8 +1256,7 @@
       "summary": "Using GPU-accelerated AFQMC to generate reference energies and potential-energy curves for transition-metal compounds, supporting studies of bonding and strong correlation.",
       "keywords": [
         "AFQMC",
-        "Transition-metal compounds",
-        "Reference data"
+        "Transition-metal compounds"
       ],
       "publication_numbers": []
     },
@@ -1269,8 +1268,7 @@
       "keywords": [
         "Static correlation",
         "NOCI(-RSPT)",
-        "AFQMC",
-        "Complex orbitals"
+        "AFQMC"
       ],
       "publication_numbers": [
         8,
