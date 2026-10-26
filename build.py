@@ -208,7 +208,7 @@ def build():
     links += [x for x in DATA['profile']['links'] if x['label'] == 'LinkedIn']
     social = ''.join('<li>' + link(x['url'], icon(x['label']) + e(x['label'])) + '</li>' for x in links)
     nav = ''.join('<li>' + link('#' + id_, e(label), 'is-active' if id_ == 'about' else '') + '</li>' for id_, label in NAV)
-    topbar = '<header class="topbar"><div class="topbar__inner">' + link('#about', 'Zeyi Zhang', 'topbar__name') + '<nav class="toc" aria-label="Section navigation"><ol class="toc__list">' + nav + '</ol></nav><button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme" hidden>' + icon('Theme') + '<span>Dark theme</span></button></div></header>'
+    topbar = '<header class="topbar"><div class="topbar__inner">' + link('#about', 'Homepage', 'topbar__name') + '<nav class="toc" aria-label="Section navigation"><ol class="toc__list">' + nav + '</ol></nav><button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme" hidden>' + icon('Theme') + '<span>Dark theme</span></button></div></header>'
     # Trusted, author-edited paragraph markup keeps the displayed biography in the profile data.
     lead_index = DATA['profile'].get('about_lead_index', 0)
     intro = ''.join('<p' + (' class="intro__lead"' if i == lead_index else '') + '>' + paragraph + '</p>' for i, paragraph in enumerate(DATA['profile']['about_html']))
