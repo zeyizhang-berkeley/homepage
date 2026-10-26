@@ -1218,36 +1218,82 @@
   ],
   "research_highlights": [
     {
-      "id": "excited-states",
-      "name": "Excited States & Chemical Reactivity",
+      "id": "quantum-simulation",
+      "name": "GPU-Accelerated Quantum Chemistry",
       "label": "Quantum chemistry",
-      "summary": "Developing state-specific and multireference methods to understand electronic excitations and strong correlation, with applications to spectroscopy, charge-transfer excitations, and photoionization-driven reactions.",
+      "summary": "Making demanding quantum-chemical simulations accessible for scientific and industrial applications through GPU implementations of tensor hypercontraction (THC), auxiliary-field quantum Monte Carlo (AFQMC), and real-space Kohn–Sham DFT, extending scalable calculations from mean-field to correlated methods.",
       "keywords": [
-        "Excited states",
-        "Strong correlation",
-        "Spectroscopy"
+        "GPU computing",
+        "THC",
+        "AFQMC",
+        "Real-space DFT"
+      ],
+      "publication_numbers": [
+        3,
+        9
+      ]
+    },
+    {
+      "id": "real-space-dft",
+      "name": "Real-Space Kohn–Sham DFT",
+      "label": "Quantum chemistry",
+      "summary": "Developing real-space Kohn–Sham DFT for large, complex systems, including surfaces and interfaces, CO₂ capture, X-ray photoelectron spectroscopy, and semiconductor and lithography applications in microelectronics. Multi-node, multi-GPU electronic-structure calculations are complemented by GPU-accelerated geometry optimization and ab initio molecular dynamics; learned densities and machine learning force fields provide efficient initial density and geometry guesses.",
+      "keywords": [
+        "Surfaces & interfaces",
+        "CO₂ capture",
+        "Microelectronics",
+        "ML-assisted initialization"
+      ],
+      "publication_numbers": [
+        3,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "quantum-monte-carlo-research",
+      "name": "Quantum Monte Carlo",
+      "label": "Quantum chemistry",
+      "summary": "Enabling scalable, accurate simulations of transition-metal compounds with GPU-accelerated auxiliary-field quantum Monte Carlo (AFQMC), generating reference energies and potential-energy curves to investigate bonding and assess electronic-structure methods.",
+      "keywords": [
+        "AFQMC",
+        "Transition-metal compounds",
+        "Reference data"
+      ],
+      "publication_numbers": []
+    },
+    {
+      "id": "strong-correlation",
+      "name": "Multireference Methods & Strongly Correlated Systems",
+      "label": "Quantum chemistry",
+      "summary": "Investigating static correlation, symmetry breaking, and chemical bonding with AFQMC for transition-metal systems and non-orthogonal configuration interaction with perturbative corrections, NOCI(-RSPT), for systems such as C₂. Related work develops complex-valued orbital methods and orbital optimization for HF, DFT, MP2, and NOCI(-MP2).",
+      "keywords": [
+        "Static correlation",
+        "NOCI(-RSPT)",
+        "AFQMC",
+        "Complex orbitals"
+      ],
+      "publication_numbers": [
+        8,
+        10
+      ]
+    },
+    {
+      "id": "excited-states",
+      "name": "Excited-State Theory & Applications",
+      "label": "Quantum chemistry",
+      "summary": "Developing energy decomposition analysis (EDA) for two-determinant ROKS and frozen molecular-orbital guesses for orbital-optimized DFT calculations of charge-transfer excitations. Studying low-lying excited states with NOCI(-RSPT) and applying computational spectroscopy to photoionization and O–O bond formation in CO₂–H₂O clusters, with implications for astrochemistry.",
+      "keywords": [
+        "ROKS EDA",
+        "Charge transfer",
+        "Low-lying excited states",
+        "Photoionization"
       ],
       "publication_numbers": [
         4,
         5,
         6,
         8
-      ]
-    },
-    {
-      "id": "quantum-simulation",
-      "name": "GPU-Accelerated Quantum Chemistry",
-      "label": "Quantum chemistry",
-      "summary": "Making electronic-structure calculations more scalable through GPU algorithms for real-space DFT and correlated methods, alongside AFQMC reference data for transition-metal systems.",
-      "keywords": [
-        "Real-space DFT",
-        "THC",
-        "AFQMC"
-      ],
-      "publication_numbers": [
-        3,
-        7,
-        9
       ]
     },
     {

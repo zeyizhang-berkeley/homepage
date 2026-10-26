@@ -129,7 +129,7 @@ def build_research():
     groups = []
     for label, title, id_ in [('Quantum chemistry', 'Quantum Chemistry', 'quantum-chemistry'), ('AI for science', 'AI for Science', 'ai-for-science')]:
         cards = ''.join(project_card(p, p['id']) for p in DATA['research_highlights'] if p['label'] == label)
-        groups.append('<div class="research-group" aria-labelledby="' + id_ + '-title"><h3 id="' + id_ + '-title">' + title + '</h3><div class="projects">' + cards + '</div></div>')
+        groups.append('<div class="research-group section-panel" aria-labelledby="' + id_ + '-title"><h3 id="' + id_ + '-title">' + title + '</h3><div class="projects">' + cards + '</div></div>')
     return ''.join(groups)
 
 def build_software():
