@@ -64,7 +64,7 @@
 .brand-logo{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none;width:var(--logo-size);height:var(--logo-size);overflow:hidden;vertical-align:middle}
 .brand-logo img{display:block;width:100%;height:100%;object-fit:contain}
 /* Keep the official originals; the viewport shows only their graphic marks. */
-.brand-logo--parsec img{position:absolute;left:4%;top:0;width:auto;max-width:none;height:100%}
+.brand-logo--parsec img{position:absolute;left:-7%;top:-12.5%;width:auto;max-width:none;height:125%}
 .brand-logo--pyscf img{position:absolute;left:-18.54%;top:-8.29%;width:341.46%;max-width:none;height:117.07%}
 .brand-logo--dtcs{border-radius:3px}.brand-logo--dtcs img{object-fit:fill}
 #frontierphysics-software .brand-logo img{position:absolute;width:140%;height:140%;max-width:none}
