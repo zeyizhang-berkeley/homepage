@@ -1260,8 +1260,8 @@
         9
       ],
       "image": {
-        "src": "assets/research/real-space-dft-balanced-v5.svg",
-        "alt": "A water molecule with smaller hydrogen display spheres in a transparent cubic real-space grid, with layered qualitative electron-density contours.",
+        "src": "assets/research/real-space-dft-water-cluster-v6.svg",
+        "alt": "A six-water molecular cluster inside a wide rectangular real-space grid, with small white hydrogen spheres and dashed intermolecular hydrogen bonds.",
         "width": 800,
         "height": 600
       }

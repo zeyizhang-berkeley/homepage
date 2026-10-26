@@ -1,6 +1,6 @@
 {
   "selected_on": "2026-10-26",
-  "molecular_policy": "Methane source models retain their original pixels and proportions. Water uses an edit of its verified public-domain source, with smaller hydrogen display spheres and the same one-O/two-H connectivity. The GPU source panel has only its a) label removed with a tightly bounded carbon-rim repair. No additional atoms or bonds are introduced.",
+  "molecular_policy": "Methane keeps its source pixels. The water cluster is rendered natively from published Cartesian coordinates, with unchanged molecular geometry, 6 O, 12 H and 12 solid O–H bonds. Smaller hydrogen spheres are a display convention. GPU label and rim edits remain limited to their documented regions.",
   "methane_source": {
     "page_url": "https://commons.wikimedia.org/wiki/File:Methane-CRC-MW-3D-balls.png",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Methane-CRC-MW-3D-balls.png",
@@ -260,176 +260,664 @@
     },
     {
       "id": "real-space-dft",
-      "file": "real-space-dft-balanced-v5.svg",
+      "file": "real-space-dft-water-cluster-v6.svg",
       "dimensions": [
         800,
         600
       ],
-      "sha256": "ff09e3572db27e069b0210db29f4d276a80d2e73ec513e26852220b09347df05",
-      "source_id": "water",
-      "source_png_sha256": "109ff19229927ab8951e5d140019d62504f98423502345643daa127b5eb403e9",
-      "source_pixels_unchanged": false,
-      "method": "The native SVG cubic grid, density contours and glass styling are unchanged. Its water PNG is replaced by a built-in ImageGen edit of the original verified source, reducing both hydrogen sphere display diameters to about 60%; two O-H single bonds and the original molecular view are retained.",
-      "molecule_viewport": [
-        250.0,
-        198.13636363636363,
-        300,
-        203.72727272727272
-      ],
-      "grid": {
-        "coordinate_model": "p(i,j,k)=[400+65*sqrt(3)/2*(i-j),300+32.5*(i+j)-65*k]",
-        "cell_counts": [
-          4,
-          4,
-          4
+      "sha256": "281f7a09e7150ef683af04e74ec5c022326c6c4ed246a491f783a7539e42bf88",
+      "source_id": "water-hexamer-prism",
+      "coordinate_file": "water-hexamer-prism.xyz",
+      "coordinate_sha256": "c8aea2650b212aaf172f5dc779040aee9ade00c8424b2f4ed51f766e0fd805a6",
+      "method": "Native SVG rendering of the published water-hexamer prism coordinates inside a wider rectangular Cartesian mesh. Atom positions and covalent connectivity come from the source geometry; no AI-generated molecular structure or paper artwork is used.",
+      "geometry": {
+        "atom_count": 18,
+        "element_counts": {
+          "O": 6,
+          "H": 12
+        },
+        "sequential_OHH_triplets_valid": true,
+        "covalent_bond_count": 12,
+        "OH_length_range_A": [
+          0.942802,
+          0.961216
         ],
-        "world_cell_edge_lengths": [
-          1,
-          1,
-          1
-        ],
-        "world_cube_edge_lengths": [
-          4,
-          4,
-          4
-        ],
-        "projected_basis_lengths": [
-          65,
-          65,
-          65
-        ],
-        "projected_cube_edge_lengths": [
-          260.0,
-          260.0,
-          260.0,
-          260.0,
-          260.0,
-          260.0,
-          260.0,
-          260.0,
-          260.0,
-          260.0,
-          260.0,
-          260.0
-        ],
-        "projected_bounds": [
-          174.83339501604596,
-          40,
-          625.166604983954,
-          560
-        ],
-        "projection_type": "orthographic isometric",
-        "true_cartesian_cube": true,
-        "highlighted_regular_lattice_nodes": [
-          [
-            0,
-            0,
-            4
-          ],
-          [
-            4,
-            0,
-            4
-          ],
-          [
-            0,
-            4,
-            4
-          ],
-          [
-            4,
-            4,
-            0
-          ],
-          [
-            4,
-            0,
-            0
-          ],
-          [
-            0,
-            4,
-            0
-          ],
-          [
-            2,
-            0,
-            4
-          ],
-          [
-            0,
-            2,
-            4
-          ],
-          [
-            4,
-            2,
-            4
-          ],
-          [
-            2,
-            4,
-            4
-          ],
-          [
-            4,
-            0,
-            2
-          ],
-          [
-            0,
-            4,
-            2
-          ]
+        "HOH_angle_range_deg": [
+          103.135685,
+          107.620446
         ]
       },
-      "density_note": "Qualitative positive envelope only; not a computed density or signed orbital.",
-      "paper_artwork": false,
-      "visual_qa": {
-        "reviewed_at_800x600_and_180x135": true,
-        "glass_faces_and_depth_visible": true,
-        "true_4x4x4_cube_preserved": true,
-        "all_three_atoms_and_two_OH_single_bonds_visible": true,
-        "molecule_unfiltered_and_last_in_paint_order": true,
-        "no_neon_or_sign_changing_density": true,
-        "no_visible_text_numbers_or_data_values": true,
-        "grid_node_highlights_on_regular_lattice_only": true,
-        "original_water_source_retained_for_provenance": true,
-        "hydrogen_display_size_reduced": true
-      },
-      "style_changes": [
-        "Both hydrogen sphere display diameters reduced to approximately 60% of the previous rendering; all surrounding grid, density and page styling unchanged."
-      ],
-      "edited_molecule_png_sha256": "260d9a611351286849fff9db2af1171f642cdbaefdad95e89583104e8ebb8c63",
-      "molecule_edit": {
-        "tool": "Built-in image_gen.imagegen",
-        "mode": "precise-object-edit",
-        "prompt_id": "water-hydrogen-display-size",
-        "target_hydrogen_diameter_scale": 0.6,
-        "edited_png_dimensions": [
-          1522,
-          1033
+      "rendering": {
+        "source": {
+          "source_page": "https://www-wales.ch.cam.ac.uk/~wales/CCD/anant-watcl.html",
+          "coordinate_url": "https://www-wales.ch.cam.ac.uk/~wales/CCD/anant/xyz/6-prism.xyz",
+          "doi": "10.1021/jp013141b",
+          "coordinate_file": "6-prism.xyz",
+          "coordinate_sha256": "c8aea2650b212aaf172f5dc779040aee9ade00c8424b2f4ed51f766e0fd805a6",
+          "geometry": "Published RHF/6-31G(d,p) prism water-hexamer coordinates; rigid rotation, translation and uniform visual scaling only.",
+          "domain": "Rectangular 6×4×3 domain with uniform Cartesian mesh; orthographic camera yaw45°, elevation20°.",
+          "density": "Background teal haze is qualitative, not computed electron-density data."
+        },
+        "source_xyz_exact_text": "18\nE(RHF/6-31G(d,p))=-456.2206685\n O                   1.526924   -0.407825    1.467087\n H                   0.615293   -0.694811    1.569578\n H                   2.001971   -0.712098    2.222674\n O                   0.831994    2.016713   -0.073306\n H                   1.169971    1.534473    0.670375\n H                   1.181010    1.553886   -0.823001\n O                   1.709464   -0.492590   -1.370853\n H                   2.421392   -0.900609   -1.835542\n H                   1.839304   -0.657788   -0.441680\n O                  -1.891336    1.277844   -0.075746\n H                  -1.013035    1.654737   -0.078267\n H                  -2.500751    1.992871   -0.154652\n O                  -1.172193   -1.306705   -1.416807\n H                  -0.263214   -1.117130   -1.610277\n H                  -1.591494   -0.462719   -1.314422\n O                  -1.135583   -1.129560    1.451997\n H                  -1.200738   -1.536124    0.593247\n H                  -1.613872   -0.317697    1.342986\n\n",
+        "atom_count": 18,
+        "oxygen_count": 6,
+        "hydrogen_count": 12,
+        "atoms": [
+          {
+            "index": 1,
+            "element": "O",
+            "source_xyz_angstrom": [
+              1.526924,
+              -0.407825,
+              1.467087
+            ],
+            "world_position": [
+              1.9495117621653906,
+              2.5664925017923848,
+              0.6667147593648289
+            ],
+            "projected_center": [
+              302.81286608674566,
+              356.6083134069579
+            ],
+            "depth": -0.6065976079950448,
+            "sphere_radius_px": 22
+          },
+          {
+            "index": 2,
+            "element": "H",
+            "source_xyz_angstrom": [
+              0.615293,
+              -0.694811,
+              1.569578
+            ],
+            "world_position": [
+              1.9278068094812155,
+              1.9194768368884718,
+              0.7552368486581854
+            ],
+            "projected_center": [
+              340.3965889082748,
+              335.79095209142497
+            ],
+            "depth": -1.0206613943610867,
+            "sphere_radius_px": 13.2
+          },
+          {
+            "index": 3,
+            "element": "H",
+            "source_xyz_angstrom": [
+              2.001971,
+              -0.712098,
+              2.222674
+            ],
+            "world_position": [
+              1.4091390265341153,
+              2.735092232273708,
+              0.3659824788695534
+            ],
+            "projected_center": [
+              260.2007308174103,
+              372.98650021000753
+            ],
+            "depth": -0.9564835210606977,
+            "sphere_radius_px": 13.2
+          },
+          {
+            "index": 4,
+            "element": "O",
+            "source_xyz_angstrom": [
+              0.831994,
+              2.016713,
+              -0.073306
+            ],
+            "world_position": [
+              3.9529397564664452,
+              2.6387028657618345,
+              0.5364725213284043
+            ],
+            "projected_center": [
+              418.88691808687753,
+              409.6797579751547
+            ],
+            "depth": 0.7280418641582442,
+            "sphere_radius_px": 22
+          },
+          {
+            "index": 5,
+            "element": "H",
+            "source_xyz_angstrom": [
+              1.169971,
+              1.534473,
+              0.670375
+            ],
+            "world_position": [
+              3.3486599486827293,
+              2.6959673741685544,
+              0.31882352941176473
+            ],
+            "projected_center": [
+              379.12540796401515,
+              415.81933911770267
+            ],
+            "depth": 0.29013008453731265,
+            "sphere_radius_px": 13.2
+          },
+          {
+            "index": 6,
+            "element": "H",
+            "source_xyz_angstrom": [
+              1.18101,
+              1.553886,
+              -0.823001
+            ],
+            "world_position": [
+              3.932936050413886,
+              2.906719791894294,
+              1.1219192516557106
+            ],
+            "projected_center": [
+              401.5757040050062,
+              368.0162196844727
+            ],
+            "depth": 1.0930720530769982,
+            "sphere_radius_px": 13.2
+          },
+          {
+            "index": 7,
+            "element": "O",
+            "source_xyz_angstrom": [
+              1.709464,
+              -0.49259,
+              -1.370853
+            ],
+            "world_position": [
+              2.9655957255949654,
+              3.056531786308422,
+              2.2376171924573027
+            ],
+            "projected_center": [
+              334.4302956584289,
+              262.09533398759993
+            ],
+            "depth": 0.9314458757539199,
+            "sphere_radius_px": 22
+          },
+          {
+            "index": 8,
+            "element": "H",
+            "source_xyz_angstrom": [
+              2.421392,
+              -0.900609,
+              -1.835542
+            ],
+            "world_position": [
+              2.797168481348736,
+              3.530454281099707,
+              2.6350355723465344
+            ],
+            "projected_center": [
+              295.8224578672479,
+              236.63199511758177
+            ],
+            "depth": 1.2703612651174334,
+            "sphere_radius_px": 13.2
+          },
+          {
+            "index": 9,
+            "element": "H",
+            "source_xyz_angstrom": [
+              1.839304,
+              -0.657788,
+              -0.44168
+            ],
+            "world_position": [
+              2.495820314374785,
+              2.994566060575096,
+              1.7962352382903883
+            ],
+            "projected_center": [
+              309.91927116491775,
+              286.41932126647237
+            ],
+            "depth": 0.42716203247638873,
+            "sphere_radius_px": 13.2
+          },
+          {
+            "index": 10,
+            "element": "O",
+            "source_xyz_angstrom": [
+              -1.891336,
+              1.277844,
+              -0.075746
+            ],
+            "world_position": [
+              4.069688225855295,
+              0.7629738097747976,
+              0.9203188000780865
+            ],
+            "projected_center": [
+              538.6429394990594,
+              342.8614485344921
+            ],
+            "depth": -0.3094525369807617,
+            "sphere_radius_px": 22
+          },
+          {
+            "index": 11,
+            "element": "H",
+            "source_xyz_angstrom": [
+              -1.013035,
+              1.654737,
+              -0.078267
+            ],
+            "world_position": [
+              4.106490426003584,
+              1.3865862079617317,
+              0.7418472407147332
+            ],
+            "projected_center": [
+              503.37325452334295,
+              370.6926771611828
+            ],
+            "depth": 0.06832767606648332,
+            "sphere_radius_px": 13.2
+          },
+          {
+            "index": 12,
+            "element": "H",
+            "source_xyz_angstrom": [
+              -2.500751,
+              1.992871,
+              -0.154652
+            ],
+            "world_position": [
+              4.590860973465885,
+              0.46954571890029295,
+              0.6900694475691422
+            ],
+            "projected_center": [
+              587.6037705315694,
+              365.93405847990823
+            ],
+            "depth": -0.23687455012329323,
+            "sphere_radius_px": 13.2
+          },
+          {
+            "index": 13,
+            "element": "O",
+            "source_xyz_angstrom": [
+              -1.172193,
+              -1.306705,
+              -1.416807
+            ],
+            "world_position": [
+              3.0888139830810495,
+              1.0733441167327018,
+              2.6804999299631715
+            ],
+            "projected_center": [
+              461.03387842976866,
+              188.4855463765016
+            ],
+            "depth": -0.15296020771536312,
+            "sphere_radius_px": 22
+          },
+          {
+            "index": 14,
+            "element": "H",
+            "source_xyz_angstrom": [
+              -0.263214,
+              -1.11713,
+              -1.610277
+            ],
+            "world_position": [
+              3.094675817659465,
+              1.7180625337138058,
+              2.6811764705882353
+            ],
+            "projected_center": [
+              422.6359935918474,
+              201.8053597110528
+            ],
+            "depth": 0.27955770436497,
+            "sphere_radius_px": 13.2
+          },
+          {
+            "index": 15,
+            "element": "H",
+            "source_xyz_angstrom": [
+              -1.591494,
+              -0.462719,
+              -1.314422
+            ],
+            "world_position": [
+              3.572823230965151,
+              0.8966583759972966,
+              2.2935244375456745
+            ],
+            "projected_center": [
+              500.7443405034185,
+              225.71236697634157
+            ],
+            "depth": -0.08110851406975944,
+            "sphere_radius_px": 13.2
+          },
+          {
+            "index": 16,
+            "element": "O",
+            "source_xyz_angstrom": [
+              -1.135583,
+              -1.12956,
+              1.451997
+            ],
+            "world_position": [
+              2.0688873029560355,
+              0.7344490548415326,
+              1.0486328767580666
+            ],
+            "projected_center": [
+              420.1011020160427,
+              290.8960544138436
+            ],
+            "depth": -1.61397841544617,
+            "sphere_radius_px": 22
+          },
+          {
+            "index": 17,
+            "element": "H",
+            "source_xyz_angstrom": [
+              -1.200738,
+              -1.536124,
+              0.593247
+            ],
+            "world_position": [
+              2.197599279438382,
+              0.7540028233985563,
+              1.6827915298543954
+            ],
+            "projected_center": [
+              426.6619552849669,
+              243.29121682547986
+            ],
+            "depth": -1.2985662766608506,
+            "sphere_radius_px": 13.2
+          },
+          {
+            "index": 18,
+            "element": "H",
+            "source_xyz_angstrom": [
+              -1.613872,
+              -0.317697,
+              1.342986
+            ],
+            "world_position": [
+              2.6284414873520165,
+              0.5434589478130374,
+              0.7913600272570157
+            ],
+            "projected_center": [
+              465.21187345004614,
+              319.0219330652215
+            ],
+            "depth": -1.4570737107777016,
+            "sphere_radius_px": 13.2
+          }
         ],
-        "note": "Ball-and-stick display sizes are schematic, not physical atomic radii. Source geometry retained visually, not pixel-identical."
-      }
+        "covalent_bonds": [
+          {
+            "from": 1,
+            "to": 2,
+            "order": 1,
+            "length_angstrom": 0.961216130450379
+          },
+          {
+            "from": 1,
+            "to": 3,
+            "order": 1,
+            "length_angstrom": 0.9429546252641218
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "order": 1,
+            "length_angstrom": 0.9486017604295284
+          },
+          {
+            "from": 4,
+            "to": 6,
+            "order": 1,
+            "length_angstrom": 0.9476621725119135
+          },
+          {
+            "from": 7,
+            "to": 8,
+            "order": 1,
+            "length_angstrom": 0.9430041613195563
+          },
+          {
+            "from": 7,
+            "to": 9,
+            "order": 1,
+            "length_angstrom": 0.9526338586954592
+          },
+          {
+            "from": 10,
+            "to": 11,
+            "order": 1,
+            "length_angstrom": 0.9557548511469873
+          },
+          {
+            "from": 10,
+            "to": 12,
+            "order": 1,
+            "length_angstrom": 0.9428024235172501
+          },
+          {
+            "from": 13,
+            "to": 14,
+            "order": 1,
+            "length_angstrom": 0.9484788579436023
+          },
+          {
+            "from": 13,
+            "to": 15,
+            "order": 1,
+            "length_angstrom": 0.9479495688178776
+          },
+          {
+            "from": 16,
+            "to": 17,
+            "order": 1,
+            "length_angstrom": 0.9523607628525023
+          },
+          {
+            "from": 16,
+            "to": 18,
+            "order": 1,
+            "length_angstrom": 0.948559590332099
+          }
+        ],
+        "hydrogen_bonds": [
+          {
+            "donor_oxygen": 1,
+            "hydrogen": 2,
+            "acceptor_oxygen": 16,
+            "H_acceptor_distance_angstrom": 1.8078713316876287,
+            "O_H_O_angle_degrees": 169.53851749467725
+          },
+          {
+            "donor_oxygen": 4,
+            "hydrogen": 5,
+            "acceptor_oxygen": 1,
+            "H_acceptor_distance_angstrom": 2.129480447423033,
+            "O_H_O_angle_degrees": 144.75765384472973
+          },
+          {
+            "donor_oxygen": 4,
+            "hydrogen": 6,
+            "acceptor_oxygen": 7,
+            "H_acceptor_distance_angstrom": 2.1834535631874568,
+            "O_H_O_angle_degrees": 138.1918517959145
+          },
+          {
+            "donor_oxygen": 7,
+            "hydrogen": 9,
+            "acceptor_oxygen": 1,
+            "H_acceptor_distance_angstrom": 1.950244658000119,
+            "O_H_O_angle_degrees": 155.58439659594458
+          },
+          {
+            "donor_oxygen": 10,
+            "hydrogen": 11,
+            "acceptor_oxygen": 4,
+            "H_acceptor_distance_angstrom": 1.8802082988163837,
+            "O_H_O_angle_degrees": 167.87117283743842
+          },
+          {
+            "donor_oxygen": 13,
+            "hydrogen": 14,
+            "acceptor_oxygen": 7,
+            "H_acceptor_distance_angstrom": 2.0829864510025025,
+            "O_H_O_angle_degrees": 160.74926483284926
+          },
+          {
+            "donor_oxygen": 13,
+            "hydrogen": 15,
+            "acceptor_oxygen": 10,
+            "H_acceptor_distance_angstrom": 2.1572628525307245,
+            "O_H_O_angle_degrees": 147.335647093161
+          },
+          {
+            "donor_oxygen": 16,
+            "hydrogen": 17,
+            "acceptor_oxygen": 13,
+            "H_acceptor_distance_angstrom": 2.0233054582791,
+            "O_H_O_angle_degrees": 147.82549551177615
+          },
+          {
+            "donor_oxygen": 16,
+            "hydrogen": 18,
+            "acceptor_oxygen": 10,
+            "H_acceptor_distance_angstrom": 2.1530299212507473,
+            "O_H_O_angle_degrees": 140.80331287431406
+          }
+        ],
+        "rigid_transform": {
+          "rotation_matrix": [
+            [
+              -0.27328701402678846,
+              0.7767111794179152,
+              -0.5674803536084343
+            ],
+            [
+              0.9609255811138854,
+              0.19344811578837107,
+              -0.19798953017488352
+            ],
+            [
+              -0.0440026763420624,
+              -0.5994143560719583,
+              -0.7992284993727239
+            ]
+          ],
+          "world_units_per_angstrom": 0.6797678347085906,
+          "translation_world": [
+            3.014431828545014,
+            1.8201757438760604,
+            1.3432675126402411
+          ],
+          "camera_screen_x": [
+            0.7071067811865475,
+            -0.7071067811865475,
+            0
+          ],
+          "camera_screen_y": [
+            0.24184476264797522,
+            0.24184476264797522,
+            -0.9396926207859084
+          ],
+          "camera_depth": [
+            0.6644630243886747,
+            0.6644630243886747,
+            0.3420201433256687
+          ],
+          "screen_scale": 85,
+          "screen_center": [
+            400,
+            300
+          ],
+          "domain_center": [
+            3,
+            2,
+            1.5
+          ],
+          "rotation_search_seed": 4721,
+          "selected_trial": 684
+        },
+        "domain": {
+          "cell_counts": [
+            6,
+            4,
+            3
+          ],
+          "equal_cell_edges": [
+            1,
+            1,
+            1
+          ],
+          "camera_yaw_degrees": 45,
+          "camera_elevation_degrees": 20,
+          "projection_type": "orthographic",
+          "rectangular_cuboid": true,
+          "bounds_2d": [
+            99.4796,
+            77.4051,
+            700.5204,
+            522.5949
+          ]
+        },
+        "cluster_projected_bounds": [
+          247.00073081741033,
+          166.4855463765016,
+          600.8037705315694,
+          431.6797579751547
+        ],
+        "hydrogen_oxygen_radius_ratio": 0.6,
+        "draw_order": "Hydrogen bonds, twelve solid intramolecular bonds, atoms sorted back-to-front by camera depth. No invented molecule or arbitrary atom displacement.",
+        "geometry_qa": {
+          "source_hash": "c8aea2650b212aaf172f5dc779040aee9ade00c8424b2f4ed51f766e0fd805a6",
+          "coordinates_unchanged": true,
+          "unique_parent_oxygen_for_each_H": true,
+          "all_atoms_in_domain": true
+        },
+        "files": [
+          "candidate.svg",
+          "cluster-layer.svg",
+          "full-preview.png",
+          "thumbnail-180.png"
+        ]
+      },
+      "density_note": "Soft teal contours are qualitative illustration only, not computed electron density.",
+      "paper_artwork": false,
+      "vector_artwork": true
     }
   ],
-  "draft_policy": "Superseded molecular drafts and diagram versions are not used. Current water is an edit of a verified source to reduce hydrogen sphere display sizes; it is not a newly invented molecular structure. The GPU paper panel is retained at the owner’s request.",
+  "draft_policy": "Earlier single-water images and discarded/generated molecular drafts are archived outside the active site. The active water cluster uses published XYZ coordinates rendered as native SVG. The GPU paper-panel exception is retained at the owner’s request.",
   "additional_molecular_sources": [
     {
-      "id": "water",
-      "file": "water-3d-balls.png",
-      "page_url": "https://commons.wikimedia.org/wiki/File:Water-3D-balls.png",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Water-3D-balls.png",
-      "creator": "Benjah-bmm27 (Ben Mills)",
-      "license": "Public domain, released by creator (PD-user)",
-      "original_source_description": "Own work; the Commons description does not cite numerical input coordinates.",
-      "chemical_reference_url": "https://cccbdb.nist.gov/expgeom2x.asp?casno=7732185",
-      "visual_inspection": "One red oxygen and two white hydrogens are fully visible in a bent geometry. Two O-H single-bond cylinders, one per H. No extra atoms or bonds. Standard geometry checked independently against NIST, without claiming the Commons author used NIST coordinates.",
-      "width": 1100,
-      "height": 747,
-      "sha256": "109ff19229927ab8951e5d140019d62504f98423502345643daa127b5eb403e9",
-      "pixel_modifications": "None; exact downloaded original PNG bytes."
+      "id": "water-hexamer-prism",
+      "file": "water-hexamer-prism.xyz",
+      "dataset": "Cambridge Cluster Database: ab initio optimized water clusters",
+      "page_url": "https://www-wales.ch.cam.ac.uk/~wales/CCD/anant-watcl.html",
+      "coordinate_url": "https://www-wales.ch.cam.ac.uk/~wales/CCD/anant/xyz/6-prism.xyz",
+      "sha256": "c8aea2650b212aaf172f5dc779040aee9ade00c8424b2f4ed51f766e0fd805a6",
+      "method": "RHF/6-31G(d,p), per Cambridge source",
+      "coordinate_units": "angstrom",
+      "citation": "Maheshwary, Patel, Sathyamurthy, Kulkarni and Gadre, J. Phys. Chem. A 105, 10525–10537 (2001).",
+      "doi": "10.1021/jp013141b",
+      "attribution_note": "Scientific coordinates from the cited public research database; no public-domain or Creative Commons license is asserted. The SVG artwork is newly rendered from the coordinates, not copied from a paper figure.",
+      "coordinate_changes": "None. Only rigid rotation, translation, uniform display scaling and orthographic projection are applied for the illustration."
     }
   ],
   "conceptual_references": [

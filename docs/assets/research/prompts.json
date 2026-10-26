@@ -1,6 +1,6 @@
 {
   "generator": "Built-in image_gen.imagegen",
-  "purpose": "Non-molecular QMC artwork and targeted edits of verified source images: GPU panel-label removal and smaller water hydrogen display spheres.",
+  "purpose": "Active non-molecular QMC artwork and GPU label repair, plus archived single-water editing provenance. The current water cluster is native SVG based on scientific XYZ coordinates and uses no image-generation prompt.",
   "style": "White background; muted navy and teal with burgundy accents; no labels; landscape 4:3.",
   "images": [
     {
@@ -26,7 +26,8 @@
       "mode": "Built-in image_gen.imagegen; precise-object-edit",
       "input": "Verified public-domain Water-3D-balls.png, by Ben Mills, as the edit target",
       "prompt": "Use case: precise-object-edit. The input is the EDIT TARGET: an existing public-domain ball-and-stick water molecule on a transparent 1100 x 747 canvas. Modify only the display size of the TWO WHITE HYDROGEN SPHERES. Shrink each white sphere to 60% of its current diameter, keeping its center fixed. Keep the RED OXYGEN sphere at exactly its original position and size. In original image coordinates, approximate centers are O (535,229), left H (228,518), right H (870,462), all current sphere radii roughly 177. After editing, white H radii should be approximately 106, red O radius remains 177. These are rendering sizes, not atomic radii claims. Preserve the original canvas aspect, placement, framing, white sphere coloring, soft ball shading and illumination, and the oblique molecular view exactly. Preserve the two O-H single-bond axes and their thickness, extend the existing white portions of the cylinders along those same axes to meet the now-smaller white sphere surfaces. There must be exactly THREE atoms: one red O and two white H; exactly TWO bonds, one from O to each H; no H-H bond. Do not move atomic centers, change the H-O-H angle, rotate the molecule, resize oxygen, alter projection, or add any geometry. Return the complete edited molecule alone on genuinely transparent background, retaining the original empty margins and 1100:747 canvas aspect. No grid, glow, density cloud, shadow outside the molecule, text, labels, border, comparison panels or watermark. This is an edit of the supplied verified molecule, not creation of a different molecular model.",
-      "usage": "Edited transparent water PNG is embedded in the existing native SVG. Only the molecular display layer changes; cubic grid and surrounding styling are retained."
+      "usage": "Edited transparent water PNG is embedded in the existing native SVG. Only the molecular display layer changes; cubic grid and surrounding styling are retained.",
+      "status": "Archived; superseded by native SVG water hexamer. Not referenced by the current homepage."
     }
   ]
 }
