@@ -1238,7 +1238,7 @@
       "id": "real-space-dft",
       "name": "Real-Space Kohn–Sham DFT",
       "label": "Quantum chemistry",
-      "summary": "Combining multi-GPU acceleration, ML density guesses for SCF, and MLFF geometry guesses for large-scale simulations of surfaces, interfaces, CO₂ capture, XPS, semiconductors, and lithography.",
+      "summary": "Combining multi-GPU acceleration, ML-density SCF guesses, and MLFF geometry guesses for large-scale simulations of complex systems.",
       "keywords": [
         "Real-space DFT",
         "GPU computing",
