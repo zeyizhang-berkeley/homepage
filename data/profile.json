@@ -27,7 +27,7 @@
     "location": "Berkeley, CA",
     "headline": "Ph.D. Candidate in Chemistry, UC Berkeley",
     "email": "zhentan007@berkeley.edu",
-    "bio": "I’m a theoretical chemistry Ph.D. candidate at UC Berkeley and Lawrence Berkeley National Laboratory, co-advised by Prof. Martin Head-Gordon and Dr. Jin Qian, and a Research Scientist Intern at ByteDance Seed–AI for Science. I bridge quantum chemistry and AI to make molecular simulation more predictive and practical. I develop machine-learned Hamiltonians and use learned densities and force fields to accelerate electronic-structure calculations. I also develop benchmarks for scientific reasoning in LLMs and build agentic workflows linking simulations with spectroscopy. My quantum chemistry research combines GPU computing, real-space DFT, and auxiliary-field quantum Monte Carlo for molecular and periodic systems, alongside multireference and excited-state methods for strong correlation and spectroscopy. I develop PARSEC.py and contribute to Q-Chem.",
+    "bio": "I’m a theoretical chemistry Ph.D. candidate at UC Berkeley and Lawrence Berkeley National Laboratory, co-advised by Prof. Martin Head-Gordon and Dr. Jin Qian, and a Research Scientist Intern at ByteDance Seed–AI for Science. I bridge quantum chemistry and AI to make molecular simulation more practical. I develop machine-learned Hamiltonians and use learned densities and force fields to accelerate electronic-structure calculations. I also develop benchmarks for scientific reasoning in LLMs and build agentic workflows linking simulations with spectroscopy. My quantum chemistry research combines GPU computing, real-space DFT, and auxiliary-field quantum Monte Carlo for molecular and periodic systems, alongside multireference and excited-state methods for strong correlation and spectroscopy. I develop PARSEC.py and contribute to Q-Chem.",
     "research_interests": [
       "Excited states and strong correlation",
       "GPU electronic-structure algorithms",
@@ -60,7 +60,7 @@
     ],
     "about_html": [
       "I’m a theoretical chemistry Ph.D. candidate at <strong>UC Berkeley</strong> and <strong>Lawrence Berkeley National Laboratory</strong>, co-advised by <a class=\"person\" href=\"https://mhggroupberkeley.com/members/\" target=\"_blank\" rel=\"noopener noreferrer\">Prof. Martin Head-Gordon</a> and <a class=\"person\" href=\"https://qiangrouppage.lbl.gov/people\" target=\"_blank\" rel=\"noopener noreferrer\">Dr. Jin Qian</a>, and a Research Scientist Intern at <a href=\"https://seed.bytedance.com/en/\" target=\"_blank\" rel=\"noopener noreferrer\">ByteDance Seed–AI for Science</a>.",
-      "I bridge quantum chemistry and AI to make molecular simulation more predictive and practical.",
+      "I bridge quantum chemistry and AI to make molecular simulation more practical.",
       "I develop machine-learned Hamiltonians and use learned densities and force fields to accelerate electronic-structure calculations. I also develop benchmarks for scientific reasoning in LLMs and build agentic workflows linking simulations with spectroscopy.",
       "My quantum chemistry research combines GPU computing, real-space DFT, and auxiliary-field quantum Monte Carlo for molecular and periodic systems, alongside multireference and excited-state methods for strong correlation and spectroscopy. I develop <a href=\"#parsec-software\">PARSEC.py</a> and contribute to <a href=\"#qchem-software\">Q-Chem</a>."
     ],
