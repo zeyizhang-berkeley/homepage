@@ -178,11 +178,11 @@ def build_mentorship():
     for x in DATA['mentorship']:
         current = ''
         if x.get('current_role'):
-            current = '<p class="mentee__now mentee-line"><span>Now: ' + e(x['current_role']) + ',</span> ' + institution_name(x['current_institution'])
+            current = '<p class="mentee__now mentee-line">' + institution_name(x['current_institution']) + ' <span>· ' + e(x['current_role']) + '</span>'
             if x.get('current_group'):
                 current += ' <span>· ' + e(x['current_group']) + '</span>'
-            current += '</p>'
-        rows.append('<li><h3>' + e(x['name']) + '</h3><p class="exp__meta mentee-line"><span>' + e(x['mentee_role']) + ' ·</span> ' + institution_name(x['mentee_institution']) + '</p>' + current + '</li>')
+            current += ' <span>(Now)</span></p>'
+        rows.append('<li><h3>' + e(x['name']) + '</h3><p class="exp__meta mentee-line">' + institution_name(x['mentee_institution']) + ' <span>· ' + e(x['mentee_role']) + '</span></p>' + current + '</li>')
     return '<ul class="mentees">' + ''.join(rows) + '</ul>'
 
 def build():
