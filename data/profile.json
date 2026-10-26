@@ -1239,6 +1239,7 @@
       "label": "Quantum chemistry",
       "summary": "Combining multi-GPU acceleration, ML density guesses for SCF, and MLFF geometry guesses for large-scale simulations of surfaces, interfaces, CO₂ capture, XPS, semiconductors, and lithography.",
       "keywords": [
+        "Real-space DFT",
         "GPU computing",
         "ML-assisted initialization",
         "Large-scale simulation"
@@ -1262,13 +1263,14 @@
     },
     {
       "id": "strong-correlation",
-      "name": "Multireference Methods & Strongly Correlated Systems",
+      "name": "Multireference Methods and Strongly Correlated Systems",
       "label": "Quantum chemistry",
-      "summary": "Studying static correlation and symmetry breaking with AFQMC for transition-metal systems and NOCI(-RSPT) for C₂, alongside complex-valued orbital methods and orbital optimization.",
+      "summary": "Studying both static and dynamic correlation with multireference methods like AFQMC and NOCI(-RSPT) for strong correlated systems like transition metal compounds.",
       "keywords": [
-        "Static correlation",
+        "Strong correlation",
         "NOCI(-RSPT)",
-        "AFQMC"
+        "AFQMC",
+        "Transition-metal compounds"
       ],
       "publication_numbers": [
         8,
@@ -1281,7 +1283,7 @@
       "label": "Quantum chemistry",
       "summary": "Developing ROKS energy decomposition and frozen-orbital guesses for charge-transfer excitations; studying low-lying states with NOCI(-RSPT) and photoionization-driven O–O bond formation in CO₂–H₂O clusters, linking spectroscopy with astrochemistry.",
       "keywords": [
-        "ROKS EDA",
+        "ROKS-EDA",
         "Charge transfer",
         "Low-lying excited states",
         "Photoionization"
