@@ -172,9 +172,9 @@ def build_teaching():
         courses = []
         for c in x['courses']:
             instructors = c.get('instructors', [])
-            label = 'Instructors: ' if len(instructors) > 1 else 'Instructor: '
-            instructor_line = '<p class="course__instructors">' + label + e(' and '.join(instructors)) + '</p>' if instructors else ''
-            courses.append('<li><div><strong>' + e(c['code']) + '</strong><span>' + e(c['name']) + '</span>' + (link(c['url'], '[Course]') if c.get('url') else '') + '</div><span class="exp__date">' + e(c['dates']) + '</span>' + instructor_line + '</li>')
+            label = 'Instructors:' if len(instructors) > 1 else 'Instructor:'
+            instructor_line = '<p class="course__instructors"><span>' + label + '</span><span>' + e(' and '.join(instructors)) + '</span></p>' if instructors else ''
+            courses.append('<li><div class="course__title"><strong>' + e(c['code']) + '</strong><span class="course__name">' + e(c['name']) + (link(c['url'], '[Course]') if c.get('url') else '') + '</span></div><span class="exp__date">' + e(c['dates']) + '</span>' + instructor_line + '</li>')
         groups.append('<div class="teaching-group"><h3>' + institution_name(x['institution']) + '</h3><p class="exp__role">' + e(x['role']) + '</p><ul class="courses">' + ''.join(courses) + '</ul></div>')
     return ''.join(groups)
 
@@ -187,7 +187,8 @@ def build_mentorship():
             if x.get('current_group'):
                 current += ' <span>· ' + e(x['current_group']) + '</span>'
             current += ' <span>(Now)</span></p>'
-        rows.append('<li><h3>' + e(x['name']) + '</h3><p class="exp__meta mentee-line">' + institution_name(x['mentee_institution']) + ' <span>· ' + e(x['mentee_role']) + '</span></p>' + current + '</li>')
+        profile_link = link(x['linkedin_url'], '[LinkedIn]', 'mentee__link') if x.get('linkedin_url') else link(x['profile_url'], '[Profile]', 'mentee__link') if x.get('profile_url') else ''
+        rows.append('<li><h3>' + e(x['name']) + profile_link + '</h3><p class="exp__meta mentee-line">' + institution_name(x['mentee_institution']) + ' <span>· ' + e(x['mentee_role']) + '</span></p>' + current + '</li>')
     return '<ul class="mentees">' + ''.join(rows) + '</ul>'
 
 def build():

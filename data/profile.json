@@ -1004,35 +1004,40 @@
       "mentee_institution": "Technical University of Munich",
       "current_role": "Postdoctoral Researcher",
       "current_institution": "UC Berkeley",
-      "current_group": "Martin Head-Gordon group"
+      "current_group": "Martin Head-Gordon group",
+      "linkedin_url": "https://www.linkedin.com/in/nicola-bogo-b9693a211"
     },
     {
       "name": "Haobo Ling",
       "mentee_role": "Visiting student",
       "mentee_institution": "Nanjing University",
       "current_role": "Ph.D. student in Chemistry",
-      "current_institution": "Columbia University"
+      "current_institution": "Columbia University",
+      "linkedin_url": "https://www.linkedin.com/in/haobo-ling-47540a336/"
     },
     {
       "name": "Sahand Adibnia",
       "mentee_role": "Undergraduate",
       "mentee_institution": "UC Berkeley",
       "current_role": "Ph.D. student in Chemical Physics",
-      "current_institution": "Columbia University"
+      "current_institution": "Columbia University",
+      "linkedin_url": "https://www.linkedin.com/in/sahand-adibnia-97b0401a4/"
     },
     {
       "name": "Patrick Kwon",
       "mentee_role": "Undergraduate",
       "mentee_institution": "UC Berkeley",
       "current_role": "Research Assistant",
-      "current_institution": "Lawrence Berkeley National Laboratory"
+      "current_institution": "Lawrence Berkeley National Laboratory",
+      "linkedin_url": "https://www.linkedin.com/in/patrickkwon27"
     },
     {
       "name": "Joey Shin",
       "mentee_role": "Undergraduate",
       "mentee_institution": "UC Berkeley",
       "current_role": null,
-      "current_institution": null
+      "current_institution": null,
+      "profile_url": "https://mhggroupberkeley.com/members/#:~:text=Joey%20Shin"
     }
   ],
   "teaching": [
@@ -1084,7 +1089,8 @@
           "program_url": "https://en.zhiyuan.sjtu.edu.cn/",
           "dates": "Feb–Jun 2022",
           "instructors": [
-            "Prof. Bei Ding"
+            "Prof. Bei Ding",
+            "Prof. Qiming Chen"
           ]
         }
       ]
