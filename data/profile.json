@@ -389,7 +389,7 @@
           "homepage_summary": "Machine-learned Hamiltonians and flow-matching models for electronic states and molecular properties."
         }
       ],
-      "homepage_summary": "Excited-state and multireference quantum chemistry; photoionization-driven reactions; machine-learned Hamiltonians, electronic force fields, and flow matching."
+      "homepage_summary": "Excited-state and multireference quantum chemistry; photoionization-driven reactions; machine-learned Hamiltonians."
     },
     {
       "id": "qchem",
