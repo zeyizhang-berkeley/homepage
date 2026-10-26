@@ -14,7 +14,7 @@ The dependency-free Python build writes `dist/index.html`, assets, and compatibi
 
 ## Edit
 
-- Approved CV content: `data/profile.json` (initial extraction on October 23, 2026; summaries and toolkit reconciled with the complete current `CV_v2/main.tex` on October 24, 2026).
+- Approved CV content: `data/profile.json` (initial extraction on October 23, 2026; summaries and source skills reconciled with the complete current `CV_v2/main.tex` on October 24, 2026).
 - Page composition and content rendering: `build.py`.
 - Visual styles and responsive layout: `assets/style.css`.
 - Local theme preference and section tracking: `assets/site.js`.
@@ -26,7 +26,7 @@ Publication order follows the current CV: works 1–7 under Publications and wor
 
 About paragraphs are maintained in `profile.about_html`; `research_highlights` holds the cross-project research summaries. Experience and Software use specific, grammatical phrases corresponding to the CV points, with explicit relationships between methods, actions, and applications. Detailed results stay in the source records and CV. Summary review preserves exploratory MLDFT wording, the QH9-orbital/HELM-spectral distinction, and the distinction between MLFF-assisted geometry initialization and DFT molecular dynamics.
 
-Experience entries show the organization, role, dates, and a compact sequence of specific phrases corresponding to the CV points. Research cards synthesize the complete CV into electronic structure and GPU computing, machine learning for quantum chemistry, and AI workflows and scientific reasoning. Software uses compact rows with the contribution role, project name, explicit [Code]/[Website] links, and a brief description; detailed project records remain in the source data and downloadable CV.
+Experience entries show the organization, role, dates, and a compact sequence of specific phrases corresponding to the CV points. Research cards synthesize the complete CV into electronic structure and GPU computing, machine learning for quantum chemistry, and AI workflows and scientific reasoning. The “Tools I work with” block is omitted at the owner’s request; skills remain in the source data and CV. Software uses compact rows with the contribution role, project name, explicit [Code]/[Website] links, and a brief description; detailed project records remain in the source data and downloadable CV.
 
 The visual reference is <https://onehfr.github.io/>: off-white background, Inter typography, a 264 px sidebar, 960 px main column, 56 px column gap, understated red accents, section rules, and rounded white cards. No reference-site biography, images, publications, or personal assets are reused. Below 860 px, the sidebar becomes a compact profile; the top navigation remains accessible through horizontal scrolling. The new homepage supersedes the previous separate-page design.
 

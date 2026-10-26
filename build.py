@@ -107,10 +107,7 @@ def project_card(p, id_, label='', wide=False):
 
 def build_research():
     cards = ''.join(project_card(p, p['id'], p['label'], p.get('wide', False)) for p in DATA['research_highlights'])
-    skills = DATA['skills']
-    labels = [('programming_languages', 'Programming'), ('scientific_computing_and_ml_frameworks', 'Scientific computing & ML'), ('simulation_software', 'Simulation software'), ('coding_agents', 'Coding agents')]
-    skill_html = '<div class="toolkit"><h3>Tools I work with</h3><dl>' + ''.join('<div><dt>' + e(label) + '</dt><dd>' + e(', '.join(skills[key])) + '</dd></div>' for key, label in labels) + '</dl></div>'
-    return '<div class="projects">' + cards + '</div>' + skill_html
+    return '<div class="projects">' + cards + '</div>'
 
 def build_software():
     groups = []
