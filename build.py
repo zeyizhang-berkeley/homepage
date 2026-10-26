@@ -106,7 +106,7 @@ def institution_name(name):
     }
     key = keys.get(name)
     logo = '<span class="institution-mark institution-mark--' + key + '" aria-hidden="true"><img src="assets/institutions/' + INSTITUTION_LOGOS[key] + '" alt="" width="18" height="18" loading="lazy" decoding="async"></span>' if key else ''
-    return '<span class="institution-name">' + logo + e(name) + '</span>'
+    return '<span class="institution-name">' + logo + '<span class="institution-name__text">' + e(name) + '</span></span>'
 
 def software_logo(item):
     if not item.get('logo'):
@@ -178,11 +178,11 @@ def build_mentorship():
     for x in DATA['mentorship']:
         current = ''
         if x.get('current_role'):
-            current = '<p class="mentee__now">Now: ' + e(x['current_role']) + ', ' + institution_name(x['current_institution'])
+            current = '<p class="mentee__now mentee-line"><span>Now: ' + e(x['current_role']) + ',</span> ' + institution_name(x['current_institution'])
             if x.get('current_group'):
-                current += ' · ' + e(x['current_group'])
+                current += ' <span>· ' + e(x['current_group']) + '</span>'
             current += '</p>'
-        rows.append('<li><h3>' + e(x['name']) + '</h3><p class="exp__meta">' + e(x['mentee_role']) + ' · ' + institution_name(x['mentee_institution']) + '</p>' + current + '</li>')
+        rows.append('<li><h3>' + e(x['name']) + '</h3><p class="exp__meta mentee-line"><span>' + e(x['mentee_role']) + ' ·</span> ' + institution_name(x['mentee_institution']) + '</p>' + current + '</li>')
     return '<ul class="mentees">' + ''.join(rows) + '</ul>'
 
 def build():

@@ -42,7 +42,7 @@
 .affiliations{list-style:none;margin:0;padding:0;display:grid;gap:20px}
 .affiliation{display:grid;grid-template-columns:24px minmax(0,1fr);gap:10px;scroll-margin-top:0}
 :root{--logo-size:24px}
-.affiliation__logo{display:flex;width:var(--logo-size);height:26px;align-items:center;justify-content:center}
+.affiliation__logo{display:flex;width:var(--logo-size);height:1.65em;font-size:15px;align-items:center;justify-content:center}
 .affiliation__logo img{display:block;width:var(--logo-size);height:var(--logo-size);object-fit:contain}
 .affiliation__body{min-width:0}.affiliation__body h3{margin:0;font-size:15px;font-weight:600;line-height:1.65}.affiliation__body h3 a{color:var(--text)}
 .affiliation__location{font-size:13px;font-weight:400;color:var(--muted)}
@@ -69,11 +69,14 @@
 .brand-logo--dtcs{border-radius:3px}.brand-logo--dtcs img{object-fit:fill}
 #frontierphysics-software .brand-logo img{position:absolute;width:140%;height:140%;max-width:none}
 #quantum-monte-carlo .brand-logo img{position:absolute;width:116%;height:116%;max-width:none}
-.institution-mark{position:relative;display:inline-block;width:var(--logo-size);height:var(--logo-size);margin-right:5px;overflow:hidden;vertical-align:middle}
+.institution-name{display:inline-flex;align-items:center;gap:5px;max-width:100%;vertical-align:middle}
+.institution-name__text{min-width:0}
+.mentee-line{display:flex;flex-wrap:wrap;align-items:center;gap:0 .3em}
+.institution-mark{position:relative;display:block;flex:0 0 var(--logo-size);width:var(--logo-size);height:var(--logo-size);overflow:hidden}
 .institution-mark img{display:block;width:100%;height:100%;object-fit:contain}
 .institution-mark--tum img{position:absolute;left:-21.43%;top:-21.43%;width:142.86%;max-width:none;height:142.86%}
 .institution-mark--columbia img{position:absolute;left:0;top:7.35%;width:995.29%;max-width:none;height:148.24%}
-.teaching-group h3 .institution-mark{margin-right:8px}
+.teaching-group h3 .institution-name{gap:8px}
 @media(max-width:540px){:root{--logo-size:22px}}
 :root[data-theme=dark] :is(#qchem-software,#agents-last-exam-software,#rsi-exam-software) .brand-logo{background:#fff;border-radius:4px}
 :root[data-theme=dark] :is(.institution-mark--columbia,.institution-mark--nanjing){background:#fff;border-radius:2px}
