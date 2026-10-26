@@ -1084,7 +1084,9 @@
           "role": "Developer",
           "name": "PARSEC.py",
           "url": "https://github.com/QianGroupPage/PARSEC.py",
-          "summary": "Integration of ML charge-density models; multi-node, multi-GPU real-space DFT; MLFF-assisted structure initialization; GPU-accelerated DFT geometry optimization and molecular dynamics."
+          "summary": "Integration of ML charge-density models; multi-node, multi-GPU real-space DFT; MLFF-assisted structure initialization; GPU-accelerated DFT geometry optimization and molecular dynamics.",
+          "logo": "assets/logos/parsec.png",
+          "logo_style": "parsec"
         },
         {
           "id": "digital-twin",
@@ -1100,35 +1102,51 @@
               "label": "v.01 Paper",
               "url": "https://www.nature.com/articles/s43588-025-00857-y"
             }
-          ]
+          ],
+          "logo": "assets/logos/dtcs.png",
+          "logo_style": "dtcs"
         },
         {
           "id": "qchem-software",
           "role": "Contributor",
           "name": "Q-Chem",
           "url": "https://www.q-chem.com/",
-          "summary": "Complex-valued orbital methods for HF, DFT, and correlated calculations; orbital optimization and energy decomposition; frozen-orbital initial guesses for DFT."
+          "summary": "Complex-valued orbital methods for HF, DFT, and correlated calculations; orbital optimization and energy decomposition; frozen-orbital initial guesses for DFT.",
+          "logo": "assets/institutions/qchem.png"
         },
         {
           "id": "gpu-quantum-chemistry",
           "role": "Contributor",
           "name": "ByteQC",
           "url": "https://github.com/bytedance/byteqc",
-          "summary": "Tensor hypercontraction (THC) for Hartree–Fock and correlated calculations on GPUs."
+          "summary": "Tensor hypercontraction (THC) for Hartree–Fock and correlated calculations on GPUs.",
+          "logo": "assets/institutions/bytedance.png"
         },
         {
           "id": "gpu4pyscf-software",
           "role": "Contributor",
-          "name": "GPU4PySCF",
-          "url": "https://github.com/bytedance/gpu4pyscf",
-          "summary": "Tensor hypercontraction (THC) for electronic-structure calculations on GPUs."
+          "name": "GPU4PySCF/PySCF",
+          "summary": "Tensor hypercontraction (THC) for electronic-structure calculations on GPUs.",
+          "logo": "assets/logos/pyscf.svg",
+          "logo_style": "pyscf",
+          "links": [
+            {
+              "label": "Code - Bytedance",
+              "url": "https://github.com/bytedance/gpu4pyscf"
+            },
+            {
+              "label": "Code 2 - PySCF",
+              "url": "https://github.com/pyscf/gpu4pyscf"
+            }
+          ]
         },
         {
           "id": "quantum-monte-carlo",
           "role": "Contributor",
           "name": "JaQMC",
           "url": "https://github.com/bytedance/jaqmc",
-          "summary": "Generation of reference data for transition-metal systems using auxiliary-field quantum Monte Carlo (AFQMC)."
+          "summary": "Generation of reference data for transition-metal systems using auxiliary-field quantum Monte Carlo (AFQMC).",
+          "logo": "assets/logos/jaqmc.svg"
         }
       ]
     },
@@ -1155,21 +1173,24 @@
           "role": "Contributor",
           "name": "Agents’ Last Exam",
           "url": "https://agents-last-exam.org/",
-          "summary": "Scientific tasks for evaluating agents in professional workflows."
+          "summary": "Scientific tasks for evaluating agents in professional workflows.",
+          "logo": "assets/logos/agents-last-exam-logo.png"
         },
         {
           "id": "frontierphysics-software",
           "role": "Contributor",
           "name": "FrontierPhysics",
           "url": "https://www.benchflow.ai/frontierphysics",
-          "summary": "Scientific tasks for evaluating agents in physics research."
+          "summary": "Scientific tasks for evaluating agents in physics research.",
+          "logo": "assets/logos/frontierphysics-icon.svg"
         },
         {
           "id": "rsi-exam-software",
           "role": "Contributor",
           "name": "RSI-Exam",
           "url": "https://rsi-exam.ai/index.html",
-          "summary": "Scientific tasks for evaluating agent self-improvement and generalization."
+          "summary": "Scientific tasks for evaluating agent self-improvement and generalization.",
+          "logo": "assets/logos/rsi-exam-logo.png"
         }
       ]
     }

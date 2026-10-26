@@ -58,9 +58,23 @@
 .software__item+.software__item{border-top:1px solid var(--line)}
 .software__role{margin:3px 0 0;color:var(--muted);font:400 13px/1.65 var(--sans)}
 .software__role--developer{color:var(--accent)}
-.software__body{min-width:0}.software__body h4{margin:0 0 6px;font-size:17px;line-height:1.4;font-weight:600;letter-spacing:-.012em}
+.software__body{min-width:0}.software__body h4{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin:0 0 6px;font-size:17px;line-height:1.4;font-weight:600;letter-spacing:-.012em}
+.software__name{display:inline-flex;align-items:center;gap:9px}
+.brand-logo{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none;width:32px;height:32px;overflow:hidden;vertical-align:middle}
+.brand-logo img{display:block;width:100%;height:100%;object-fit:contain}
+/* Keep the official originals; the viewport shows only their graphic marks. */
+.brand-logo--parsec{width:30px;height:34px}.brand-logo--parsec img{position:absolute;left:0;top:0;width:auto;max-width:none;height:34px}
+.brand-logo--pyscf img{position:absolute;left:-5.93px;top:-2.65px;width:109.27px;max-width:none;height:37.46px}
+.brand-logo--dtcs{width:48px;height:27px;border-radius:3px}
+.institution-mark{position:relative;display:inline-block;width:18px;height:18px;margin-right:5px;overflow:hidden;vertical-align:middle}
+.institution-mark img{display:block;width:100%;height:100%;object-fit:contain}
+.institution-mark--tum{width:27px}.institution-mark--tum img{position:absolute;left:-5.79px;top:-10.29px;width:38.57px;max-width:none;height:38.57px}
+.institution-mark--columbia{width:21.1px}.institution-mark--columbia img{position:absolute;left:0;top:0;width:210.04px;max-width:none;height:31.28px}
+.teaching-group h3 .institution-mark{width:24px;height:24px;margin-right:8px}
+:root[data-theme=dark] :is(#qchem-software,#agents-last-exam-software,#rsi-exam-software) .brand-logo{background:#fff;border-radius:4px}
+:root[data-theme=dark] :is(.institution-mark--columbia,.institution-mark--nanjing){background:#fff;border-radius:2px}
 .software__description{margin:0;color:var(--muted);font-size:14px;line-height:1.65}
-.software__resources{margin-left:10px;font-size:12.5px;font-weight:400;letter-spacing:normal}.software__resources a{display:inline-block;white-space:nowrap}.software__resources a+a{margin-left:9px}
+.software__resources{font-size:12.5px;font-weight:400;letter-spacing:normal}.software__resources a{display:inline-block;white-space:nowrap}.software__resources a+a{margin-left:9px}
 @media(max-width:860px){.software-group,.software__item{scroll-margin-top:0}}
 @media(max-width:540px){.software__item{grid-template-columns:1fr;gap:5px;padding:18px 0}.software__role{margin:0}.software-group+.software-group{margin-top:24px}}
 

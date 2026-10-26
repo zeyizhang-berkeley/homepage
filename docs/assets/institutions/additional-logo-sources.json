@@ -1,0 +1,53 @@
+{
+  "assets": [
+    {
+      "institution": "tum",
+      "file": "tum.svg",
+      "official_page_url": "https://www.it.tum.de/",
+      "asset_url": "https://www.it.tum.de/_frontend/favicon/favicon.svg",
+      "final_url": "https://www.it.tum.de/_frontend/favicon/favicon.svg",
+      "mime": "image/svg+xml",
+      "bytes": 5483,
+      "sha256": "59c8bd55af40e8e8d81548f1843441455b0e6b50e77bb2c283eae966261ecb5c",
+      "note": "Official 1000x1000 favicon, both light/dark branches use original blue #3070b3 TUM lettermark on white; no script or external-resource references.",
+      "svg_attributes": {
+        "width": "1000",
+        "height": "1000"
+      },
+      "external_resource_references": [],
+      "script_elements": 0
+    },
+    {
+      "institution": "nanjing",
+      "file": "nanjing.png",
+      "official_page_url": "https://www.nju.edu.cn/",
+      "asset_url": "https://www.nju.edu.cn/images/favicon.png",
+      "final_url": "https://www.nju.edu.cn/images/favicon.png",
+      "mime": "image/png",
+      "bytes": 17167,
+      "sha256": "a7ba0b2c71870f679d10efe980b3943a4af13bcf6a8136261bda123deeaf65bf",
+      "note": "Transparent purple Nanjing University emblem favicon used by main official website; suitable at small display sizes.",
+      "width": 61,
+      "height": 61,
+      "mode": "RGBA",
+      "transparency": true
+    },
+    {
+      "institution": "columbia",
+      "file": "columbia.svg",
+      "official_page_url": "https://library.columbia.edu/",
+      "asset_url": "https://toolkit.library.columbia.edu/v3/img/cu-blue-logo.svg",
+      "final_url": "https://toolkit.library.columbia.edu/v3/img/cu-blue-logo.svg",
+      "mime": "image/svg+xml",
+      "bytes": 42030,
+      "sha256": "347a1ff7515afe3ce431dc9283b248e893ad5e14ad0aac8027ecb203e7271ac4",
+      "note": "Full blue university crown and wordmark, used by the official Columbia Libraries footer. No independent crown extraction or cropping.",
+      "svg_attributes": {
+        "viewBox": "0 0 1692 252"
+      },
+      "external_resource_references": [],
+      "script_elements": 0
+    }
+  ],
+  "display": "Columbia crown and TUM letters are shown through CSS viewports; official source images are unchanged."
+}

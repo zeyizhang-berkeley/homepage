@@ -1,0 +1,130 @@
+{
+  "scientific_packages": {
+    "parsec.png": "https://real-space.org/wp-content/uploads/2020/05/parsec_logo_2.png",
+    "jaqmc.svg": "https://raw.githubusercontent.com/bytedance/jaqmc/main/docs/_static/jaqmc-light.svg",
+    "pyscf.svg": "https://raw.githubusercontent.com/pyscf/pyscf.github.io/master/logo/pyscf-logo-inkscape.svg",
+    "dtcs.png": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72ucvmCg8qJRVWq82zrKX1j26fx4ajNy2pMUlab2HToE7IlEBAwcvmXr3HxeFEp4etRlMQ4xqK2K6aAEUTPZ-hfo0XSXzQNaouqKgFGkCGeolxj3ur_Gui3A6MdRs_wfrJbX9CFl0Bn5pQfQ-Jz67muIo9OMQbah9TikQoQqQZPs9gzT-IDotoK025WVfW4=w400"
+  },
+  "ai4science": {
+    "verified_on": "2026-10-25",
+    "scope": "Only Agents’ Last Exam, FrontierPhysics and RSI-Exam, following user restriction. No MolP2SBench or RSI for Science logos collected or proposed.",
+    "directory": "/Users/bytedance/Desktop/CV/tmp/software-logo-research/ai4science",
+    "website_files_modified": false,
+    "projects": [
+      {
+        "project": "Agents’ Last Exam",
+        "profile_id": "agents-last-exam-software",
+        "page_url": "https://agents-last-exam.org/",
+        "selected": {
+          "file": "agents-last-exam-logo.png",
+          "bytes": 34250,
+          "sha256": "adb169e58b6364d72e72df093d1c89ca93e2ddfb14efbf9102fbd2dd08cb7c69",
+          "format": "PNG",
+          "width": 800,
+          "height": 801,
+          "mode": "RGBA",
+          "has_transparency": true
+        },
+        "source_url": "https://agents-last-exam.org/media/brand/agenthle-logo.jpg",
+        "evidence": "Official homepage navbar img has alt=\"Agents' Last Exam logo\"; its Next.js optimized-image URL names /media/brand/agenthle-logo.jpg as the source. Downloaded that exact original public resource.",
+        "visual_judgment": "Dark grey circular A-shaped brand mark with transparent background, matching the homepage logo; not a partner institution or framework icon.",
+        "format_note": "Publisher resource has a .jpg extension and image/jpeg HTTP header but its actual bytes are PNG RGBA. Selected .png file is a byte-identical copy; no recompression or redraw.",
+        "alternative": {
+          "file": "agents-last-exam-apple.png",
+          "bytes": 15784,
+          "sha256": "6291340ab60a5e7a72250aefb3dbd15acc77622e989cc6d1a1e02ad0b532fe44",
+          "format": "PNG",
+          "width": 180,
+          "height": 180,
+          "mode": "RGBA",
+          "has_transparency": true,
+          "source_url": "https://agents-last-exam.org/apple-icon.png?6df56c9c347cf494"
+        },
+        "visual_verified": true
+      },
+      {
+        "project": "FrontierPhysics",
+        "profile_id": "frontierphysics-software",
+        "page_url": "https://www.benchflow.ai/frontierphysics",
+        "selected": {
+          "file": "frontierphysics-icon.svg",
+          "bytes": 1504,
+          "sha256": "69df528308683fe7fd06554463c5a810bc5024c9b083a4b7d2692f8d24ff4825",
+          "format": "SVG",
+          "width": "100",
+          "height": "100",
+          "viewBox": "0 0 100 100",
+          "vector": true
+        },
+        "source_url": "https://www.benchflow.ai/frontierphysics/icon.svg?icon.2ypjapbl7e3uz.svg",
+        "evidence": "Official page declares this SVG as rel=icon. Its circle, arc and triangular ruler path data match the inline SVG in the homepage navigation link to /frontierphysics.",
+        "visual_judgment": "An orbital circular arc and dot surrounding a triangular measuring/ruler mark. The exact graphic is used for the project navbar; not the separate BenchFlow partner logo or a generic Next.js favicon.",
+        "theme_note": "The original favicon includes prefers-color-scheme rules: near-black on light system theme, near-white on dark. A fixed white image box could therefore hide it in OS dark mode. Alternative is the exact official navbar SVG with currentColor, suitable for inline use with the website theme; do not assume external img currentColor inherits the parent.",
+        "alternatives": [
+          {
+            "file": "frontierphysics-navbar-original.svg",
+            "bytes": 1055,
+            "sha256": "406c3264a8c9343cec1670540e3e8e4c5a6c9cd5bd6eb8e52f4f2bf7444c3f24",
+            "format": "SVG",
+            "width": null,
+            "height": null,
+            "viewBox": "0 0 100 100",
+            "vector": true,
+            "source_url": "https://www.benchflow.ai/frontierphysics",
+            "extraction": "Copied the original navbar SVG and only added the standard SVG XML namespace for standalone validity. No path/color geometry changes."
+          },
+          {
+            "file": "frontierphysics-apple.png",
+            "bytes": 964,
+            "sha256": "8906f10e298493dad170a9023fae6667458d63954344b427546a41d3cc1612cf",
+            "format": "PNG",
+            "width": 180,
+            "height": 180,
+            "mode": "L",
+            "has_transparency": false,
+            "source_url": "https://www.benchflow.ai/frontierphysics/apple-icon.png?apple-icon.300jh4-e4e8ho.png",
+            "judgment": "White same mark on an opaque near-black background."
+          }
+        ],
+        "preview": "frontierphysics-icon-preview.png",
+        "visual_verified": true
+      },
+      {
+        "project": "RSI-Exam",
+        "profile_id": "rsi-exam-software",
+        "page_url": "https://rsi-exam.ai/index.html",
+        "selected": {
+          "file": "rsi-exam-logo.png",
+          "bytes": 24331,
+          "sha256": "a8a779a5431797db1a5269dcf9451d17f0d3afd09c58d16201a9b96b3012b4a2",
+          "format": "PNG",
+          "width": 180,
+          "height": 180,
+          "mode": "RGBA",
+          "has_transparency": true
+        },
+        "source_url": "https://rsi-exam.ai/img/logo/apple-touch-icon.png",
+        "evidence": "Official page rel=apple-touch-icon points to this asset. Official stylesheet .brand::before uses an embedded PNG of the same mark, establishing that it is the visible site brand symbol.",
+        "visual_judgment": "Rose-and-dark ribbon/loop mark on a transparent background. Visually verified against the actual 96×96 .brand::before PNG extracted from the official CSS. Not an institution seal or framework icon.",
+        "alternative": {
+          "file": "rsi-exam-header-logo.png",
+          "bytes": 9529,
+          "sha256": "49891562f2261c218e90e1b824be0c550f116fff2b7ff7134014eb7f25cedb6b",
+          "format": "PNG",
+          "width": 96,
+          "height": 96,
+          "mode": "RGBA",
+          "has_transparency": true,
+          "source_url": "https://rsi-exam.ai/style.css?v=4b715b1f",
+          "extraction": "Decoded the exact data:image/png;base64 payload from .brand::before; no redraw or alteration."
+        },
+        "visual_verified": true
+      }
+    ]
+  },
+  "existing_assets": {
+    "Q-Chem": "assets/institutions/qchem.png",
+    "ByteQC": "assets/institutions/bytedance.png"
+  },
+  "presentation": "PARSEC and PySCF original assets are displayed through CSS viewports showing their graphic marks. DTCS uses the group homepage background at its original aspect ratio."
+}

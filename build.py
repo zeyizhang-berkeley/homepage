@@ -89,10 +89,30 @@ INSTITUTION_LOGOS = {
     'bytedance': 'bytedance.png',
     'qchem': 'qchem.png',
     'nyu-ecnu': 'nyu-shanghai.png',
+    'tum': 'tum.svg',
+    'nanjing': 'nanjing.png',
+    'columbia': 'columbia.svg',
 }
 
 def institution_logo(key):
     return '<div class="affiliation__logo"><img src="assets/institutions/' + INSTITUTION_LOGOS[key] + '" alt="" width="24" height="24" loading="lazy" decoding="async"></div>'
+
+def institution_name(name):
+    keys = {
+        'University of California, Berkeley': 'berkeley', 'UC Berkeley': 'berkeley',
+        'Shanghai Jiao Tong University': 'sjtu',
+        'Technical University of Munich': 'tum', 'Nanjing University': 'nanjing',
+        'Columbia University': 'columbia', 'Lawrence Berkeley National Laboratory': 'lbnl',
+    }
+    key = keys.get(name)
+    logo = '<span class="institution-mark institution-mark--' + key + '" aria-hidden="true"><img src="assets/institutions/' + INSTITUTION_LOGOS[key] + '" alt="" width="18" height="18" loading="lazy" decoding="async"></span>' if key else ''
+    return '<span class="institution-name">' + logo + e(name) + '</span>'
+
+def software_logo(item):
+    if not item.get('logo'):
+        return ''
+    style = ' brand-logo--' + e(item['logo_style']) if item.get('logo_style') else ''
+    return '<span class="brand-logo' + style + '" aria-hidden="true"><img src="' + e(item['logo']) + '" alt="" loading="lazy" decoding="async"></span>'
 
 def project_card(p, id_, label='', wide=False):
     summary = p.get('homepage_summary', p['summary'])
@@ -114,7 +134,7 @@ def build_software():
     for group in DATA['software_groups']:
         rows = []
         for item in group['items']:
-            name = e(item['name'])
+            name = '<span class="software__name">' + software_logo(item) + e(item['name']) + '</span>'
             role_class = ' software__role--developer' if item['role'] == 'Developer' else ''
             resources = list(item.get('links', []))
             if item.get('url'):
@@ -150,7 +170,7 @@ def build_teaching():
     groups = []
     for x in DATA['teaching']:
         courses = ''.join('<li><div><strong>' + e(c['code']) + '</strong><span>' + e(c['name']) + '</span></div><span class="exp__date">' + e(c['dates']) + '</span></li>' for c in x['courses'])
-        groups.append('<div class="teaching-group"><h3>' + e(x['institution']) + '</h3><p class="exp__role">' + e(x['role']) + '</p><ul class="courses">' + courses + '</ul></div>')
+        groups.append('<div class="teaching-group"><h3>' + institution_name(x['institution']) + '</h3><p class="exp__role">' + e(x['role']) + '</p><ul class="courses">' + courses + '</ul></div>')
     return ''.join(groups)
 
 def build_mentorship():
@@ -158,11 +178,11 @@ def build_mentorship():
     for x in DATA['mentorship']:
         current = ''
         if x.get('current_role'):
-            current = '<p class="mentee__now">Now: ' + e(x['current_role']) + ', ' + e(x['current_institution'])
+            current = '<p class="mentee__now">Now: ' + e(x['current_role']) + ', ' + institution_name(x['current_institution'])
             if x.get('current_group'):
                 current += ' · ' + e(x['current_group'])
             current += '</p>'
-        rows.append('<li><h3>' + e(x['name']) + '</h3><p class="exp__meta">' + e(x['mentee_role']) + ' · ' + e(x['mentee_institution']) + '</p>' + current + '</li>')
+        rows.append('<li><h3>' + e(x['name']) + '</h3><p class="exp__meta">' + e(x['mentee_role']) + ' · ' + institution_name(x['mentee_institution']) + '</p>' + current + '</li>')
     return '<ul class="mentees">' + ''.join(rows) + '</ul>'
 
 def build():
