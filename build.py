@@ -117,13 +117,9 @@ def software_logo(item):
 def project_card(p, id_):
     summary = p.get('homepage_summary', p['summary'])
     title = p.get('homepage_title', p['name'])
-    references = list(p.get('publication_numbers', []))
-    for detail in p.get('details', []) + p.get('subprojects', []):
-        references.extend(detail.get('publication_numbers', []))
-    references = sorted(set(references))
     resources = p.get('homepage_links', p.get('links', []))
     keywords_html = '<p class="project__keywords">' + e(' · '.join(p['keywords'])) + '</p>' if p.get('keywords') else ''
-    return '<article class="project" id="' + id_ + '"><h4>' + e(title) + '</h4><p>' + e(summary) + pubrefs(references) + '</p>' + keywords_html + chips(resources) + '</article>'
+    return '<article class="project" id="' + id_ + '"><h4>' + e(title) + '</h4><p>' + e(summary) + '</p>' + keywords_html + chips(resources) + '</article>'
 
 def build_research():
     groups = []

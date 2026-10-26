@@ -1300,30 +1300,45 @@
       "id": "machine-learning",
       "name": "Machine Learning for Electronic Structure",
       "label": "AI for science",
-      "summary": "Developing machine-learned Hamiltonians and integrating learned charge densities to accelerate quantum-chemical calculations, guided by physical principles and self-consistent-field feedback.",
+      "summary": "Developing machine-learned Hamiltonians guided by physical principles and self-consistent-field feedback. Integrating learned charge-density models to reduce SCF iterations, alongside machine learning force fields (MLFFs) that preoptimize molecular geometries and accelerate subsequent DFT geometry optimization.",
       "keywords": [
         "Learned Hamiltonians",
+        "SCF self-distillation",
         "Charge densities",
-        "SCF self-distillation"
+        "ML force fields"
       ],
       "publication_numbers": [
         2,
-        3
+        3,
+        9
       ]
     },
     {
-      "id": "spectroscopy",
-      "name": "Scientific Reasoning & Agentic Workflows",
+      "id": "scientific-benchmarks",
+      "name": "Scientific Benchmarks for LLMs",
       "label": "AI for science",
-      "summary": "Evaluating whether AI models reason from physical evidence, and building agentic workflows that connect quantum-chemical simulations, scientific computing tools, and spectroscopic analysis.",
+      "summary": "Developing scientific benchmarks to evaluate how large language models (LLMs) reason from physical evidence and solve research problems, from molecular-structure inference to reaction mechanisms, transition states, and synthesis. Using shuffled and counterfactual inputs to test molecular reasoning, and contributing research tasks to scientific-agent benchmarks.",
       "keywords": [
-        "Scientific benchmarks",
-        "Molecular inference",
-        "Agentic AI"
+        "Scientific reasoning",
+        "Physical evidence",
+        "LLM evaluation"
       ],
       "publication_numbers": [
         1
       ]
+    },
+    {
+      "id": "spectroscopy",
+      "name": "Agentic AI Workflows",
+      "label": "AI for science",
+      "summary": "Building agentic AI workflows that connect natural-language instructions with structure preparation, simulation setup, high-performance computing, and spectroscopic analysis. Combining quantum-chemical tools and multimodal spectroscopy in a digital twin to study gas-phase reactions and connect theoretical predictions with experimental observations.",
+      "keywords": [
+        "Agentic AI",
+        "Scientific workflows",
+        "Digital twins",
+        "Multimodal spectroscopy"
+      ],
+      "publication_numbers": []
     }
   ]
 }
