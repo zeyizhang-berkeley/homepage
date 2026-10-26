@@ -1279,7 +1279,7 @@
     },
     {
       "id": "excited-states",
-      "name": "Excited-State Theory & Applications",
+      "name": "Excited-State Theory and Computational Spectroscopy",
       "label": "Quantum chemistry",
       "summary": "Developing ROKS energy decomposition and frozen-orbital guesses for charge-transfer excitations; studying low-lying states with NOCI(-RSPT) and photoionization-driven O–O bond formation in CO₂–H₂O clusters, linking spectroscopy with astrochemistry.",
       "keywords": [
