@@ -27,7 +27,7 @@
     "location": "Berkeley, CA",
     "headline": "Ph.D. Candidate in Chemistry, UC Berkeley",
     "email": "zhentan007@berkeley.edu",
-    "bio": "I develop quantum-chemical methods, GPU software, and AI tools for molecular and materials research. I am a Ph.D. candidate in theoretical chemistry at UC Berkeley, advised by Prof. Martin Head-Gordon and Dr. Jin Qian, and a Graduate Student Researcher at Lawrence Berkeley National Laboratory. My research connects excited-state and strongly correlated electronic structure with scalable DFT, quantum Monte Carlo, and machine learning. I also build scientific benchmarks and agentic simulation workflows. Applications range from spectroscopy and reaction chemistry to CO₂ capture and microelectronics. I develop PARSEC.py, contribute to Q-Chem, and am a Research Scientist Intern at ByteDance Seed–AI for Science.",
+    "bio": "I develop quantum chemistry and AI methods to make molecular simulation more predictive and practical. My work combines electronic-structure theory, GPU computing, and machine learning to study excited states, strong correlation, and chemical transformations. I develop PARSEC.py, contribute to Q-Chem, and build scientific benchmarks and agentic workflows that connect simulations with spectroscopy. Applications include interfacial chemistry, CO₂ capture, and microelectronics. I am a Ph.D. candidate in theoretical chemistry at UC Berkeley, advised by Prof. Martin Head-Gordon and Dr. Jin Qian, and a Graduate Student Researcher at Lawrence Berkeley National Laboratory. I am also a Research Scientist Intern at ByteDance Seed–AI for Science.",
     "research_interests": [
       "Excited states and strong correlation",
       "GPU electronic-structure algorithms",
@@ -59,10 +59,9 @@
       }
     ],
     "about_html": [
-      "I develop quantum-chemical methods, GPU software, and AI tools for molecular and materials research.",
-      "I am a Ph.D. candidate in theoretical chemistry at <strong>UC Berkeley</strong>, advised by <a class=\"person\" href=\"https://mhggroupberkeley.com/members/\" target=\"_blank\" rel=\"noopener noreferrer\">Prof. Martin Head-Gordon</a> and <a class=\"person\" href=\"https://qiangrouppage.lbl.gov/people\" target=\"_blank\" rel=\"noopener noreferrer\">Dr. Jin Qian</a>, and a Graduate Student Researcher at <strong>Lawrence Berkeley National Laboratory</strong>.",
-      "My research connects excited-state and strongly correlated electronic structure with scalable DFT, quantum Monte Carlo, and machine learning. I also build scientific benchmarks and agentic simulation workflows. Applications range from spectroscopy and reaction chemistry to CO₂ capture and microelectronics.",
-      "I develop <a href=\"#parsec-software\">PARSEC.py</a>, contribute to <a href=\"#qchem-software\">Q-Chem</a>, and am a Research Scientist Intern at <a href=\"https://seed.bytedance.com/en/\" target=\"_blank\" rel=\"noopener noreferrer\">ByteDance Seed–AI for Science</a>."
+      "I develop quantum chemistry and AI methods to make molecular simulation more predictive and practical.",
+      "My work combines electronic-structure theory, GPU computing, and machine learning to study excited states, strong correlation, and chemical transformations. I develop <a href=\"#parsec-software\">PARSEC.py</a>, contribute to <a href=\"#qchem-software\">Q-Chem</a>, and build scientific benchmarks and agentic workflows that connect simulations with spectroscopy. Applications include interfacial chemistry, CO₂ capture, and microelectronics.",
+      "I am a Ph.D. candidate in theoretical chemistry at <strong>UC Berkeley</strong>, advised by <a class=\"person\" href=\"https://mhggroupberkeley.com/members/\" target=\"_blank\" rel=\"noopener noreferrer\">Prof. Martin Head-Gordon</a> and <a class=\"person\" href=\"https://qiangrouppage.lbl.gov/people\" target=\"_blank\" rel=\"noopener noreferrer\">Dr. Jin Qian</a>, and a Graduate Student Researcher at <strong>Lawrence Berkeley National Laboratory</strong>. I am also a Research Scientist Intern at <a href=\"https://seed.bytedance.com/en/\" target=\"_blank\" rel=\"noopener noreferrer\">ByteDance Seed–AI for Science</a>."
     ]
   },
   "education": [
@@ -1220,23 +1219,47 @@
   "research_highlights": [
     {
       "id": "excited-states",
-      "name": "Electronic Structure & GPU Computing",
+      "name": "Excited States & Chemical Reactivity",
       "label": "Quantum chemistry",
-      "wide": true,
-      "summary": "State-specific excited-state and multireference methods, alongside scalable real-space DFT, GPU-accelerated correlated calculations, and AFQMC reference data.",
+      "summary": "Developing state-specific and multireference methods to understand electronic excitations and strong correlation, with applications to spectroscopy, charge-transfer excitations, and photoionization-driven reactions.",
+      "keywords": [
+        "Excited states",
+        "Strong correlation",
+        "Spectroscopy"
+      ],
       "publication_numbers": [
-        3,
+        4,
         5,
         6,
-        8,
+        8
+      ]
+    },
+    {
+      "id": "quantum-simulation",
+      "name": "GPU-Accelerated Quantum Chemistry",
+      "label": "Quantum chemistry",
+      "summary": "Making electronic-structure calculations more scalable through GPU algorithms for real-space DFT and correlated methods, alongside AFQMC reference data for transition-metal systems.",
+      "keywords": [
+        "Real-space DFT",
+        "THC",
+        "AFQMC"
+      ],
+      "publication_numbers": [
+        3,
+        7,
         9
       ]
     },
     {
       "id": "machine-learning",
-      "name": "Machine Learning for Quantum Chemistry",
-      "label": "Electronic structure and learning",
-      "summary": "Machine learning for Hamiltonians, charge densities, and force fields, including flow matching, label-free SCF self-distillation, and training for machine-learned DFT.",
+      "name": "Machine Learning for Electronic Structure",
+      "label": "AI for science",
+      "summary": "Developing machine-learned Hamiltonians and integrating learned charge densities to accelerate quantum-chemical calculations, guided by physical principles and self-consistent-field feedback.",
+      "keywords": [
+        "Learned Hamiltonians",
+        "Charge densities",
+        "SCF self-distillation"
+      ],
       "publication_numbers": [
         2,
         3
@@ -1244,9 +1267,14 @@
     },
     {
       "id": "spectroscopy",
-      "name": "AI Workflows & Scientific Reasoning",
+      "name": "Scientific Reasoning & Agentic Workflows",
       "label": "AI for science",
-      "summary": "Agentic workflows for quantum-chemical simulations and multimodal spectroscopy, alongside benchmarks for molecular inference, reaction mechanisms, and scientific reasoning.",
+      "summary": "Evaluating whether AI models reason from physical evidence, and building agentic workflows that connect quantum-chemical simulations, scientific computing tools, and spectroscopic analysis.",
+      "keywords": [
+        "Scientific benchmarks",
+        "Molecular inference",
+        "Agentic AI"
+      ],
       "publication_numbers": [
         1
       ]

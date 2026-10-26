@@ -123,7 +123,8 @@ def project_card(p, id_, label='', wide=False):
     references = sorted(set(references))
     resources = p.get('homepage_links', p.get('links', []))
     label_html = '<p class="project__label">' + e(label) + '</p>' if label else ''
-    return '<article class="project' + (' project--wide' if wide else '') + '" id="' + id_ + '">' + label_html + '<h3>' + e(title) + '</h3><p>' + e(summary) + pubrefs(references) + '</p>' + chips(resources) + '</article>'
+    keywords_html = '<p class="project__keywords">' + e(' · '.join(p['keywords'])) + '</p>' if p.get('keywords') else ''
+    return '<article class="project' + (' project--wide' if wide else '') + '" id="' + id_ + '">' + label_html + '<h3>' + e(title) + '</h3><p>' + e(summary) + pubrefs(references) + '</p>' + keywords_html + chips(resources) + '</article>'
 
 def build_research():
     cards = ''.join(project_card(p, p['id'], p['label'], p.get('wide', False)) for p in DATA['research_highlights'])
