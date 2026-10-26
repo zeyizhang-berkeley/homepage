@@ -1,6 +1,6 @@
 {
   "selected_on": "2026-10-26",
-  "molecular_policy": "Molecular models retain verified source pixels and proportions. Most Research compositions are original diagrams; the earlier graphene/CO2 paper panel with a separate GPU symbol is restored at the owner’s request. The water model is shown inside a genuine cubic Cartesian grid.",
+  "molecular_policy": "Water and methane source models retain their original pixels and proportions. The GPU source panel has only its a) label removed, with a tightly bounded repair of the previously obscured carbon rim; no bonds or molecular connectivity are altered.",
   "methane_source": {
     "page_url": "https://commons.wikimedia.org/wiki/File:Methane-CRC-MW-3D-balls.png",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Methane-CRC-MW-3D-balls.png",
@@ -98,14 +98,14 @@
     },
     {
       "id": "quantum-simulation",
-      "file": "quantum-simulation-sourced.svg",
+      "file": "quantum-simulation-unlabeled-v2.svg",
       "dimensions_px": [
         800,
         600
       ],
-      "bytes": 789759,
-      "sha256": "759de32757294cb126214dbb2750f33988c37d56e809f81f57994f6e23794448",
-      "description": "Published pristine-graphene/CO2 structure on the left, a separate arrow, and one conceptual GPU chip on the right.",
+      "bytes": 812407,
+      "sha256": "4da1e96799178c402dccf100619c134eba5bd9351f4a4c5f1ffd166cb394feaf",
+      "description": "Existing graphene/CO2 source panel with a separate GPU symbol; original a) label removed with a localized rim repair.",
       "source": {
         "title": "Real-space Kohn–Sham density functional theory for complex energy applications",
         "doi": "10.1039/D5CC01820J",
@@ -155,72 +155,129 @@
           410
         ],
         "preserve_aspect_ratio": "xMidYMid meet",
-        "source_label_retained": "a)",
-        "source_label_reason": "The original panel label overlaps a carbon atom; preserved to avoid obscuring or reconstructing source pixels.",
-        "molecular_redrawing_or_AI_generation": false
+        "molecular_redrawing_or_AI_generation": "No whole-molecule generation; only the small atom rim occluded by the old label is locally repaired.",
+        "source_label_removed": "a)",
+        "local_rim_reconstruction": "ImageGen repair clipped to [30,90,32,24] in source pixels. All bonds and pixels outside the label edit regions remain unchanged."
       },
       "scientific_context": "The paper panel depicts an ARES computational system, not a GPU performance measurement. The separate GPU is an added conceptual symbol; the connector does not represent a chemical bond.",
       "verification": {
-        "retired_svg_equals_verified_cropped_png_candidate": true,
-        "source_and_crop_rechecked": true,
-        "visual_comparison_completed": true,
-        "renderer": "@resvg/resvg-js",
-        "render_equivalence_to_prior_full_image_SVG": [
-          {
-            "size_px": [
-              800,
-              600
-            ],
-            "decoded_RGBA_identical": true,
-            "decoded_RGBA_sha256": "267c12275c92c7b8de3f532d4ec876a8cefa53e2d8b5e86e4f2b06e01fd85878"
-          },
-          {
-            "size_px": [
-              180,
-              135
-            ],
-            "decoded_RGBA_identical": true,
-            "decoded_RGBA_sha256": "a28974876b1a7dcf9850c6a15281aee599d68811371eaa87a70aae1f54adda3f"
-          }
-        ]
+        "asset": "assets/research/quantum-simulation-unlabeled-v2.svg",
+        "asset_sha256": "4da1e96799178c402dccf100619c134eba5bd9351f4a4c5f1ffd166cb394feaf",
+        "source_png_preserved_byte_for_byte": true,
+        "source_png_sha256": "2b17df5808522ae67855c6d652fb152c98aa66cac33b647760d0430db62c1532",
+        "comparison_dimensions_px": [
+          985,
+          720
+        ],
+        "before_file_sha256": "6a1dcc33a93769fb7b9932533b614b54185464e7fabe8bb4c198de330ff74b68",
+        "after_file_sha256": "2ddd45a7fcf03d0cf967a0c9470802fcffcfc427c4db5e3bbe1c224270879381",
+        "allowed_regions_xyxy_exclusive": {
+          "white_text_upper": [
+            32,
+            36,
+            104,
+            95
+          ],
+          "white_text_right": [
+            58,
+            93,
+            104,
+            125
+          ],
+          "carbon_rim_repair": [
+            30,
+            90,
+            62,
+            114
+          ]
+        },
+        "changed_pixel_count": 2702,
+        "changed_pixel_bbox_xyxy_exclusive": [
+          30,
+          40,
+          104,
+          125
+        ],
+        "changed_pixel_counts_per_region_overlaps_counted_in_each": {
+          "white_text_upper": 1308,
+          "white_text_right": 919,
+          "carbon_rim_repair": 705
+        },
+        "outside_allowed_regions_changed_pixels": 0,
+        "outside_allowed_regions_example_pixels": [],
+        "y_greater_than_or_equal_126_changed_pixels": 0,
+        "below_126_RGBA_equal": true,
+        "max_channel_difference_within_edited_regions": 255,
+        "visual_qa": {
+          "inspected": [
+            "gpu-label-final-inspection.png",
+            "gpu-unlabeled-full.png",
+            "gpu-unlabeled-180.png"
+          ],
+          "panel_label_a_parenthesis_removed": true,
+          "visible_character_residue": false,
+          "carbon_rim_contour": "Natural, continuous sphere outline; tiny reconstructed rim blends with the original sphere at the inspected enlargement and normal sizes.",
+          "bonds": "Complete, continuous; no visible change or break in the lower-right bond attached to the repaired carbon sphere or other bonds.",
+          "full_and_thumbnail": "Graphene, CO2, separate arrow and GPU remain legible; no clipping or new artifacts."
+        },
+        "conclusion": "PASS",
+        "final_asset_modified_by_qa": false
       },
       "restored_at_owner_request": true,
-      "paper_artwork": true
+      "paper_artwork": true,
+      "label_edit": {
+        "method": "Native SVG label erasure in blank background and a clipped ImageGen repair of the obscured carbon rim. Original full molecule artwork remains embedded unchanged.",
+        "source_svg_sha256": "759de32757294cb126214dbb2750f33988c37d56e809f81f57994f6e23794448",
+        "label_removal_rectangles_xywh": [
+          [
+            32,
+            36,
+            72,
+            59
+          ],
+          [
+            58,
+            93,
+            46,
+            32
+          ]
+        ],
+        "repaired_atom_rim_xywh": [
+          30,
+          90,
+          32,
+          24
+        ],
+        "patch_edge_blending": "1-pixel Gaussian mask; all effects clipped to this ROI",
+        "raw_edit_sha256": "cf3b9795ab57a33e5285ecef99c41b9a39c940e04e3aa037bf3883703b718158",
+        "used_patch_png_sha256": "c27e77bc2b8901fb5d51149612cfeb3aaa25520e5b9f2cb3517400dac0348c75",
+        "used_patch_size_px": [
+          128,
+          96
+        ],
+        "mode": "Built-in image_gen.imagegen, precise-object-edit"
+      }
     },
     {
       "id": "real-space-dft",
-      "file": "real-space-dft-cube-v3.svg",
+      "file": "real-space-dft-polished-v4.svg",
       "dimensions": [
         800,
         600
       ],
-      "sha256": "fd9ec4d8dc17c03ac1f49fb36e978f92bfd4f7ca2c6a7e6e9115410f870289e1",
+      "sha256": "55c1305e3a5ad159e61d3b9213a96b46c9c27b2aedc113321b728c36328790e5",
       "source_id": "water",
       "source_png_sha256": "109ff19229927ab8951e5d140019d62504f98423502345643daa127b5eb403e9",
       "source_pixels_unchanged": true,
-      "method": "Original native SVG cubic Cartesian grid and qualitative density envelope, with the unmodified public-domain water model.",
+      "method": "Original native SVG with a true cubic Cartesian grid, glass-like face gradients, edge highlights, soft depth shadows, and layered qualitative density contours. Water source pixels are unchanged.",
       "molecule_viewport": [
-        260.0,
-        204.92727272727274,
-        280,
-        190.14545454545456
+        250.0,
+        198.13636363636363,
+        300,
+        203.72727272727272
       ],
       "grid": {
         "coordinate_model": "p(i,j,k)=[400+65*sqrt(3)/2*(i-j),300+32.5*(i+j)-65*k]",
-        "index_bounds": [
-          [
-            0,
-            4
-          ],
-          [
-            0,
-            4
-          ],
-          [
-            0,
-            4
-          ]
-        ],
         "cell_counts": [
           4,
           4,
@@ -261,21 +318,93 @@
           625.166604983954,
           560
         ],
-        "true_cartesian_cube": true,
         "projection_type": "orthographic isometric",
-        "rendering": "All six face lattices; back lines lighter and hidden back edges dashed. No grid lines drawn over atoms or bonds."
+        "true_cartesian_cube": true,
+        "highlighted_regular_lattice_nodes": [
+          [
+            0,
+            0,
+            4
+          ],
+          [
+            4,
+            0,
+            4
+          ],
+          [
+            0,
+            4,
+            4
+          ],
+          [
+            4,
+            4,
+            0
+          ],
+          [
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ],
+          [
+            2,
+            0,
+            4
+          ],
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            4,
+            2,
+            4
+          ],
+          [
+            2,
+            4,
+            4
+          ],
+          [
+            4,
+            0,
+            2
+          ],
+          [
+            0,
+            4,
+            2
+          ]
+        ]
       },
       "density_note": "Qualitative positive envelope only; not a computed density or signed orbital.",
       "paper_artwork": false,
       "visual_qa": {
         "reviewed_at_800x600_and_180x135": true,
-        "true_4x4x4_cube_visible": true,
+        "glass_faces_and_depth_visible": true,
+        "true_4x4x4_cube_preserved": true,
         "all_three_atoms_and_two_OH_single_bonds_visible": true,
-        "molecule_pixels_unedited": true,
-        "all_grid_and_density_elements_behind_molecule": true,
-        "front_and_back_grid_distinguished": true,
-        "no_visible_labels_or_numbers": true
-      }
+        "original_water_png_byte_identical": true,
+        "molecule_unfiltered_and_last_in_paint_order": true,
+        "no_neon_or_sign_changing_density": true,
+        "no_visible_text_numbers_or_data_values": true,
+        "grid_node_highlights_on_regular_lattice_only": true
+      },
+      "style_changes": [
+        "transparent face gradients",
+        "front/back grid contrast",
+        "glass edge highlights",
+        "soft ground and molecular shadows",
+        "nested qualitative single-hue density contours",
+        "sparse exact lattice-node highlights",
+        "molecule increased from 280 to 300 pixels wide"
+      ]
     }
   ],
   "draft_policy": "Generated molecular drafts and superseded diagram versions are not used. The previously selected graphene/CO2 figure is restored for the GPU topic at the owner’s explicit request.",

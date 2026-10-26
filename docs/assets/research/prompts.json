@@ -1,6 +1,6 @@
 {
   "generator": "Built-in image_gen.imagegen",
-  "purpose": "Non-molecular conceptual illustration for auxiliary-field quantum Monte Carlo; all molecular draft images were rejected and are excluded from the site.",
+  "purpose": "Original non-molecular QMC illustration and localized removal of a panel label from the GPU source figure. No new molecular structure is generated.",
   "style": "White background; muted navy and teal with burgundy accents; no labels; landscape 4:3.",
   "images": [
     {
@@ -8,6 +8,17 @@
       "file": "quantum-monte-carlo-research-v1.png",
       "alt": "Electronic-state walkers propagate through sampled auxiliary fields in quantum Monte Carlo calculations.",
       "prompt": "Use case: scientific-educational. Create ONE original conceptual illustration for a researcher's academic homepage. Asset: landscape 4:3 thumbnail, readable at 180 x 135 CSS pixels; output 1024 x 768 if possible. White background. Clean polished editorial scientific illustration, crisp geometry, restrained soft 3D forms and fine vector-like strokes. Palette: muted navy, teal, soft gray, with small burgundy accents matching #8c1515. Compact centered composition occupying about 85% of the frame, modest white margins, two or three clear components maximum. Qualitative research concept, not experimental or simulated results. Absolutely no words, text, labels, letters, equations, numbers, tick marks, logos, border, captions, watermark, neon glow, brains, robots, or DNA. Keep silhouettes simple and legible at small size. Topic: auxiliary-field quantum Monte Carlo. Depict a small ensemble of FOUR electronic-state walkers as crisp little rectangular determinant-matrix tiles, each containing a sparse pattern of teal and navy squares. They follow a few branching paths from left to right through TWO translucent vertical auxiliary-field sheets, with slightly different tile patterns after the sheets. One walker may branch into two. Use thin navy connecting paths with small directional arrowheads and one burgundy highlighted walker. The paths represent propagation of electronic states, not atoms moving in real space. Do not use atom trajectories, random balls in an electron cloud, dice, roulette, energy curves, hardware, or a literal graph with axes. The core visual idea is stochastic propagation and branching of an ensemble of electronic configurations."
+    },
+    {
+      "id": "quantum-simulation-label-edit",
+      "file": "quantum-simulation-unlabeled-v2.svg",
+      "mode": "Built-in image_gen.imagegen; precise-object-edit",
+      "prompt": "Use case: precise-object-edit. Image 1 is the EDIT TARGET: a 750 by 900 pixel magnified crop from a scientific figure. Image 2 is contextual reference ONLY showing the original entire molecular panel; do not output it. Remove ONLY the black printed label 'a)' from Image 1 and restore the clean white background behind those letters. The lower-left curve of the printed letter a overlaps a tiny part of the TOP-RIGHT RIM of the existing brown carbon sphere. Reconstruct only that tiny obscured rim by continuing the same existing spherical outline, color and lighting. Everything else must stay fixed: keep the existing brown atom at exactly its current location, with the same radius, brown color, white central highlight, shading, pixel texture, and the same single bond exiting diagonally down-right. Do not move, redraw, beautify, sharpen, resize, reshape, recolor, or replace the atom or the bond. Do not add atoms or bonds. Preserve the crop composition and 5:6 portrait aspect ratio exactly, ideally output the same 750 x 900 canvas. No other letters, labels, diagrams, borders or panels. Return only the edited first image with the a) label gone, not a side-by-side comparison. Chemical changes are forbidden; only the black label and its antialias fringe plus the very tiny obscured sphere rim may change.",
+      "inputs": [
+        "5x inspection crop of source PNG bounds [0,0,150,180]",
+        "Original Figure 9(a) panel for context"
+      ],
+      "usage": "Only source-coordinate [30,90,32,24] of the edited crop is used, with a one-pixel feather mask. All other atoms and bonds retain the original source pixels."
     }
   ]
 }

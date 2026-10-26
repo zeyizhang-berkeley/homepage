@@ -1237,8 +1237,8 @@
         9
       ],
       "image": {
-        "src": "assets/research/quantum-simulation-sourced.svg",
-        "alt": "A published carbon dioxide on graphene model paired with a GPU schematic for accelerated electronic-structure calculations.",
+        "src": "assets/research/quantum-simulation-unlabeled-v2.svg",
+        "alt": "A published carbon dioxide on graphene model beside a GPU schematic, with the original panel label removed.",
         "width": 800,
         "height": 600
       }
@@ -1260,8 +1260,8 @@
         9
       ],
       "image": {
-        "src": "assets/research/real-space-dft-cube-v3.svg",
-        "alt": "A water molecule centered within an equally spaced three-dimensional cubic real-space grid and a qualitative electron-density envelope.",
+        "src": "assets/research/real-space-dft-polished-v4.svg",
+        "alt": "A water molecule in a transparent cubic real-space grid, with layered qualitative electron-density contours and soft depth shading.",
         "width": 800,
         "height": 600
       }
