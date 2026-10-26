@@ -1221,7 +1221,7 @@
       "id": "quantum-simulation",
       "name": "GPU-Accelerated Quantum Chemistry",
       "label": "Quantum chemistry",
-      "summary": "Accelerating THC, AFQMC, and real-space Kohn–Sham DFT on GPUs for large-scale gas- (molecular) and condensed-phase (periodic) simulations.",
+      "summary": "Accelerating THC, AFQMC, and real-space DFT on GPUs for large-scale gas- (molecular) and condensed-phase (periodic) simulations.",
       "keywords": [
         "GPU computing",
         "THC",
