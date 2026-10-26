@@ -169,7 +169,7 @@ def build_education():
 def build_teaching():
     groups = []
     for x in DATA['teaching']:
-        courses = ''.join('<li><div><strong>' + e(c['code']) + '</strong><span>' + e(c['name']) + '</span></div><span class="exp__date">' + e(c['dates']) + '</span></li>' for c in x['courses'])
+        courses = ''.join('<li><div><strong>' + e(c['code']) + '</strong><span>' + e(c['name']) + '</span>' + (link(c['url'], '[Course]') if c.get('url') else '') + '</div><span class="exp__date">' + e(c['dates']) + '</span></li>' for c in x['courses'])
         groups.append('<div class="teaching-group"><h3>' + institution_name(x['institution']) + '</h3><p class="exp__role">' + e(x['role']) + '</p><ul class="courses">' + courses + '</ul></div>')
     return ''.join(groups)
 
