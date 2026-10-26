@@ -30,7 +30,7 @@ Experience entries show the organization, role, dates, and a compact sequence of
 
 The visual reference is <https://onehfr.github.io/>: off-white background, Inter typography, a 264 px sidebar, 960 px main column, 56 px column gap, understated red accents, section rules, and rounded white cards. No reference-site biography, images, publications, or personal assets are reused. Below 860 px, the sidebar becomes a compact profile; the top navigation remains accessible through horizontal scrolling. The new homepage supersedes the previous separate-page design.
 
-The section navigation follows the persistent top-bar structure of <https://hungqpham.com/> while retaining the homepage's Inter typography and colors. It appears above the profile and content, stays visible during scrolling, and highlights the current section. Navigation jumps directly to each section, and anchor offsets keep destination headings below the bar. The horizontally scrollable menu reveals the active item after page scrolling settles. Navigation and content share this order: About Me, Research Interest, Experience, Education, Software, Publications, Teaching, Mentorship. The former sidebar “On this page” menu is removed. Existing #about and #research links remain compatible.
+The section navigation follows the persistent top-bar structure of <https://hungqpham.com/> while retaining the homepage's Inter typography and colors. It appears above the profile and content, stays visible during scrolling, and highlights the current section. Navigation jumps directly to each section, and anchor offsets keep destination headings below the bar. The horizontally scrollable menu reveals the active item after page scrolling settles. Navigation and content share this order: About Me, Research, Experience, Education, Software, Publications, Teaching, Mentorship. The former sidebar “On this page” menu is removed. Existing #about and #research links remain compatible.
 
 The “View CV” button links directly to `assets/Zeyi_Zhang_CV.pdf` in a new tab, without an HTML download attribute, so the browser can display the PDF inline.
 
@@ -101,7 +101,7 @@ The generated homepage is served at <https://zeyizhang-berkeley.github.io/homepa
 
 1. Open <https://vscode.dev/github/zeyizhang-berkeley/homepage>.
 2. Edit `data/profile.json` and save. Use `profile.about_html` for About Me and
-   `research_highlights` for the Research Interest cards. Update the source
+   `research_highlights` for the Research cards. Update the source
    fields rather than generated `docs/index.html`.
 3. In Source Control, commit and push to `main`.
 4. Open the repository's **Actions** tab and wait for **Build and deploy homepage**

@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent
 OUT = ROOT / 'dist'
 DATA = json.loads((ROOT / 'data/profile.json').read_text())
 SITE_URL = 'https://zeyizhang-berkeley.github.io/homepage/'
-NAV = [('about', 'About Me'), ('research', 'Research Interest'), ('experience', 'Experience'), ('education', 'Education'), ('software', 'Software'), ('publications', 'Publications'), ('teaching', 'Teaching'), ('mentorship', 'Mentorship')]
+NAV = [('about', 'About Me'), ('research', 'Research'), ('experience', 'Experience'), ('education', 'Education'), ('software', 'Software'), ('publications', 'Publications'), ('teaching', 'Teaching'), ('mentorship', 'Mentorship')]
 
 def e(value):
     return escape(str(value), quote=True)
@@ -206,7 +206,7 @@ def build():
     pubs = '<div class="pubs">' + ''.join(publication(p) for p in DATA['publications'] if p['section'] == 'Publications') + '</div>'
     pubs += '<div class="subsection__head" id="manuscripts"><h3>Manuscripts</h3><p>Submitted, in preparation, and forthcoming</p></div><div class="pubs">' + ''.join(publication(p) for p in DATA['publications'] if p['section'] == 'Manuscripts') + '</div>'
     body = section('about', 'About Me', intro, cls='intro')
-    body += section('research', 'Research Interest', build_research())
+    body += section('research', 'Research', build_research())
     body += section('experience', 'Experience', build_experience(), 'See ' + link('assets/Zeyi_Zhang_CV.pdf', '[CV]', new_tab=True) + ' for details.', panel=True)
     body += section('education', 'Education', build_education(), panel=True)
     body += section('software', 'Software', build_software(), panel=True)
