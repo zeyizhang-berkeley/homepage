@@ -1239,7 +1239,7 @@
       "label": "Quantum chemistry",
       "summary": "Combining multi-GPU acceleration, ML density guesses for SCF, and MLFF geometry guesses for large-scale simulations of surfaces, interfaces, CO₂ capture, XPS, semiconductors, and lithography.",
       "keywords": [
-        "GPU",
+        "GPU computing",
         "ML-assisted initialization",
         "Large-scale simulation"
       ],
