@@ -1299,9 +1299,9 @@
       "label": "AI for science",
       "summary": "Developing machine-learned Hamiltonians with SCF feedback, using learned densities to reduce SCF iterations and ML force-field preoptimization to accelerate DFT geometry optimization.",
       "keywords": [
-        "Learned Hamiltonians",
+        "ML Hamiltonians",
         "SCF self-distillation",
-        "Charge densities",
+        "ML densities",
         "ML force fields"
       ],
       "publication_numbers": [
