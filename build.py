@@ -169,8 +169,13 @@ def build_education():
 def build_teaching():
     groups = []
     for x in DATA['teaching']:
-        courses = ''.join('<li><div><strong>' + e(c['code']) + '</strong><span>' + e(c['name']) + '</span>' + (link(c['url'], '[Course]') if c.get('url') else '') + '</div><span class="exp__date">' + e(c['dates']) + '</span></li>' for c in x['courses'])
-        groups.append('<div class="teaching-group"><h3>' + institution_name(x['institution']) + '</h3><p class="exp__role">' + e(x['role']) + '</p><ul class="courses">' + courses + '</ul></div>')
+        courses = []
+        for c in x['courses']:
+            instructors = c.get('instructors', [])
+            label = 'Instructors: ' if len(instructors) > 1 else 'Instructor: '
+            instructor_line = '<p class="course__instructors">' + label + e(' and '.join(instructors)) + '</p>' if instructors else ''
+            courses.append('<li><div><strong>' + e(c['code']) + '</strong><span>' + e(c['name']) + '</span>' + (link(c['url'], '[Course]') if c.get('url') else '') + '</div><span class="exp__date">' + e(c['dates']) + '</span>' + instructor_line + '</li>')
+        groups.append('<div class="teaching-group"><h3>' + institution_name(x['institution']) + '</h3><p class="exp__role">' + e(x['role']) + '</p><ul class="courses">' + ''.join(courses) + '</ul></div>')
     return ''.join(groups)
 
 def build_mentorship():

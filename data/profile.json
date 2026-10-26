@@ -1045,21 +1045,31 @@
           "name": "Advanced Quantum Mechanics",
           "level": "Graduate",
           "dates": "Jan–May 2025",
-          "url": "https://classes.berkeley.edu/content/2025-spring-chem-221b-001-lec-001"
+          "url": "https://classes.berkeley.edu/content/2025-spring-chem-221b-001-lec-001",
+          "instructors": [
+            "Prof. Martin Head-Gordon"
+          ]
         },
         {
           "code": "Chem 120A",
           "name": "Physical Chemistry",
           "level": "Undergraduate",
           "dates": "Jan–May 2024",
-          "url": "https://classes.berkeley.edu/content/2024-spring-chem-120a-001-lec-001"
+          "url": "https://classes.berkeley.edu/content/2024-spring-chem-120a-001-lec-001",
+          "instructors": [
+            "Prof. Hendrik Utzat",
+            "Prof. Stephen Robert Leone"
+          ]
         },
         {
           "code": "Chem 1A",
           "name": "General Chemistry",
           "level": "Undergraduate",
           "dates": "Jan–May 2023",
-          "url": "https://classes.berkeley.edu/content/2023-spring-chem-1a-001-lec-001"
+          "url": "https://classes.berkeley.edu/content/2023-spring-chem-1a-001-lec-001",
+          "instructors": [
+            "Dr. Alexis Shusterman"
+          ]
         }
       ]
     },
@@ -1072,7 +1082,10 @@
           "name": "Physical Chemistry (2)",
           "program": "Zhiyuan Honors Program",
           "program_url": "https://en.zhiyuan.sjtu.edu.cn/",
-          "dates": "Feb–May 2022"
+          "dates": "Feb–Jun 2022",
+          "instructors": [
+            "Prof. Bei Ding"
+          ]
         }
       ]
     }
