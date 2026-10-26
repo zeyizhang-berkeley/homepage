@@ -1237,12 +1237,12 @@
       "id": "real-space-dft",
       "name": "Real-Space Kohn–Sham DFT",
       "label": "Quantum chemistry",
-      "summary": "Combining multi-GPU acceleration, machine-learned densities for SCF initial guesses, and machine learning force fields for initial geometries to simulate large, complex systems, including surfaces and interfaces, with applications to CO₂ capture, XPS, semiconductors, and lithography.",
+      "summary": "Combining multi-GPU acceleration, ML density guesses for SCF, and MLFF geometry guesses for large-scale simulations of surfaces, interfaces, CO₂ capture, XPS, semiconductors, and lithography.",
       "keywords": [
         "Surfaces & interfaces",
         "CO₂ capture",
         "Microelectronics",
-        "Machine learning for initial guesses"
+        "ML-assisted initialization"
       ],
       "publication_numbers": [
         3,
