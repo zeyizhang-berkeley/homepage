@@ -1317,7 +1317,6 @@
       "summary": "Evaluating molecular-structure inference with shuffled and counterfactual inputs, benchmarking LLM reasoning about reaction mechanisms, transition states, and synthesis, and contributing tasks to scientific-agent benchmarks.",
       "keywords": [
         "Scientific reasoning",
-        "Physical evidence",
         "LLM evaluation"
       ],
       "publication_numbers": [
