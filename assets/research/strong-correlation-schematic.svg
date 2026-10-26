@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="strong-correlation-title strong-correlation-desc">
+  <title id="strong-correlation-title">Two-configuration electron correlation schematic</title>
+  <desc id="strong-correlation-desc">Two spatial orbitals and two electrons are represented in each of two occupation diagrams. The left configuration has the lower slot doubly occupied and the upper slot empty; the right configuration has the upper slot doubly occupied and the lower slot empty. Each occupied orbital contains one spin-up and one spin-down electron. The two configurations connect to a shared wavefunction symbol, illustrating a multiconfigurational singlet without specifying coefficients or relative phase. Orbital positions identify slots, not quantitative energies. This original conceptual diagram is not a calculated wavefunction, a complete active-space expansion, or a molecular structure.</desc>
+  <rect width="800" height="600" fill="#ffffff"/>
+
+  <!-- The same two orbital slots appear in both configurations. -->
+  <g fill="#f6f9fb" stroke="#d9e4ea" stroke-width="3">
+    <rect x="42" y="48" width="296" height="280" rx="24"/>
+    <rect x="462" y="48" width="296" height="280" rx="24"/>
+  </g>
+  <g fill="none" stroke="#17344f" stroke-width="7" stroke-linecap="round">
+    <path d="M93 144 H287 M93 254 H287"/>
+    <path d="M513 144 H707 M513 254 H707"/>
+  </g>
+
+  <!-- Configuration one: a spin-up/spin-down pair in the lower slot. -->
+  <g id="lower-orbital-pair" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M166 240 V181 M151 196 L166 181 L181 196" stroke="#2b8c86"/>
+    <path d="M214 181 V240 M199 225 L214 240 L229 225" stroke="#93404b"/>
+  </g>
+
+  <!-- Configuration two: the same opposite-spin pair in the upper slot. -->
+  <g id="upper-orbital-pair" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M586 130 V71 M571 86 L586 71 L601 86" stroke="#2b8c86"/>
+    <path d="M634 71 V130 M619 115 L634 130 L649 115" stroke="#93404b"/>
+  </g>
+
+  <!-- Connections denote participation in one state, not physical transitions. -->
+  <g fill="none" stroke-width="7" stroke-linecap="round">
+    <path d="M190 328 C190 384 265 408 318 435" stroke="#2b8c86"/>
+    <path d="M610 328 C610 384 535 408 482 435" stroke="#93404b"/>
+  </g>
+  <circle cx="400" cy="470" r="92" fill="#f6f9fb" stroke="#17344f" stroke-width="4"/>
+
+  <!-- A font-independent capital psi: a state symbol, not a plotted orbital. -->
+  <g fill="none" stroke="#17344f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M350 427 V447 C350 476 371 488 400 488 C429 488 450 476 450 447 V427"/>
+    <path d="M400 414 V526 M381 526 H419 M338 427 H362 M438 427 H462"/>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "generator": "Built-in image_gen.imagegen",
+  "purpose": "Non-molecular conceptual illustration for auxiliary-field quantum Monte Carlo; all molecular draft images were rejected and are excluded from the site.",
+  "style": "White background; muted navy and teal with burgundy accents; no labels; landscape 4:3.",
+  "images": [
+    {
+      "id": "quantum-monte-carlo-research",
+      "file": "quantum-monte-carlo-research-v1.png",
+      "alt": "Electronic-state walkers propagate through sampled auxiliary fields in quantum Monte Carlo calculations.",
+      "prompt": "Use case: scientific-educational. Create ONE original conceptual illustration for a researcher's academic homepage. Asset: landscape 4:3 thumbnail, readable at 180 x 135 CSS pixels; output 1024 x 768 if possible. White background. Clean polished editorial scientific illustration, crisp geometry, restrained soft 3D forms and fine vector-like strokes. Palette: muted navy, teal, soft gray, with small burgundy accents matching #8c1515. Compact centered composition occupying about 85% of the frame, modest white margins, two or three clear components maximum. Qualitative research concept, not experimental or simulated results. Absolutely no words, text, labels, letters, equations, numbers, tick marks, logos, border, captions, watermark, neon glow, brains, robots, or DNA. Keep silhouettes simple and legible at small size. Topic: auxiliary-field quantum Monte Carlo. Depict a small ensemble of FOUR electronic-state walkers as crisp little rectangular determinant-matrix tiles, each containing a sparse pattern of teal and navy squares. They follow a few branching paths from left to right through TWO translucent vertical auxiliary-field sheets, with slightly different tile patterns after the sheets. One walker may branch into two. Use thin navy connecting paths with small directional arrowheads and one burgundy highlighted walker. The paths represent propagation of electronic states, not atoms moving in real space. Do not use atom trajectories, random balls in an electron cloud, dice, roulette, energy curves, hardware, or a literal graph with axes. The core visual idea is stochastic propagation and branching of an ensemble of electronic configurations."
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "selected_on": "2026-10-26",
+  "molecular_policy": "Reuse verified source structures. Preserve molecular geometry, atom identities, connectivity and source pixels; no generative molecular drawing.",
+  "methane_source": {
+    "page_url": "https://commons.wikimedia.org/wiki/File:Methane-CRC-MW-3D-balls.png",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Methane-CRC-MW-3D-balls.png",
+    "creator": "Ben Mills (Benjah-bmm27)",
+    "license": "Public domain, released by the creator (PD-user)",
+    "structural_provenance": "Source description cites microwave spectroscopy and CRC Handbook, 88th edition; rendering in Accelrys DS Visualizer.",
+    "sha256": "d5e3121547292f7a57c6a1641843a4369197dc23cf746f6e2c910f388c84f337",
+    "bytes": 111121,
+    "width": 942,
+    "height": 1100
+  },
+  "figures": [
+    {
+      "id": "machine-learning",
+      "file": "machine-learning-sourced.svg",
+      "source_id": "methane-crc",
+      "dimensions": [
+        800,
+        600
+      ],
+      "sha256": "437721dffdd9e5c366e0d26c45993ff8c364527524ac82b35bf4225663ce7207",
+      "method": "Embed original methane PNG unchanged. Uniform scaling and translation only; surrounding arrows and symbols are original SVG.",
+      "source_pixels_unchanged": true
+    },
+    {
+      "id": "scientific-benchmarks",
+      "file": "scientific-benchmarks-sourced.svg",
+      "source_id": "methane-crc",
+      "dimensions": [
+        800,
+        600
+      ],
+      "sha256": "6fbec4672cdbc86a879d69fb52e99edbcea52b2336783dd20a783cfc3f63b3f6",
+      "method": "Embed original methane PNG unchanged. Uniform scaling and translation only; surrounding arrows and symbols are original SVG.",
+      "source_pixels_unchanged": true
+    },
+    {
+      "id": "spectroscopy",
+      "file": "spectroscopy-sourced.svg",
+      "source_id": "methane-crc",
+      "dimensions": [
+        800,
+        600
+      ],
+      "sha256": "cd67e86c82ac1326f446be3deaec861ce96db3659a718f1b2291ab8f87cc0b1d",
+      "method": "Embed original methane PNG unchanged. Uniform scaling and translation only; surrounding arrows and symbols are original SVG.",
+      "source_pixels_unchanged": true
+    },
+    {
+      "id": "real-space-dft",
+      "source_dimensions": [
+        1890,
+        740
+      ],
+      "source_url": "https://pubs.rsc.org/cc/article/61/56/10273/882519/Real-space-Kohn-Sham-density-functional-theory-for",
+      "doi": "10.1039/D5CC01820J",
+      "source_figure": "Publisher Visual Abstract",
+      "source_method": "Original publisher Download slide PNG, ppt/media/image2.png; existing sources.json verifies unchanged artwork.",
+      "panels": [
+        {
+          "source_viewbox_xywh": [
+            0,
+            0,
+            744,
+            740
+          ],
+          "output_viewport_xywh": [
+            20,
+            40,
+            520,
+            520
+          ],
+          "meaning": "Original methane illustration on its real-space grid."
+        },
+        {
+          "source_viewbox_xywh": [
+            1148,
+            0,
+            742,
+            740
+          ],
+          "output_viewport_xywh": [
+            600,
+            210,
+            180,
+            180
+          ],
+          "meaning": "Original sparse real-space Hamiltonian schematic, without its intervening text."
+        }
+      ],
+      "alt": "Published methane and real-space grid illustration linked to its sparse Hamiltonian schematic.",
+      "science_note": "The original methane atoms, four C–H bonds, molecular projection, grid and matrix pixels are untouched. The added arrow is a diagram connector, not a chemical bond.",
+      "source_sha256": "37460c89ecfcf1231607373bb1d71e5c9b1dbbf5e53593df52fb9807a4876f41",
+      "embedded_png_sha256": "37460c89ecfcf1231607373bb1d71e5c9b1dbbf5e53593df52fb9807a4876f41",
+      "embedded_bytes_match_source": true,
+      "output_dimensions": [
+        800,
+        600
+      ],
+      "geometry_preservation": "Unmodified original full PNG embedded byte-for-byte; visibility cropped only by nested SVG viewBox. Panel rendering preserves aspect ratio. No molecular pixels redrawn, recolored, stretched, masked or reconstructed.",
+      "preview_renderer": "@resvg/resvg-js (existing local installation)",
+      "visual_qa": {
+        "reviewed_at_800x600_and_180x135": true,
+        "all_selected_atoms_bonds_and_orbital_surfaces_preserved": true,
+        "no_image_generation_or_private_manuscript": true,
+        "native_overlays_separated_from_atoms": true,
+        "remaining_source_labels": []
+      },
+      "file": "real-space-dft-sourced.svg",
+      "source_file": "realspace-graphical-abstract-highres.png",
+      "sha256": "3246fbb4f862150eef42ce5a271c8ad1d7a8a2349d00f015ff85fa700089e974"
+    },
+    {
+      "id": "excited-states",
+      "source_dimensions": [
+        919,
+        330
+      ],
+      "source_url": "https://pubs.acs.org/jctcce/article-pdf/22/1/385/63143370/ct5c01738.pdf",
+      "doi": "10.1021/acs.jctc.5c01738",
+      "source_figure": "Final publisher Visual Abstract, PDF page 1",
+      "source_method": "Original 919×330 PNG extracted unchanged from final publisher PDF; same final visual abstract verified against the publisher thumbnail.",
+      "panels": [
+        {
+          "source_viewbox_xywh": [
+            14,
+            16,
+            190,
+            259
+          ],
+          "output_viewport_xywh": [
+            24,
+            104,
+            250,
+            341
+          ],
+          "meaning": "Original ROKS orbital-occupation diagram, without title text."
+        },
+        {
+          "source_viewbox_xywh": [
+            497,
+            0,
+            235,
+            180
+          ],
+          "output_viewport_xywh": [
+            370,
+            20,
+            400,
+            306
+          ],
+          "meaning": "Original upper OVOCV orbital visualization."
+        },
+        {
+          "source_viewbox_xywh": [
+            506,
+            188,
+            220,
+            142
+          ],
+          "output_viewport_xywh": [
+            385,
+            352,
+            365,
+            236
+          ],
+          "meaning": "Original lower NOCV density-difference visualization."
+        }
+      ],
+      "alt": "Published ROKS orbital occupations connect to original orbital and density-difference visualizations.",
+      "science_note": "All orbital surfaces, atom locations and occupancy arrows are from the final published graphic. Two added connectors express the analysis workflow and do not imply a new molecular transition or a new bond.",
+      "source_sha256": "bd4d834c98854ee760d03014680c5fb985239b74ad23e40782a14c4b01f93087",
+      "embedded_png_sha256": "bd4d834c98854ee760d03014680c5fb985239b74ad23e40782a14c4b01f93087",
+      "embedded_bytes_match_source": true,
+      "output_dimensions": [
+        800,
+        600
+      ],
+      "geometry_preservation": "Unmodified original full PNG embedded byte-for-byte; visibility cropped only by nested SVG viewBox. Panel rendering preserves aspect ratio. No molecular pixels redrawn, recolored, stretched, masked or reconstructed.",
+      "preview_renderer": "@resvg/resvg-js (existing local installation)",
+      "visual_qa": {
+        "reviewed_at_800x600_and_180x135": true,
+        "all_selected_atoms_bonds_and_orbital_surfaces_preserved": true,
+        "no_image_generation_or_private_manuscript": true,
+        "native_overlays_separated_from_atoms": true,
+        "remaining_source_labels": []
+      },
+      "file": "excited-states-sourced.svg",
+      "source_file": "rokseda-graphical-abstract-highres.png",
+      "sha256": "4ed6e39c6c1c7149b9a97e1fe02909bafaa85947208838cdffb1bdbcbd5c6905"
+    },
+    {
+      "id": "quantum-simulation",
+      "source_dimensions": [
+        1950,
+        1435
+      ],
+      "source_url": "https://pubs.rsc.org/cc/article/61/56/10273/882519/Real-space-Kohn-Sham-density-functional-theory-for",
+      "doi": "10.1039/D5CC01820J",
+      "source_figure": "Review Figure 9(a), citing original reference 94",
+      "source_method": "Original publisher Download slide PNG, ppt/media/image2.png, from review-publisher-figure9.pptx.",
+      "source_credit": "Review Figure 9: CO₂ configurations on pristine graphene sheets using ARES. Existing sources.json records original source reference 94 and CC BY 4.0 in the caption.",
+      "panels": [
+        {
+          "source_viewbox_xywh": [
+            0,
+            0,
+            985,
+            720
+          ],
+          "output_viewport_xywh": [
+            20,
+            92,
+            560,
+            410
+          ],
+          "meaning": "Original complete Figure 9(a) graphene/CO₂ structure; small original a) retained because it overlaps a carbon atom."
+        }
+      ],
+      "alt": "Published graphene and carbon dioxide structure beside a separate conceptual GPU chip.",
+      "science_note": "The source depicts an ARES computational system, not a GPU benchmark or performance result. The conceptual chip is separated from every atom by white space. The original a) label overlaps a carbon atom and is retained rather than obscuring or reconstructing that atom.",
+      "source_sha256": "b8e8cb097fe3bf544e3be25ad4946cb3b42b64990c335c1da2490c7899b46b33",
+      "embedded_png_sha256": "2b17df5808522ae67855c6d652fb152c98aa66cac33b647760d0430db62c1532",
+      "output_dimensions": [
+        800,
+        600
+      ],
+      "geometry_preservation": "The original Figure 9(a) pixels are cropped at integer bounds [0,0,985,720], without resizing, resampling, recoloring or reconstruction, and encoded as optimized PNG. All viewports, proportional scaling and diagram geometry are unchanged.",
+      "preview_renderer": "@resvg/resvg-js (existing local installation)",
+      "visual_qa": {
+        "reviewed_at_800x600_and_180x135": true,
+        "all_selected_atoms_bonds_and_orbital_surfaces_preserved": true,
+        "no_image_generation_or_private_manuscript": true,
+        "native_overlays_separated_from_atoms": true,
+        "remaining_source_labels": [
+          "a)"
+        ]
+      },
+      "file": "quantum-simulation-sourced.svg",
+      "source_file": "review-publisher-figure9-image2.png",
+      "sha256": "759de32757294cb126214dbb2750f33988c37d56e809f81f57994f6e23794448",
+      "embedded_dimensions": [
+        985,
+        720
+      ],
+      "source_crop_xywh": [
+        0,
+        0,
+        985,
+        720
+      ],
+      "embedded_pixels_match_source_panel": true,
+      "render_equivalence": "Compared with the composition embedding the full original PNG, all decoded RGBA pixels are identical at both 800×600 and 180×135 using resvg."
+    },
+    {
+      "id": "strong-correlation",
+      "file": "strong-correlation-schematic.svg",
+      "sha256": "9f3f63be6e9a15554135e3dfc09068c05bd28b76c6c7095ee350c59bd5c77da1",
+      "method": "Original native SVG, two paired opposite-spin configurations; no molecular structure."
+    },
+    {
+      "id": "quantum-monte-carlo-research",
+      "file": "quantum-monte-carlo-research-v1.png",
+      "sha256": "21aaf5956aed033af8f2e97c7fbaba4ea7d791b49cb772c223fe7d16eb413734",
+      "method": "Original built-in ImageGen conceptual illustration; electronic-state walkers, no molecular structures. Final prompt in prompts.json."
+    }
+  ],
+  "draft_policy": "Generated molecular drafts were rejected and are not published.",
+  "public_source_record": "../papers/sources.json"
+}

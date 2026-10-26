@@ -1235,7 +1235,13 @@
       "publication_numbers": [
         3,
         9
-      ]
+      ],
+      "image": {
+        "src": "assets/research/quantum-simulation-sourced.svg",
+        "alt": "A published carbon dioxide on graphene model paired with a GPU schematic for accelerated electronic-structure calculations.",
+        "width": 800,
+        "height": 600
+      }
     },
     {
       "id": "real-space-dft",
@@ -1252,7 +1258,13 @@
         3,
         7,
         9
-      ]
+      ],
+      "image": {
+        "src": "assets/research/real-space-dft-sourced.svg",
+        "alt": "The methane and real-space grid panel from the graphical abstract of the real-space DFT review.",
+        "width": 800,
+        "height": 600
+      }
     },
     {
       "id": "quantum-monte-carlo-research",
@@ -1263,7 +1275,13 @@
         "AFQMC",
         "Transition-metal compounds"
       ],
-      "publication_numbers": []
+      "publication_numbers": [],
+      "image": {
+        "src": "assets/research/quantum-monte-carlo-research-v1.png",
+        "alt": "Electronic-state walkers propagate through sampled auxiliary fields in a conceptual quantum Monte Carlo illustration.",
+        "width": 1448,
+        "height": 1086
+      }
     },
     {
       "id": "strong-correlation",
@@ -1279,7 +1297,13 @@
       "publication_numbers": [
         8,
         10
-      ]
+      ],
+      "image": {
+        "src": "assets/research/strong-correlation-schematic.svg",
+        "alt": "Two opposite-spin paired electronic configurations combine in a multiconfigurational wavefunction.",
+        "width": 800,
+        "height": 600
+      }
     },
     {
       "id": "excited-states",
@@ -1297,7 +1321,13 @@
         5,
         6,
         8
-      ]
+      ],
+      "image": {
+        "src": "assets/research/excited-states-sourced.svg",
+        "alt": "Original molecular orbital and density panels from the ROKS energy decomposition graphical abstract.",
+        "width": 800,
+        "height": 600
+      }
     },
     {
       "id": "machine-learning",
@@ -1314,7 +1344,13 @@
         2,
         3,
         9
-      ]
+      ],
+      "image": {
+        "src": "assets/research/machine-learning-sourced.svg",
+        "alt": "A source-verified methane model linked to a symmetric Hamiltonian matrix and an iterative feedback loop.",
+        "width": 800,
+        "height": 600
+      }
     },
     {
       "id": "scientific-benchmarks",
@@ -1327,7 +1363,13 @@
       ],
       "publication_numbers": [
         1
-      ]
+      ],
+      "image": {
+        "src": "assets/research/scientific-benchmarks-sourced.svg",
+        "alt": "Scientific evidence cards, a source-verified methane model, and an evaluation checklist illustrate molecular reasoning benchmarks.",
+        "width": 800,
+        "height": 600
+      }
     },
     {
       "id": "spectroscopy",
@@ -1340,7 +1382,13 @@
         "Digital twins",
         "Multimodal spectroscopy"
       ],
-      "publication_numbers": []
+      "publication_numbers": [],
+      "image": {
+        "src": "assets/research/spectroscopy-sourced.svg",
+        "alt": "A source-verified methane model, computing resources, and a schematic spectrum form an automated scientific workflow.",
+        "width": 800,
+        "height": 600
+      }
     }
   ]
 }

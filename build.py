@@ -119,7 +119,20 @@ def project_card(p, id_):
     title = p.get('homepage_title', p['name'])
     resources = p.get('homepage_links', p.get('links', []))
     keywords_html = '<p class="project__keywords">' + e(' · '.join(p['keywords'])) + '</p>' if p.get('keywords') else ''
-    return '<article class="project" id="' + id_ + '"><h4>' + e(title) + '</h4><p>' + e(summary) + '</p>' + keywords_html + chips(resources) + '</article>'
+    body_html = '<h4>' + e(title) + '</h4><p>' + e(summary) + '</p>' + keywords_html + chips(resources)
+    figure = p.get('image')
+    if not figure:
+        return '<article class="project" id="' + id_ + '">' + body_html + '</article>'
+    full_src = figure.get('full_src', figure['src'])
+    # The shared button class connects research illustrations to the existing lightbox.
+    figure_html = (
+        '<figure class="project__figure"><button class="pub__figure-link project__figure-link" type="button"'
+        ' data-figure-src="' + e(full_src) + '" aria-haspopup="dialog" aria-controls="figure-lightbox"'
+        ' title="Enlarge illustration" aria-label="Enlarge illustration for ' + e(title) + '">'
+        '<img src="' + e(figure['src']) + '" alt="' + e(figure['alt']) + '" width="' + e(figure['width'])
+        + '" height="' + e(figure['height']) + '" loading="lazy" decoding="async"></button></figure>'
+    )
+    return '<article class="project project--with-figure" id="' + id_ + '">' + figure_html + '<div class="project__body">' + body_html + '</div></article>'
 
 def build_research():
     groups = []
@@ -229,7 +242,7 @@ def build():
 </head><body><a class="skip-link" href="#main">Skip to content</a>''' + topbar + '''<div class="shell"><aside class="side" aria-label="Profile and contact information">
 <div class="profile"><div class="profile__avatar" role="img" aria-label="Portrait placeholder"></div><div class="profile__identity"><h1 class="profile__name">Zeyi Zhang</h1><p class="profile__tagline">Ph.D. Candidate in Chemistry<br>University of California, Berkeley<br>Lawrence Berkeley National Laboratory</p></div></div>
 <p class="profile__location">Berkeley, California</p><ul class="links" aria-label="Contact and academic profiles">''' + social + '</ul>' + link('assets/Zeyi_Zhang_CV.pdf', icon('CV') + 'View CV', 'cv-link', new_tab=True) + '</aside><main class="main" id="main">' + body + '<footer class="foot"><span>© 2026 Zeyi Zhang</span><a href="#about">Back to top ↑</a></footer></main></div></body></html>'
-    viewer = '<dialog class="figure-viewer" id="figure-lightbox" aria-label="Enlarged publication figure"><div class="figure-viewer__panel"><div class="figure-viewer__toolbar"><button class="figure-viewer__close" type="button" aria-label="Close enlarged figure" autofocus><span aria-hidden="true">×</span> Close</button></div><img class="figure-viewer__image" alt=""></div></dialog>'
+    viewer = '<dialog class="figure-viewer" id="figure-lightbox" aria-label="Enlarged figure"><div class="figure-viewer__panel"><div class="figure-viewer__toolbar"><button class="figure-viewer__close" type="button" aria-label="Close enlarged figure" autofocus><span aria-hidden="true">×</span> Close</button></div><img class="figure-viewer__image" alt=""></div></dialog>'
     html = html.replace('</body>', viewer + '</body>')
     html = html.replace('href="assets/style.css"', 'href="' + asset_url('assets/style.css') + '"')
     html = html.replace('src="assets/site.js"', 'src="' + asset_url('assets/site.js') + '"')
