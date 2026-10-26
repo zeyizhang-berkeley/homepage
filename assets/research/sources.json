@@ -1,6 +1,6 @@
 {
   "selected_on": "2026-10-26",
-  "molecular_policy": "Water and methane source models retain their original pixels and proportions. The GPU source panel has only its a) label removed, with a tightly bounded repair of the previously obscured carbon rim; no bonds or molecular connectivity are altered.",
+  "molecular_policy": "Methane source models retain their original pixels and proportions. Water uses an edit of its verified public-domain source, with smaller hydrogen display spheres and the same one-O/two-H connectivity. The GPU source panel has only its a) label removed with a tightly bounded carbon-rim repair. No additional atoms or bonds are introduced.",
   "methane_source": {
     "page_url": "https://commons.wikimedia.org/wiki/File:Methane-CRC-MW-3D-balls.png",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Methane-CRC-MW-3D-balls.png",
@@ -260,16 +260,16 @@
     },
     {
       "id": "real-space-dft",
-      "file": "real-space-dft-polished-v4.svg",
+      "file": "real-space-dft-balanced-v5.svg",
       "dimensions": [
         800,
         600
       ],
-      "sha256": "55c1305e3a5ad159e61d3b9213a96b46c9c27b2aedc113321b728c36328790e5",
+      "sha256": "ff09e3572db27e069b0210db29f4d276a80d2e73ec513e26852220b09347df05",
       "source_id": "water",
       "source_png_sha256": "109ff19229927ab8951e5d140019d62504f98423502345643daa127b5eb403e9",
-      "source_pixels_unchanged": true,
-      "method": "Original native SVG with a true cubic Cartesian grid, glass-like face gradients, edge highlights, soft depth shadows, and layered qualitative density contours. Water source pixels are unchanged.",
+      "source_pixels_unchanged": false,
+      "method": "The native SVG cubic grid, density contours and glass styling are unchanged. Its water PNG is replaced by a built-in ImageGen edit of the original verified source, reducing both hydrogen sphere display diameters to about 60%; two O-H single bonds and the original molecular view are retained.",
       "molecule_viewport": [
         250.0,
         198.13636363636363,
@@ -390,24 +390,31 @@
         "glass_faces_and_depth_visible": true,
         "true_4x4x4_cube_preserved": true,
         "all_three_atoms_and_two_OH_single_bonds_visible": true,
-        "original_water_png_byte_identical": true,
         "molecule_unfiltered_and_last_in_paint_order": true,
         "no_neon_or_sign_changing_density": true,
         "no_visible_text_numbers_or_data_values": true,
-        "grid_node_highlights_on_regular_lattice_only": true
+        "grid_node_highlights_on_regular_lattice_only": true,
+        "original_water_source_retained_for_provenance": true,
+        "hydrogen_display_size_reduced": true
       },
       "style_changes": [
-        "transparent face gradients",
-        "front/back grid contrast",
-        "glass edge highlights",
-        "soft ground and molecular shadows",
-        "nested qualitative single-hue density contours",
-        "sparse exact lattice-node highlights",
-        "molecule increased from 280 to 300 pixels wide"
-      ]
+        "Both hydrogen sphere display diameters reduced to approximately 60% of the previous rendering; all surrounding grid, density and page styling unchanged."
+      ],
+      "edited_molecule_png_sha256": "260d9a611351286849fff9db2af1171f642cdbaefdad95e89583104e8ebb8c63",
+      "molecule_edit": {
+        "tool": "Built-in image_gen.imagegen",
+        "mode": "precise-object-edit",
+        "prompt_id": "water-hydrogen-display-size",
+        "target_hydrogen_diameter_scale": 0.6,
+        "edited_png_dimensions": [
+          1522,
+          1033
+        ],
+        "note": "Ball-and-stick display sizes are schematic, not physical atomic radii. Source geometry retained visually, not pixel-identical."
+      }
     }
   ],
-  "draft_policy": "Generated molecular drafts and superseded diagram versions are not used. The previously selected graphene/CO2 figure is restored for the GPU topic at the owner’s explicit request.",
+  "draft_policy": "Superseded molecular drafts and diagram versions are not used. Current water is an edit of a verified source to reduce hydrogen sphere display sizes; it is not a newly invented molecular structure. The GPU paper panel is retained at the owner’s request.",
   "additional_molecular_sources": [
     {
       "id": "water",

@@ -1260,8 +1260,8 @@
         9
       ],
       "image": {
-        "src": "assets/research/real-space-dft-polished-v4.svg",
-        "alt": "A water molecule in a transparent cubic real-space grid, with layered qualitative electron-density contours and soft depth shading.",
+        "src": "assets/research/real-space-dft-balanced-v5.svg",
+        "alt": "A water molecule with smaller hydrogen display spheres in a transparent cubic real-space grid, with layered qualitative electron-density contours.",
         "width": 800,
         "height": 600
       }
