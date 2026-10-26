@@ -1255,7 +1255,7 @@
       "id": "quantum-monte-carlo-research",
       "name": "Quantum Monte Carlo",
       "label": "Quantum chemistry",
-      "summary": "Using GPU-accelerated AFQMC to generate reference energies and potential-energy curves for transition-metal compounds, supporting studies of bonding and strong correlation.",
+      "summary": "Developing and using GPU-accelerated AFQMC to generate high-quality dataset for transition-metal compounds.",
       "keywords": [
         "AFQMC",
         "Transition-metal compounds"
