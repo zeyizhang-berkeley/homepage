@@ -280,7 +280,7 @@ def build_software():
         rows = []
         for item in group['items']:
             name = '<span class="software__name">' + software_logo(item) + e(item['name']) + '</span>'
-            role_class = ' software__role--developer' if item['role'] == 'Developer' else ''
+            role_class = ' software__role--' + item['role'].lower() if item['role'] in ('Developer', 'Contributor') else ''
             resources = list(item.get('links', []))
             if item.get('url'):
                 label = 'Code' if item['url'].startswith('https://github.com/') else 'Website'

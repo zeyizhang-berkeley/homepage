@@ -61,6 +61,8 @@ html[lang="zh-CN"]{--sans:"Inter","PingFang SC","Microsoft YaHei","Noto Sans CJK
 .software__item+.software__item{border-top:1px solid var(--line)}
 .software__role{margin:3px 0 0;color:var(--muted);font:400 13px/1.65 var(--sans)}
 .software__role--developer{color:var(--accent)}
+.software__role--contributor{color:#b85c00}
+:root[data-theme=dark] .software__role--contributor{color:#ffb45e}
 .software__body{min-width:0}.software__body h4{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin:0 0 6px;font-size:17px;line-height:1.4;font-weight:600;letter-spacing:-.012em}
 .software__name{display:inline-flex;align-items:center;gap:9px}
 .brand-logo{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none;width:var(--logo-size);height:var(--logo-size);overflow:hidden;vertical-align:middle}
