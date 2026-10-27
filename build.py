@@ -46,7 +46,6 @@ class ChinesePage(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.parts = []
         self.raw_tag = None
-        self.language_link = False
 
     def handle_decl(self, declaration):
         self.parts.append('<!' + declaration + '>')
@@ -55,12 +54,18 @@ class ChinesePage(HTMLParser):
         attrs = dict(attrs)
         if tag in ('script', 'style'):
             self.raw_tag = tag
-        is_language_link = tag == 'a' and 'language-switch' in attrs.get('class', '').split()
+        is_language_link = tag == 'a' and 'language-switch__option' in attrs.get('class', '').split()
+        if 'language-switch' in attrs.get('class', '').split():
+            attrs['data-language'] = 'zh'
+            attrs['aria-label'] = '语言'
         if is_language_link:
-            self.language_link = True
-            attrs.update(href='../', hreflang='en', lang='en', title='Switch to English')
-            attrs['aria-label'] = 'Switch to English'
-            attrs['data-language-target'] = '../'
+            chinese = attrs['data-language-option'] == 'zh'
+            attrs['href'] = './' if chinese else '../'
+            attrs['data-language-target'] = attrs['href']
+            attrs['aria-label'] = '中文（当前语言）' if chinese else 'Switch to English'
+            attrs.pop('aria-current', None)
+            if chinese:
+                attrs['aria-current'] = 'page'
         if tag == 'html':
             attrs['lang'] = 'zh-CN'
         for key in ('alt', 'title', 'aria-label'):
@@ -85,8 +90,6 @@ class ChinesePage(HTMLParser):
         self.parts.append('</' + tag + '>')
         if tag == self.raw_tag:
             self.raw_tag = None
-        if tag == 'a':
-            self.language_link = False
 
     def handle_startendtag(self, tag, attrs):
         self.handle_starttag(tag, attrs)
@@ -96,7 +99,7 @@ class ChinesePage(HTMLParser):
         if self.raw_tag:
             self.parts.append(data)
         else:
-            self.parts.append(escape('EN' if self.language_link else zh_text(data), quote=False))
+            self.parts.append(escape(zh_text(data), quote=False))
 
     def handle_comment(self, comment):
         self.parts.append('<!--' + comment + '-->')
@@ -342,7 +345,7 @@ def build():
     links += [x for x in DATA['profile']['links'] if x['label'] == 'LinkedIn']
     social = ''.join('<li>' + link(x['url'], icon(x['label']) + e(x['label'])) + '</li>' for x in links)
     nav = ''.join('<li>' + link('#' + id_, e(label), 'is-active' if id_ == 'about' else '') + '</li>' for id_, label in NAV)
-    language_switch = '<a class="language-switch" href="zh/" data-language-target="zh/" hreflang="zh-CN" lang="zh-CN" title="切换到中文" aria-label="切换到中文">中</a>'
+    language_switch = '<nav class="language-switch" data-language="en" aria-label="Language"><a class="language-switch__option" href="./" data-language-target="./" data-language-option="en" hreflang="en" lang="en" aria-current="page" aria-label="English (current language)">EN</a><span class="language-switch__divider" aria-hidden="true">|</span><a class="language-switch__option" href="zh/" data-language-target="zh/" data-language-option="zh" hreflang="zh-CN" lang="zh-CN" aria-label="切换到中文">CN</a></nav>'
     topbar = '<header class="topbar"><div class="topbar__inner">' + link('#about', 'Homepage', 'topbar__name') + '<nav class="toc" aria-label="Section navigation"><ol class="toc__list">' + nav + '</ol></nav>' + language_switch + '<button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme" hidden>' + icon('Theme') + '<span>Dark theme</span></button></div></header>'
     # Trusted, author-edited paragraph markup keeps the displayed biography in the profile data.
     lead_index = DATA['profile'].get('about_lead_index', 0)

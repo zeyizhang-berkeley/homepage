@@ -21,13 +21,33 @@ if (themeButton) {
 const topbar = document.querySelector(".topbar");
 const navList = document.querySelector(".toc__list");
 const languageSwitch = document.querySelector(".language-switch");
-const languageDestination = languageSwitch ? new URL(languageSwitch.dataset.languageTarget, location.href) : null;
+const languageOptions = Array.from(document.querySelectorAll(".language-switch__option"));
+const languageDestinations = languageOptions.map(option => new URL(option.dataset.languageTarget, location.href));
 function updateLanguageLink(sectionId) {
-  if (!languageSwitch || !languageDestination) return;
-  languageDestination.hash = sectionId || location.hash;
-  languageSwitch.href = languageDestination.href;
+  languageOptions.forEach((option, index) => {
+    const destination = languageDestinations[index];
+    destination.hash = sectionId || location.hash;
+    option.href = destination.href;
+  });
 }
 updateLanguageLink();
+if (languageSwitch) {
+  let languageNavigationTimer;
+  const currentLanguage = isChinese ? "zh" : "en";
+  window.addEventListener("pageshow", () => {
+    clearTimeout(languageNavigationTimer);
+    languageSwitch.dataset.language = currentLanguage;
+  });
+  languageOptions.forEach(option => option.addEventListener("click", event => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    clearTimeout(languageNavigationTimer);
+    languageSwitch.dataset.language = option.dataset.languageOption;
+    if (option.dataset.languageOption === currentLanguage) return;
+    const delay = matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 160;
+    languageNavigationTimer = setTimeout(() => location.assign(option.href), delay);
+  }));
+}
 const navLinks = Array.from(document.querySelectorAll('.toc a[href^="#"]'));
 const sections = navLinks.map(a => document.getElementById(a.hash.slice(1))).filter(Boolean);
 let headerHeight = 0;
