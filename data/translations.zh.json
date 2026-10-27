@@ -199,11 +199,11 @@
     "Freeze-and-release squared-gradient minimization for charge-transfer excitations in a donor–acceptor cage.": "用于供体—受体笼中电荷转移激发的冻结—释放平方梯度最小化方法。",
     "This review examines the foundations and computational advances of real-space Kohn–Sham DFT, with applications to interfacial spectroscopy and carbon capture. It discusses opportunities for large-scale electronic-structure simulations alongside current limitations and future directions for exascale computing.": "本综述介绍实空间 Kohn–Sham DFT 的理论基础与计算进展，以及其在界面光谱和碳捕集中的应用，并讨论大规模电子结构模拟的机遇、当前局限及面向百亿亿次计算的未来方向。",
     "Figures 6, 8 and 9: carbonate at the air–water interface, wood-derived carbon capture, and carbon dioxide on graphene.": "图6、8、9：气—水界面的碳酸根、木质碳材料捕集二氧化碳，以及石墨烯表面的二氧化碳。",
-    "Relativistic Quantum Chemistry and Spin–Orbit Coupling": "相对论量子化学与自旋–轨道耦合",
     "Studying relativistic effects and spin–orbit coupling in transition-metal complexes.": "研究过渡金属配合物中的相对论效应与自旋–轨道耦合。",
     "Relativistic quantum mechanics": "相对论量子力学",
     "Spin–orbit coupling": "自旋–轨道耦合",
     "Transition-metal complexes": "过渡金属配合物",
-    "Orbital angular momentum L and spin S connected by a symbolic spin–orbit interaction.": "以示意连接表示轨道角动量 L 与自旋 S 之间的自旋–轨道相互作用。"
+    "Relativistic Quantum Chemistry with Spin–Orbit Coupling": "含自旋–轨道耦合的相对论量子化学",
+    "Two relativistic effects: representative scalar-relativistic s-orbital contraction relative to a nonrelativistic reference, and coupling between orbital angular momentum L and spin S.": "相对论效应的两种示意：相对非相对论参考的 s 轨道收缩，以及轨道角动量 L 与自旋 S 的耦合。"
   }
 }

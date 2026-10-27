@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="rel-title rel-desc">
+  <title id="rel-title">Scalar relativity with spin–orbit coupling</title>
+  <desc id="rel-desc">Two qualitative aspects of relativistic electronic structure. Left: a smaller teal s-orbital density envelope overlaps a larger dashed gray nonrelativistic reference, illustrating representative scalar-relativistic s-orbital contraction. Right: symbolic orbital angular momentum L and spin S are joined by a spin–orbit coupling connector. Cloud sizes, vector lengths and angles are illustrative, not calculated for a specific complex; the clouds are not electron trajectories and not all orbitals contract.</desc>
+  <rect width="800" height="600" fill="#ffffff"/>
+  <rect x="42" y="48" width="716" height="504" rx="28" fill="#f6f9fb"/>
+  <path d="M400 150 V490" stroke="#d9e4ea" stroke-width="2"/>
+
+  <!-- Representative scalar effect, not a universal orbital trend or classical orbit. -->
+  <text x="220" y="119" text-anchor="middle" fill="#17344f" font-family="Arial, sans-serif" font-size="31" font-weight="600">Scalar relativity</text>
+  <circle cx="220" cy="308" r="128" fill="#f6f9fb"/>
+  <circle cx="220" cy="308" r="124" fill="#f5f8fa"/>
+  <circle cx="220" cy="308" r="120" fill="#f4f7f9"/>
+  <circle cx="220" cy="308" r="116" fill="#f2f6f8"/>
+  <circle cx="220" cy="308" r="112" fill="#f1f5f7"/>
+  <circle cx="220" cy="308" r="108" fill="#f0f4f7"/>
+  <circle cx="220" cy="308" r="104" fill="#eff3f6"/>
+  <circle cx="220" cy="308" r="100" fill="#eef2f5"/>
+  <circle cx="220" cy="308" r="96" fill="#edf2f4"/>
+  <circle cx="220" cy="308" r="92" fill="#ecf1f4"/>
+  <circle cx="220" cy="308" r="88" fill="#ebf0f3"/>
+  <circle cx="220" cy="308" r="84" fill="#eaeff2"/>
+  <circle cx="220" cy="308" r="80" fill="#eaeff2"/>
+  <circle cx="220" cy="308" r="76" fill="#e9eef1"/>
+  <circle cx="220" cy="308" r="72" fill="#e8edf1"/>
+  <circle cx="220" cy="308" r="68" fill="#e7edf0"/>
+  <circle cx="220" cy="308" r="64" fill="#e7ecf0"/>
+  <circle cx="220" cy="308" r="60" fill="#e6ecef"/>
+  <circle cx="220" cy="308" r="56" fill="#e6ebef"/>
+  <circle cx="220" cy="308" r="52" fill="#e5ebee"/>
+  <circle cx="220" cy="308" r="48" fill="#e5eaee"/>
+  <circle cx="220" cy="308" r="44" fill="#e4eaee"/>
+  <circle cx="220" cy="308" r="40" fill="#e4eaed"/>
+  <circle cx="220" cy="308" r="36" fill="#e3e9ed"/>
+  <circle cx="220" cy="308" r="32" fill="#e3e9ed"/>
+  <circle cx="220" cy="308" r="28" fill="#e3e9ed"/>
+  <circle cx="220" cy="308" r="24" fill="#e2e9ec"/>
+  <circle cx="220" cy="308" r="20" fill="#e2e8ec"/>
+  <circle cx="220" cy="308" r="16" fill="#e2e8ec"/>
+  <circle cx="220" cy="308" r="12" fill="#e2e8ec"/>
+  <circle cx="220" cy="308" r="8" fill="#e2e8ec"/>
+  <circle cx="220" cy="308" r="4" fill="#e2e8ec"/>
+  <circle cx="220" cy="308" r="121" fill="none" stroke="#9aadb9" stroke-width="3" stroke-dasharray="9 9"/>
+  <circle cx="220" cy="308" r="81" fill="#eaeff2"/>
+  <circle cx="220" cy="308" r="78.5" fill="#dce7ea"/>
+  <circle cx="220" cy="308" r="76" fill="#d4e3e5"/>
+  <circle cx="220" cy="308" r="73.5" fill="#cde0e2"/>
+  <circle cx="220" cy="308" r="71" fill="#c7dcdd"/>
+  <circle cx="220" cy="308" r="68.5" fill="#c2d9db"/>
+  <circle cx="220" cy="308" r="66" fill="#bcd7d8"/>
+  <circle cx="220" cy="308" r="63.5" fill="#b8d4d5"/>
+  <circle cx="220" cy="308" r="61" fill="#b3d2d2"/>
+  <circle cx="220" cy="308" r="58.5" fill="#afd0d0"/>
+  <circle cx="220" cy="308" r="56" fill="#abcdce"/>
+  <circle cx="220" cy="308" r="53.5" fill="#a6cbcb"/>
+  <circle cx="220" cy="308" r="51" fill="#a3c9c9"/>
+  <circle cx="220" cy="308" r="48.5" fill="#9fc7c7"/>
+  <circle cx="220" cy="308" r="46" fill="#9bc5c5"/>
+  <circle cx="220" cy="308" r="43.5" fill="#98c3c3"/>
+  <circle cx="220" cy="308" r="41" fill="#94c2c1"/>
+  <circle cx="220" cy="308" r="38.5" fill="#91c0bf"/>
+  <circle cx="220" cy="308" r="36" fill="#8ebebd"/>
+  <circle cx="220" cy="308" r="33.5" fill="#8bbcbb"/>
+  <circle cx="220" cy="308" r="31" fill="#88bbba"/>
+  <circle cx="220" cy="308" r="28.5" fill="#85b9b8"/>
+  <circle cx="220" cy="308" r="26" fill="#82b8b6"/>
+  <circle cx="220" cy="308" r="23.5" fill="#7eb6b4"/>
+  <circle cx="220" cy="308" r="21" fill="#7cb5b3"/>
+  <circle cx="220" cy="308" r="18.5" fill="#79b3b1"/>
+  <circle cx="220" cy="308" r="16" fill="#76b2b0"/>
+  <circle cx="220" cy="308" r="13.5" fill="#73b0ae"/>
+  <circle cx="220" cy="308" r="11" fill="#71afad"/>
+  <circle cx="220" cy="308" r="8.5" fill="#6eaeab"/>
+  <circle cx="220" cy="308" r="6" fill="#6cacaa"/>
+  <circle cx="220" cy="308" r="3.5" fill="#69aba9"/>
+  <circle cx="220" cy="308" r="75" fill="none" stroke="#2b8c86" stroke-width="3" stroke-opacity=".55"/>
+  <circle cx="220" cy="308" r="9" fill="#17344f"/>
+  <g fill="none" stroke="#2b8c86" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M104 308 H140 M129 299 L140 308 L129 317"/>
+    <path d="M336 308 H300 M311 299 L300 308 L311 317"/>
+    <path d="M220 192 V228 M211 217 L220 228 L229 217"/>
+  </g>
+  <text x="220" y="471" text-anchor="middle" fill="#2b8c86" font-family="Arial, sans-serif" font-size="26">s-orbital contraction</text>
+  <path d="M134 510 H164" stroke="#9aadb9" stroke-width="3" stroke-dasharray="7 5"/>
+  <text x="174" y="518" fill="#627985" font-family="Arial, sans-serif" font-size="23">NR</text>
+  <path d="M244 510 H274" stroke="#2b8c86" stroke-width="3"/>
+  <text x="284" y="518" fill="#2b8c86" font-family="Arial, sans-serif" font-size="23">SR</text>
+
+  <!-- SOC is also relativistic; arrows are symbolic angular momenta. -->
+  <text x="580" y="119" text-anchor="middle" fill="#17344f" font-family="Arial, sans-serif" font-size="34" font-weight="600">Spin–orbit coupling</text>
+  <path d="M580 418 L467 260 Q496 225 538 224 Z" fill="#d8eeec"/>
+  <path d="M580 418 L624 225 Q660 237 696 269 Z" fill="#eadade"/>
+  <path d="M484 250 C518 168 645 168 680 250" fill="none" stroke="#17344f" stroke-width="5" stroke-linecap="round"/>
+  <rect x="539" y="172" width="84" height="50" rx="17" fill="#ffffff" stroke="#d9e4ea" stroke-width="2"/>
+  <text x="581" y="205" text-anchor="middle" fill="#17344f" font-family="Arial, sans-serif" font-size="26" font-weight="600">SOC</text>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="9">
+    <path d="M580 418 L485 278 M483 309 L481 273 L516 285" stroke="#2b8c86"/>
+    <path d="M580 418 L675 278 M646 286 L679 273 L677 310" stroke="#93404b"/>
+  </g>
+  <circle cx="580" cy="418" r="13" fill="#17344f"/>
+  <text x="442" y="292" fill="#2b8c86" font-family="Georgia, serif" font-size="48" font-style="italic">L</text>
+  <text x="698" y="292" fill="#93404b" font-family="Georgia, serif" font-size="48" font-style="italic">S</text>
+</svg>

@@ -1331,7 +1331,7 @@
     },
     {
       "id": "relativistic-quantum-chemistry",
-      "name": "Relativistic Quantum Chemistry and Spin–Orbit Coupling",
+      "name": "Relativistic Quantum Chemistry with Spin–Orbit Coupling",
       "label": "Quantum chemistry",
       "summary": "Studying relativistic effects and spin–orbit coupling in transition-metal complexes.",
       "keywords": [
@@ -1341,8 +1341,8 @@
       ],
       "publication_numbers": [],
       "image": {
-        "src": "assets/research/spin-orbit-coupling.svg",
-        "alt": "Orbital angular momentum L and spin S connected by a symbolic spin–orbit interaction.",
+        "src": "assets/research/relativistic-effects-soc.svg",
+        "alt": "Two relativistic effects: representative scalar-relativistic s-orbital contraction relative to a nonrelativistic reference, and coupling between orbital angular momentum L and spin S.",
         "width": 800,
         "height": 600
       }
