@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="soc-title soc-desc">
+  <title id="soc-title">Orbital and spin angular momentum coupled by spin–orbit interaction</title>
+  <desc id="soc-desc">Two symbolic angular-momentum vectors, teal L for orbital angular momentum and burgundy S for spin, emerge from a common origin. A curved connector labeled SOC joins them to indicate their interaction. The pale sectors are visual guides, not electron paths or orbital surfaces. This is an original conceptual illustration, not a molecular geometry, a calculated state, or a quantitative angular-momentum diagram. Vector lengths and angles do not specify quantum numbers, expectation values, or a particular coupling regime in a transition-metal complex.</desc>
+  <rect width="800" height="600" fill="#ffffff"/>
+  <rect x="42" y="48" width="716" height="504" rx="28" fill="#f6f9fb"/>
+
+  <!-- Symbolic vectors only: no classical electron orbit or molecule is drawn. -->
+  <path d="M400 438 L186 178 Q262 104 348 144 Z" fill="#d8eeec"/>
+  <path d="M400 438 L468 144 Q574 154 636 238 Z" fill="#eadade"/>
+  <ellipse cx="400" cy="450" rx="211" ry="47" fill="none" stroke="#d9e4ea" stroke-width="3" stroke-dasharray="10 11"/>
+
+  <!-- An interaction connector, not a precession trajectory or vector sum. -->
+  <path d="M252 205 C296 99 518 99 568 218" fill="none" stroke="#17344f" stroke-width="7" stroke-linecap="round"/>
+  <rect x="329" y="105" width="142" height="68" rx="23" fill="#ffffff" stroke="#d9e4ea" stroke-width="2"/>
+  <text x="400" y="151" text-anchor="middle" fill="#17344f" font-family="Arial, sans-serif" font-size="36" font-weight="600">SOC</text>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M400 438 L223 218" stroke="#2b8c86" stroke-width="12"/>
+    <path d="M224 261 L220 214 L265 230" stroke="#2b8c86" stroke-width="12"/>
+    <path d="M400 438 L581 257" stroke="#93404b" stroke-width="12"/>
+    <path d="M537 263 L585 253 L575 301" stroke="#93404b" stroke-width="12"/>
+  </g>
+  <circle cx="400" cy="438" r="17" fill="#17344f"/>
+
+  <text x="168" y="226" fill="#2b8c86" font-family="Georgia, serif" font-size="66" font-style="italic">L</text>
+  <text x="616" y="278" fill="#93404b" font-family="Georgia, serif" font-size="66" font-style="italic">S</text>
+</svg>

@@ -198,6 +198,12 @@
     "A freeze-and-release scheme combines constrained initial guesses with squared-gradient minimization for orbital-optimized DFT. Tests on a supramolecular coordination cage and dye–semiconductor complexes demonstrate convergence to targeted charge-transfer excited states while avoiding collapse to lower-energy states.": "冻结—释放方案将受约束的初猜与平方梯度最小化相结合，用于轨道优化 DFT。在超分子配位笼和染料—半导体复合物上的测试表明，该方法能够收敛到目标电荷转移激发态，并避免坍缩到更低能态。",
     "Freeze-and-release squared-gradient minimization for charge-transfer excitations in a donor–acceptor cage.": "用于供体—受体笼中电荷转移激发的冻结—释放平方梯度最小化方法。",
     "This review examines the foundations and computational advances of real-space Kohn–Sham DFT, with applications to interfacial spectroscopy and carbon capture. It discusses opportunities for large-scale electronic-structure simulations alongside current limitations and future directions for exascale computing.": "本综述介绍实空间 Kohn–Sham DFT 的理论基础与计算进展，以及其在界面光谱和碳捕集中的应用，并讨论大规模电子结构模拟的机遇、当前局限及面向百亿亿次计算的未来方向。",
-    "Figures 6, 8 and 9: carbonate at the air–water interface, wood-derived carbon capture, and carbon dioxide on graphene.": "图6、8、9：气—水界面的碳酸根、木质碳材料捕集二氧化碳，以及石墨烯表面的二氧化碳。"
+    "Figures 6, 8 and 9: carbonate at the air–water interface, wood-derived carbon capture, and carbon dioxide on graphene.": "图6、8、9：气—水界面的碳酸根、木质碳材料捕集二氧化碳，以及石墨烯表面的二氧化碳。",
+    "Relativistic Quantum Chemistry and Spin–Orbit Coupling": "相对论量子化学与自旋–轨道耦合",
+    "Studying relativistic effects and spin–orbit coupling in transition-metal complexes.": "研究过渡金属配合物中的相对论效应与自旋–轨道耦合。",
+    "Relativistic quantum mechanics": "相对论量子力学",
+    "Spin–orbit coupling": "自旋–轨道耦合",
+    "Transition-metal complexes": "过渡金属配合物",
+    "Orbital angular momentum L and spin S connected by a symbolic spin–orbit interaction.": "以示意连接表示轨道角动量 L 与自旋 S 之间的自旋–轨道相互作用。"
   }
 }

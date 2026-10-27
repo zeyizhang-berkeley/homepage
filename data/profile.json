@@ -1330,6 +1330,24 @@
       }
     },
     {
+      "id": "relativistic-quantum-chemistry",
+      "name": "Relativistic Quantum Chemistry and Spin–Orbit Coupling",
+      "label": "Quantum chemistry",
+      "summary": "Studying relativistic effects and spin–orbit coupling in transition-metal complexes.",
+      "keywords": [
+        "Relativistic quantum mechanics",
+        "Spin–orbit coupling",
+        "Transition-metal complexes"
+      ],
+      "publication_numbers": [],
+      "image": {
+        "src": "assets/research/spin-orbit-coupling.svg",
+        "alt": "Orbital angular momentum L and spin S connected by a symbolic spin–orbit interaction.",
+        "width": 800,
+        "height": 600
+      }
+    },
+    {
       "id": "machine-learning",
       "name": "Machine Learning for Electronic Structure",
       "label": "AI for science",
