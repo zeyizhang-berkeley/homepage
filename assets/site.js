@@ -1,11 +1,12 @@
 "use strict";
 const root = document.documentElement;
+const isChinese = root.lang.toLowerCase().startsWith("zh");
 const themeButton = document.querySelector(".theme-toggle");
 function updateThemeButton() {
   const dark = root.dataset.theme === "dark";
   themeButton.setAttribute("aria-pressed", String(dark));
-  themeButton.setAttribute("aria-label", `Switch to ${dark ? "light" : "dark"} theme`);
-  themeButton.querySelector("span").textContent = dark ? "Light theme" : "Dark theme";
+  themeButton.setAttribute("aria-label", isChinese ? (dark ? "切换为浅色模式" : "切换为深色模式") : `Switch to ${dark ? "light" : "dark"} theme`);
+  themeButton.querySelector("span").textContent = isChinese ? (dark ? "浅色模式" : "深色模式") : (dark ? "Light theme" : "Dark theme");
   document.querySelector('meta[name="theme-color"]').content = dark ? "#0f1114" : "#fafaf8";
 }
 if (themeButton) {
@@ -19,6 +20,14 @@ if (themeButton) {
 }
 const topbar = document.querySelector(".topbar");
 const navList = document.querySelector(".toc__list");
+const languageSwitch = document.querySelector(".language-switch");
+const languageDestination = languageSwitch ? new URL(languageSwitch.dataset.languageTarget, location.href) : null;
+function updateLanguageLink(sectionId) {
+  if (!languageSwitch || !languageDestination) return;
+  languageDestination.hash = sectionId || location.hash;
+  languageSwitch.href = languageDestination.href;
+}
+updateLanguageLink();
 const navLinks = Array.from(document.querySelectorAll('.toc a[href^="#"]'));
 const sections = navLinks.map(a => document.getElementById(a.hash.slice(1))).filter(Boolean);
 let headerHeight = 0;
@@ -61,6 +70,7 @@ function updateActiveSection() {
     else a.removeAttribute("aria-current");
   });
   activeSectionId = current.id;
+  updateLanguageLink(current.id);
   // A second scroll container can interrupt Chromium's page smooth scroll.
   // Wait until page scrolling (or a resize) has settled before revealing the tab.
   clearTimeout(navRevealTimer);

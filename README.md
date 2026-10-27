@@ -12,6 +12,33 @@ python3 build.py
 
 The dependency-free Python build writes `dist/index.html`, assets, and compatibility redirects for the former `publications.html`, `research.html`, and `experience.html` pages. Content and navigation remain available without JavaScript.
 
+## English and Chinese pages
+
+The same renderer now builds the English homepage at `dist/index.html` and its
+Chinese version at `dist/zh/index.html`. A language link beside the theme button
+switches between them and preserves the current reading section when JavaScript
+is available. Both languages share the original images, logos, links, theme
+preference, section IDs, and publication lightbox. The Chinese page uses system
+CJK fonts alongside Inter; English typography is unchanged.
+
+Keep `data/profile.json` as the single source of facts and English wording.
+`data/translations.zh.json` contains only translation pairs: the `ui` group covers
+controls and common labels, and `content` covers descriptions, research topics,
+image alternatives, and paper summaries. Keys are exact English strings; values
+are their Chinese translations. If English wording changes, update its key and
+translation together. The build reports missing visible-content translations and
+falls back to the new English text instead of displaying an outdated translation.
+Person names, software names, formal paper titles, authors, journals, IDs, and URLs
+are retained. Rich About paragraphs preserve their existing links and emphasis.
+
+Place the current English CV at `assets/Zeyi_Zhang_CV.pdf` and its Chinese version
+at `assets/Zeyi_Zhang_CV_zh.pdf`. All three CV links on the Chinese page target the
+Chinese PDF. The build warns when that PDF is absent; supply it before publishing.
+Assets are shared under `dist/assets/`, with `../assets/` paths from Chinese pages.
+The three compatibility redirects are generated in both the root and `zh/`, with
+their old section aliases preserved. Canonical URLs, language alternates, and the
+sitemap cover both homepages. `publish.py` also copies the Chinese pages to `docs/`.
+
 ## Edit
 
 - Approved CV content: `data/profile.json` (initial extraction on October 23, 2026; summaries and source skills reconciled with the complete current `CV_v2/main.tex` on October 24, 2026).

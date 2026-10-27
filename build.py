@@ -1,6 +1,7 @@
 """Build the academic homepage: python3 build.py (standard library only)."""
 from pathlib import Path
 from html import escape
+from html.parser import HTMLParser
 import json
 import shutil
 import hashlib
@@ -10,6 +11,139 @@ OUT = ROOT / 'dist'
 DATA = json.loads((ROOT / 'data/profile.json').read_text())
 SITE_URL = 'https://zeyizhang-berkeley.github.io/homepage/'
 NAV = [('about', 'About Me'), ('research', 'Research'), ('experience', 'Experience'), ('education', 'Education'), ('software', 'Software'), ('publications', 'Publications'), ('teaching', 'Teaching'), ('mentorship', 'Mentorship')]
+CATALOG = json.loads((ROOT / 'data/translations.zh.json').read_text())
+ZH_TEXT = {**CATALOG['ui'], **CATALOG['content']}
+
+
+def zh_text(value):
+    """Translate visible text only; data IDs, URLs and rendering logic stay English."""
+    if value in ZH_TEXT:
+        return ZH_TEXT[value]
+    stripped = value.strip()
+    if stripped != value and stripped in ZH_TEXT:
+        return value[:len(value) - len(value.lstrip())] + ZH_TEXT[stripped] + value[len(value.rstrip()):]
+    if value.startswith('[') and value.endswith(']'):
+        return '[' + zh_text(value[1:-1]) + ']'
+    for prefix in ('· ', ', '):
+        if stripped.startswith(prefix) and stripped[len(prefix):] in ZH_TEXT:
+            separator = '· ' if prefix == '· ' else '、'
+            return value[:len(value) - len(value.lstrip())] + separator + ZH_TEXT[stripped[len(prefix):]]
+    if ' · ' in value:
+        return ' · '.join(zh_text(part) for part in value.split(' · '))
+    people_parts = value.split(' and ')
+    if all(part.startswith(('Prof. ', 'Dr. ')) for part in people_parts):
+        return '、'.join(part.split(' ', 1)[1] + (' 教授' if part.startswith('Prof. ') else ' 博士') for part in people_parts)
+    for prefix in ('Enlarge figure for ', 'Work '):
+        if value.startswith(prefix):
+            return ZH_TEXT[prefix] + value[len(prefix):]
+    return value
+
+
+class ChinesePage(HTMLParser):
+    """Localize one shared template without duplicating any page components."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.parts = []
+        self.raw_tag = None
+        self.language_link = False
+
+    def handle_decl(self, declaration):
+        self.parts.append('<!' + declaration + '>')
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag in ('script', 'style'):
+            self.raw_tag = tag
+        is_language_link = tag == 'a' and 'language-switch' in attrs.get('class', '').split()
+        if is_language_link:
+            self.language_link = True
+            attrs.update(href='../', hreflang='en', lang='en', title='Switch to English')
+            attrs['aria-label'] = 'Switch to English'
+            attrs['data-language-target'] = '../'
+        if tag == 'html':
+            attrs['lang'] = 'zh-CN'
+        for key in ('alt', 'title', 'aria-label'):
+            if key in attrs and not is_language_link:
+                attrs[key] = zh_text(attrs[key])
+        if tag == 'meta' and attrs.get('name') == 'description':
+            attrs['content'] = zh_text(attrs['content'])
+        if tag == 'meta' and attrs.get('property') == 'og:url':
+            attrs['content'] = SITE_URL + 'zh/'
+        if tag == 'link' and attrs.get('rel') == 'canonical':
+            attrs['href'] = SITE_URL + 'zh/'
+        for key in ('href', 'src', 'data-figure-src'):
+            if attrs.get(key, '').startswith('assets/'):
+                path = attrs[key]
+                if path == 'assets/Zeyi_Zhang_CV.pdf':
+                    path = 'assets/Zeyi_Zhang_CV_zh.pdf'
+                attrs[key] = '../' + path
+        attributes = ''.join(' ' + key + ('="' + escape(value, quote=True) + '"' if value is not None else '') for key, value in attrs.items())
+        self.parts.append('<' + tag + attributes + '>')
+
+    def handle_endtag(self, tag):
+        self.parts.append('</' + tag + '>')
+        if tag == self.raw_tag:
+            self.raw_tag = None
+        if tag == 'a':
+            self.language_link = False
+
+    def handle_startendtag(self, tag, attrs):
+        self.handle_starttag(tag, attrs)
+        self.parts[-1] = self.parts[-1][:-1] + '/>'
+
+    def handle_data(self, data):
+        if self.raw_tag:
+            self.parts.append(data)
+        else:
+            self.parts.append(escape('EN' if self.language_link else zh_text(data), quote=False))
+
+    def handle_comment(self, comment):
+        self.parts.append('<!--' + comment + '-->')
+
+
+def chinese_page(html):
+    # About paragraphs contain trusted, author-edited markup and are translated
+    # together so word order can change without altering their links or emphasis.
+    for paragraph in DATA['profile']['about_html']:
+        html = html.replace(paragraph, zh_text(paragraph))
+    parser = ChinesePage()
+    parser.feed(html)
+    parser.close()
+    return ''.join(parser.parts)
+
+
+def untranslated_content():
+    """Flag new English source wording without preventing normal source builds."""
+    values = list(DATA['profile']['about_html'])
+    for item in DATA['research_highlights']:
+        values.extend([item.get('homepage_title', item['name']), item.get('homepage_summary', item['summary'])])
+        if item.get('image'):
+            values.append(item['image']['alt'])
+        values.extend(item.get('keywords', []))
+    for item in DATA['experience']:
+        values.extend(item[key] for key in ('organization', 'role', 'dates', 'homepage_summary') if item.get(key))
+    for item in DATA['education']:
+        values.extend(item[key] for key in ('institution', 'degree', 'dates', 'program') if item.get(key))
+        values.extend(award['name'] for award in item.get('scholarships', []))
+    for group in DATA['software_groups']:
+        values.append(group['title'])
+        for item in group['items']:
+            values.extend([item['role'], item['summary']])
+    for group in DATA['teaching']:
+        values.extend([group['institution'], group['role']])
+        for course in group['courses']:
+            values.extend([course['name'], course['dates']])
+    for item in DATA['mentorship']:
+        values.extend(item[key] for key in ('mentee_role', 'mentee_institution', 'current_role', 'current_institution', 'current_group') if item.get(key))
+    for item in DATA['publications']:
+        if item.get('summary'):
+            values.append(item['summary'])
+        if item.get('image'):
+            values.append(item['image']['alt'])
+        if item.get('description'):
+            values.append(item['description'])
+    return sorted(set(value for value in values if value not in ZH_TEXT))
 
 def e(value):
     return escape(str(value), quote=True)
@@ -208,7 +342,8 @@ def build():
     links += [x for x in DATA['profile']['links'] if x['label'] == 'LinkedIn']
     social = ''.join('<li>' + link(x['url'], icon(x['label']) + e(x['label'])) + '</li>' for x in links)
     nav = ''.join('<li>' + link('#' + id_, e(label), 'is-active' if id_ == 'about' else '') + '</li>' for id_, label in NAV)
-    topbar = '<header class="topbar"><div class="topbar__inner">' + link('#about', 'Homepage', 'topbar__name') + '<nav class="toc" aria-label="Section navigation"><ol class="toc__list">' + nav + '</ol></nav><button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme" hidden>' + icon('Theme') + '<span>Dark theme</span></button></div></header>'
+    language_switch = '<a class="language-switch" href="zh/" data-language-target="zh/" hreflang="zh-CN" lang="zh-CN" title="切换到中文" aria-label="切换到中文">中</a>'
+    topbar = '<header class="topbar"><div class="topbar__inner">' + link('#about', 'Homepage', 'topbar__name') + '<nav class="toc" aria-label="Section navigation"><ol class="toc__list">' + nav + '</ol></nav>' + language_switch + '<button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme" hidden>' + icon('Theme') + '<span>Dark theme</span></button></div></header>'
     # Trusted, author-edited paragraph markup keeps the displayed biography in the profile data.
     lead_index = DATA['profile'].get('about_lead_index', 0)
     intro = ''.join('<p' + (' class="intro__lead"' if i == lead_index else '') + '>' + paragraph + '</p>' for i, paragraph in enumerate(DATA['profile']['about_html']))
@@ -230,6 +365,9 @@ def build():
 <meta property="og:title" content="zeyizhang-berkeley | Zeyi Zhang"><meta property="og:type" content="website">
 <meta property="og:site_name" content="zeyizhang-berkeley"><meta property="og:url" content="https://zeyizhang-berkeley.github.io/homepage/">
 <link rel="canonical" href="https://zeyizhang-berkeley.github.io/homepage/">
+<link rel="alternate" hreflang="en" href="https://zeyizhang-berkeley.github.io/homepage/">
+<link rel="alternate" hreflang="zh-CN" href="https://zeyizhang-berkeley.github.io/homepage/zh/">
+<link rel="alternate" hreflang="x-default" href="https://zeyizhang-berkeley.github.io/homepage/">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -244,16 +382,24 @@ def build():
     html = html.replace('src="assets/portrait.jpg"', 'src="' + asset_url('assets/portrait.jpg') + '"')
     html = html.replace('src="assets/site.js"', 'src="' + asset_url('assets/site.js') + '"')
     (OUT / 'index.html').write_text(html)
+    (OUT / 'zh').mkdir(exist_ok=True)
+    (OUT / 'zh/index.html').write_text(chinese_page(html))
     (OUT / '.nojekyll').write_text('')
     (OUT / 'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: ' + SITE_URL + 'sitemap.xml\n')
-    (OUT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>' + SITE_URL + '</loc></url></urlset>')
+    (OUT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>' + SITE_URL + '</loc></url><url><loc>' + SITE_URL + 'zh/</loc></url></urlset>')
     aliases = {'q-chem': 'qchem-software', 'real-space': 'parsec-software', 'ecnu': 'nyu-ecnu'}
     for filename, target in [('publications.html', 'publications'), ('research.html', 'research'), ('experience.html', 'experience')]:
         url = 'index.html#' + target
         script = 'const aliases=' + json.dumps(aliases) + ";const old=location.hash.slice(1);location.replace('index.html#'+(aliases[old]||old||'" + target + "'));"
-        (OUT / filename).write_text('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="refresh" content="0;url=' + url + '"><title>Continue to Zeyi Zhang’s homepage</title></head><body><p>This page has moved. <a href="' + url + '">Continue to ' + target + '</a>.</p><script>' + script + '</script></body></html>')
+        redirect = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="refresh" content="0;url=' + url + '"><title>Continue to Zeyi Zhang’s homepage</title></head><body><p>This page has moved. <a href="' + url + '">Continue to ' + target + '</a>.</p><script>' + script + '</script></body></html>'
+        (OUT / filename).write_text(redirect)
+        (OUT / 'zh' / filename).write_text(chinese_page(redirect))
     shutil.copytree(ROOT / 'assets', OUT / 'assets', dirs_exist_ok=True)
-    print('Built homepage, 3 compatibility redirects, and assets in ' + str(OUT))
+    for value in untranslated_content():
+        print('Translation needed in data/translations.zh.json: ' + value)
+    if not (ROOT / 'assets/Zeyi_Zhang_CV_zh.pdf').exists():
+        print('Before publishing, supply assets/Zeyi_Zhang_CV_zh.pdf for the Chinese CV links.')
+    print('Built English and Chinese homepages, 6 compatibility redirects, and shared assets in ' + str(OUT))
 
 if __name__ == '__main__':
     build()
