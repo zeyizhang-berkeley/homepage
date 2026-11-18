@@ -194,7 +194,7 @@
               ]
             },
             {
-              "text": "Develop multi-node, multi-GPU DFT software that converges a 21,951-atom nanodiamond cluster (80,136 valence electrons) in 4.4 min and a 64,000-atom periodic diamond supercell at Γ in 3.3 min, both on 16 A100 GPUs.",
+              "text": "Develop multi-node, multi-GPU DFT software. On 16 A100 GPUs, converge a 21,951-atom nanodiamond cluster (80,136 valence electrons) in 4.4 min, a 64,000-atom diamond supercell at Γ in 3.3 min, and an 8,000-atom diamond supercell on a 2×2×2 k-point mesh in 6.2 min.",
               "publication_numbers": [
                 9
               ]
