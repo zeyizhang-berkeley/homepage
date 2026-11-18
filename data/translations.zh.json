@@ -175,6 +175,7 @@
     "Active learning of prebiotic glycine-formation pathways and transition states using quantum-chemical simulations.": "结合量子化学模拟与主动学习，研究前生命化学中甘氨酸生成的反应路径及过渡态。",
     "Machine learning for ionic-liquid properties and CO₂ solubility; workflows for ILThermo data.": "利用机器学习研究离子液体性质与二氧化碳溶解度；构建 ILThermo 数据工作流。",
     "Integration of ML charge-density models; multi-node, multi-GPU real-space DFT; MLFF-assisted structure initialization; GPU-accelerated DFT geometry optimization and molecular dynamics.": "集成机器学习电荷密度模型；多节点、多 GPU 实空间 DFT；机器学习力场辅助的结构初始化；GPU 加速的 DFT 几何优化与分子动力学。",
+    "Develop multi-node, multi-GPU DFT software that converges a 21,951-atom nanodiamond cluster (80,136 valence electrons) in 4.4 min and a 64,000-atom periodic diamond supercell at Γ in 3.3 min, both on 16 A100 GPUs.": "开发多节点、多 GPU DFT 软件，在 16 张 A100 GPU 上分别于 4.4 分钟内收敛含 21,951 个原子（80,136 个价电子）的纳米金刚石团簇，以及于 3.3 分钟内收敛含 64,000 个原子的周期性金刚石超胞（Γ 点）。",
     "Multimodal spectroscopy of gas-phase reactions; agentic workflows for simulations and spectroscopic analysis.": "气相反应的多模态光谱；模拟与光谱分析的智能体工作流。",
     "Complex-valued orbital methods for HF, DFT, and correlated calculations; orbital optimization and energy decomposition; frozen-orbital initial guesses for DFT.": "用于 HF、DFT 和关联计算的复数轨道方法；轨道优化与能量分解；DFT 冻结轨道初猜。",
     "Tensor hypercontraction (THC) for Hartree–Fock and correlated calculations on GPUs.": "面向 GPU 上 Hartree–Fock 与电子关联计算的张量超收缩（THC）方法。",

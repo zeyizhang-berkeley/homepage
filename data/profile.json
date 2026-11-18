@@ -194,7 +194,7 @@
               ]
             },
             {
-              "text": "Develop multi-node, multi-GPU DFT to converge molecular systems with over 10,000 atoms (~40,000 valence electrons) and ~6,000-atom periodic supercells within about 5 min on 16 A100 GPUs.",
+              "text": "Develop multi-node, multi-GPU DFT software that converges a 21,951-atom nanodiamond cluster (80,136 valence electrons) in 4.4 min and a 64,000-atom periodic diamond supercell at Γ in 3.3 min, both on 16 A100 GPUs.",
               "publication_numbers": [
                 9
               ]
